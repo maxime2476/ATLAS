@@ -1,0 +1,82 @@
+% ATLAS research monograph — main file.
+% Build: latexmk -pdf main.tex   (from memoire/). Tables in tables/ and figures in figures/ are GENERATED
+% from reports/tables/ by scripts/26_tables_memoire.py, scripts/20_figures_rapport.py, scripts/39_figures_complements.py
+% and R/26_q1_annees_multivers.R: do not edit by hand.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{mathpazo}
+\usepackage{tgpagella}
+\usepackage[scaled=0.92]{helvet}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{microtype}
+\usepackage[margin=2.6cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.12}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{booktabs,threeparttable,array,longtable}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{float}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=4pt}
+\usepackage{siunitx}
+\sisetup{group-separator={,},output-decimal-marker={.}}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=authoryear,maxcitenames=2,maxbibnames=6,uniquelist=false,dashed=false,useprefix=true,doi=true,url=false,isbn=false,eprint=false]{biblatex}
+\addbibresource{references.bib}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\hypersetup{
+  pdftitle={Hot, Dry Summers, Irrigation and Crop Yields in France, and the Empirical Size of Tests in Panels with Common Shocks},
+  pdfauthor={Maxime Gourguechon},
+  pdfsubject={Working paper (not peer reviewed)},
+  pdfkeywords={heat stress; irrigation; maize; France; panel data; wild cluster bootstrap; test size}
+}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+\input{tables/numbers}
+\newcommand{\ddthirtytwo}{\ensuremath{\mathrm{DD}_{>32}}}
+\newcommand{\degreeday}{\,$^{\circ}$C$\cdot$day}
+
+\title{Hot, Dry Summers, Irrigation and Crop Yields in France,\\
+and the Empirical Size of Tests in Panels with Common Shocks}
+\author{Maxime Gourguechon}
+% Dépôt public du code.
+\newcommand{\RepoLink}{\url{https://github.com/maxime2476/ATLAS}}
+\date{\small Working paper --- not peer reviewed. Code and data pipeline: \RepoLink. \\ \small Text licensed under CC BY 4.0; code under the MIT licence.}
+
+\begin{document}
+\maketitle
+\input{chapters/00_abstract}
+{\small\tableofcontents}
+\clearpage
+
+\input{chapters/01_introduction}
+\input{chapters/02_literature}
+\input{chapters/03_data}
+\input{chapters/04_exposure}
+\input{chapters/05_strategy}
+\input{chapters/06_inference}
+\input{chapters/07_maize}
+\input{chapters/08_wheat}
+\input{chapters/09_forecasting}
+\input{chapters/10_discussion}
+\input{chapters/11_conclusion}
+
+\clearpage
+{\setlength{\emergencystretch}{2em}\printbibliography[heading=bibintoc]}
+
+\clearpage
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\input{chapters/A_reproduction}
+\input{chapters/B_variables}
+\input{chapters/C_deviations}
+\input{chapters/D_robustness}
+\input{chapters/E_wcr}
+\input{chapters/F_degree_days}
+\input{chapters/G_maize_checks}
+\end{document}

@@ -1,0 +1,38 @@
+# Environnements Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environnement R (renv conserve renv.lock, pas la bibliothèque locale)
+.Rhistory
+.RData
+renv/library/
+
+# Secrets et identifiants (Copernicus, API, etc.)
+.env
+.env.*
+!.env.example
+
+# Données : seuls les README de documentation sont versionnés.
+# Les données brutes et volumineuses doivent pouvoir être retéléchargées.
+data/**
+!data/**/
+!data/**/README.md
+
+# Sorties générées
+reports/figures/
+
+# Fichiers système Windows / WSL
+*:Zone.Identifier
+Thumbs.db
+desktop.ini
+
+# README téléchargés avec les commandes AppEEARS (fichiers bruts NASA, non rédigés par le projet)
+data/raw/nasa_appeears/*/README.md
+data/raw/nasa_appeears_lst/*/README.md
+
+# Brouillons locaux, non versionnés
+docs/note_recherche.md

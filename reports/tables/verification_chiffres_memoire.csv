@@ -1,0 +1,77 @@
+chiffre,valeur_exacte,arrondi_recalcule,texte,source_texte,statut,note
+Chaleur moyenne de juillet-août 2003 (DD > 32 °C),14.7374,14.7,14.7,\HeatTwoThousandThree,OK,
+2003 / été suivant le plus chaud depuis 2000,3.70861,3.7,3.7,\HeatRatio,OK,deuxième été : 2019 (3.974 DD)
+Raccord SAA : paires département-année-mode,1674,"1,674","1,674",\SpliceN,OK,
+"Raccord SAA : part d'accord à 0,5 q/ha (%)",94.8626,95,95,\SpliceShare,OK,
+Raccord SAA : différence médiane (q/ha),0,0.0,0.0,\SpliceMedian,OK,
+Raccord SAA : corrélation (irrigue),0.976593,0.98,0.98,\SpliceCorrIrr,OK,
+Raccord SAA : corrélation (non_irrigue),0.994837,0.99,0.99,\SpliceCorrRain,OK,
+Blé 2010-2025 : rendements entiers en q/ha (%),86.6176,86.6,86.6,\WheatIntegerShare,OK,85 départements de la population ; 86.52% sur les 83 du principal
+Corrélation MIS / maïs grain SAA,0.993053,0.993,0.993,\MaskCorrGrain,OK,223 département-millésimes
+Corrélation MIS / maïs fourrage SAA,0.0406132,0.04,0.04,\MaskCorrFodder,OK,
+"VigiEau sans niveau, minimum 2012-2015 (%)",13.0841,13,13,\VigiMissEarlyMin,OK,année 2015
+"VigiEau sans niveau, maximum 2012-2015 (%)",20.8333,21,21,\VigiMissEarlyMax,OK,année 2014
+"VigiEau sans niveau, minimum 2016-2022 (%)",4.51977,5,5,\VigiMissMidMin,OK,année 2017
+"VigiEau sans niveau, maximum 2016-2022 (%)",10.8744,11,11,\VigiMissMidMax,OK,année 2019
+N_eff blé 2010-2025,4.13204,4.13,4.13,\NeffWheatExact,OK,16 années
+N_eff blé 2010-2024 (sans 2025),2.64364,2.64,2.64,\NeffWheatNoTwentyFive,OK,
+N_eff blé 1959-2025,6.17387,6.2,6.2,\NeffWheatLong,OK,67 années
+N_eff maïs 2000-2025 (sans poids ni SWI),7.10429,7.1,7.1,\NeffMaize,OK,formule du panel équilibré ; projection exacte : 7.06
+"Part de 2003 dans la variance résiduelle (sans poids ni SWI, %)",25.7803,26,26,\NeffMaizeShareTwoThousandThree,OK,projection exacte : 26.0 %
+"Part de 2003 dans le levier partiel, 2000-2025 (%)",40.7128,41,41,\LevThree,OK,
+"N_eff du modèle pondéré avec SWI, 2000-2025",4.80081,4.8,4.8,\NeffLevAll,OK,
+Levier de 2003 / levier moyen d'une année,10.5853,10.6,10.6,\LevTwoThousandThreeRatio,OK,
+Levier de la deuxième année (%),16.7832,17,17,\LevSecond,OK,
+Deuxième année par le levier,2023,2023,2023,\LevSecondYear,OK,
+"Part de 2003 dans le levier partiel, 2000-2009 (%)",80.2076,80,80,\LevThreeEarly,OK,
+"N_eff du modèle pondéré avec SWI, 2000-2009",1.54263,1.5,1.5,\NeffLevEarly,OK,
+"Écart d'altitude minimal, 6 départements de relief (m)",178.299,178,178,\ReliefAltDiffMin,OK,dép. 01 : 429.57 - 251.27 ; colonnes arrondies du tableau : 179
+"Écart d'altitude maximal, 6 départements de relief (m)",505.36,505,505,\ReliefAltDiffMax,OK,dép. 38 : 850.61 - 345.25 ; colonnes arrondies du tableau : 506
+Corrélation écart de chaleur / écart d'altitude (17 départements),-0.930222,-0.93,-0.93,\ReliefAltCorr,OK,
+Tableau 5 : altitudes affichées des 17 départements,,,,relief.tex,OK,
+β de A1 (contrôle de la régression réécrite),0.0157779,0.0158,0.0158,\QoneBeta,OK,
+"Autocorrélation d'ordre 1 des résidus, maïs A1",0.0750682,0.08,0.08,\ArMaize,OK,
+"Autocorrélation d'ordre 1 des résidus, blé 1959-2025 (M3)",0.129804,0.13,0.13,\ArWheat,OK,
+"Simulation AR(1), rejet du WCR pour rho = 0.0 (%)",5.33333,5.3,5.3,\SerialSizeZero,OK,CSV → texte (R/26)
+"Simulation AR(1), rejet du WCR pour rho = 0.3 (%)",5,5.0,5.0,\SerialSizeLow,OK,CSV → texte (R/26)
+"Simulation AR(1), rejet du WCR pour rho = 0.6 (%)",8,8.0,8.0,\SerialSizeHigh,OK,CSV → texte (R/26)
+Matrices de Conley corrigées par fixest (%),27.3333,27,27,\ConleyFixedPct,OK,CSV → texte (R/22)
+Rendement moyen irrigué (q/ha),107.698,108,108,\YieldIrr,OK,
+Rendement moyen pluvial (q/ha),77.4938,77,77,\YieldRain,OK,
+Écart médian irrigué / pluvial (%),37.5,38,38,\GapMedianPct,OK,
+Paires irrigué > pluvial,431,431,431,\GapAboveCount,OK,
+Paires irrigué = pluvial,3,3,3,\GapEqualCount,OK,
+Paires irrigué < pluvial,1,1,1,\GapBelowCount,OK,
+Nombre de paires de l'échantillon principal,435,435,435,\MaizeMainPairs,OK,
+Rapports répétés (%),4.30622,4.3,4.3,\SaaRepPct,OK,18 sur 418 paires successives
+Rapports répétés : nombre,18,18,18,\SaaRepTot,OK,
+Rapports répétés : dont 2000-2009,15,15,15,\SaaRepOld,OK,
+Rapports répétés : dont 2003,2,2,2,\SaaRepTwoThousandThree,OK,
+"Rapports répétés, permutation : médiane (%)",0.956938,1.0,1.0,\SaaRepRefPct,OK,"CSV (R, 1 000 permutations) ; recalcul numpy : 0.96 %, écart ≤ 0,3 point"
+"Rapports répétés, permutation : 95e centile (%)",1.91388,1.9,1.9,\SaaRepPnf,OK,"CSV (R, 1 000 permutations) ; recalcul numpy : 1.91 %, écart ≤ 0,3 point"
+Valeur 2003 (M EUR),48.9489,49,49,\QoneValTwoThousandThree,OK,
+"Valeur 2003, borne basse (M EUR)",15.895,16,16,\QoneValLow,OK,"borne de l'intervalle à 90 % de β (inversion du bootstrap, CSV R)"
+"Valeur 2003, borne haute (M EUR)",171.657,172,172,\QoneValHigh,OK,
+Valeur de toute la récolte 2003 des 17 départements (M EUR),547.71,548,548,\ProdValTwoThousandThree,OK,
+Part de la récolte 2003 (%),8.93701,9,9,\ValShareTwoThousandThree,OK,
+Paires reconduites en 2003,2,2,2,\ValRepPairs,OK,
+"Surestimation de 2003 par la formule, poids de la valorisation (%)",88.6081,89,89,\ValOverPct,OK,
+Surestimation de 2003 hors paires reconduites (%),28.2512,28,28,\ValOverNoRepPct,OK,
+Prix Eurostat observé 2003 (EUR/q),13.2,13.2,13.2,\PriceEurostatThree,OK,
+Prix raccordé 2003 (EUR/q),16.3984,16.4,16.4,\PriceRaccordThree,OK,
+Valeur 2003 au prix Eurostat (M EUR),39.4017,39,39,\QoneValEurostat,OK,
+"Valeur 2003, écart observé (M EUR)",25.9527,26,26,\QoneValObs,OK,
+"Valeur 2003, écart observé hors reconduites (M EUR)",38.1664,38,38,\QoneValObsNoRep,OK,
+"Fourchette 2003, borne basse (M EUR)",20.8908,21,21,\QoneValRangeLow,OK,
+"Fourchette 2003, borne haute (M EUR)",48.9489,49,49,\QoneValRangeHigh,OK,
+Valeur de toute la récolte 2003 au prix Eurostat (M EUR),440.883,441,441,\ProdValTwoThousandThreeEurostat,OK,
+"Valeur 2019, écart observé (M EUR)",40.2557,40,40,\QoneValObsNineteen,OK,
+"Valeur 2022, écart observé (M EUR)",64.76,65,65,\QoneValObsTwentyTwo,OK,
+Écart prédit en 2003 avec terme quadratique (log),0.203379,0.203,0.203,\QuadPredThree,OK,
+"Écart prédit en 2003, modèle linéaire (macro du § 7.10)",0.202455,0.202,0.202,\LinPredThree,OK,
+Écart observé en 2003 (macro du § 7.10),0.172303,0.172,0.172,\ObsThree,OK,
+"Non irrigué dérivé de la production, 2000-2009 (%)",53.3333,53,53,\SplitDerivOld,OK,
+"Non irrigué dérivé de la production, 2010-2025 (%)",57.037,57,57,\SplitDerivNew,OK,
+"Paires sans non irrigué dérivé, dans l'estimation",191,191,191,\SplitNoDerivN,OK,"193 paires, dont les années à une seule paire retirées par fixest"
+Couples fourrage / grain communs,400,400,400,\FodderPairsN,OK,
+Couples au rapport identique au grain,50,50,50,\FodderSameN,OK,

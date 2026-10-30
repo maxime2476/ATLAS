@@ -1,0 +1,4 @@
+"inference","taille_5pct","R","n_regions","n_annees"
+"cluster_region",0.203333333333333,300,40,25
+"cluster_annee_cr1",0.05,300,40,25
+"wcr_annee",0.05,300,40,25

@@ -1,0 +1,102 @@
+\section{Measuring heat exposure}
+\label{sec:exposure}
+
+The exposure variable answers a precise question: how much time did the crop spend above a damaging temperature, and how far above it? Building it involves three choices: how to recover sub-daily temperatures from a daily minimum and maximum, over which weeks to count, and over which fields to average. This section documents each choice and how much information the resulting exposure carries.
+
+\subsection{From daily minimum and maximum to degree-days}
+
+SIM2 gives, for each cell and day, a minimum temperature \texttt{TINF\_H} and a maximum \texttt{TSUP\_H}, each taken over a 24-hour window. The documentation does not say whether the window attached to day $J$ starts on day $J$ or the day before. The choice matters, because a degree-day calculation pairs the minimum of one morning with the maximum of the following afternoon.
+
+I settled the question with the data. The daily mean temperature \texttt{T} has an unambiguous window (midnight to midnight). If \texttt{TSUP\_H}($J$) describes the afternoon of day $J$, its day-to-day changes should move with those of \texttt{T} on the same day $J$, not on $J-1$ or $J+1$. \Cref{tab:convention} shows the correlations over all cells in 2009. Both variables move most with day $J$. The rule adopted is therefore: $T_{\min}(J) = \texttt{TINF\_H}(J)$, the minimum of the morning of $J$, and $T_{\max}(J) = \texttt{TSUP\_H}(J)$, the maximum of the afternoon of $J$. The same check on 2022 gives the same answer.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Which day do SIM2 minimum and maximum temperatures belong to?}
+\label{tab:convention}
+\begin{threeparttable}
+\begin{tabular}{lrrr}
+\toprule
+Correlation of the daily change with $\Delta\texttt{T}(J+k)$ & $k=-1$ & $k=0$ & $k=+1$ \\
+\midrule
+$\Delta\texttt{TINF\_H}(J)$ & \ConvTinfLag & \textbf{\ConvTinfSame} & $\ConvTinfLead$ \\
+$\Delta\texttt{TSUP\_H}(J)$ & $\ConvTsupLag$ & \textbf{\ConvTsupSame} & \ConvTsupLead \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item All \SimCells{} cells, 365 days of 2009. Differences remove the persistence of temperature.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\paragraph{Double sine.} Within a day, temperature is approximated by two half-sine curves: one rising from $T_{\min}(J)$ to $T_{\max}(J)$, one falling from $T_{\max}(J)$ to $T_{\min}(J+1)$. For a full sine between $a$ and $c$, with mean $M = (a+c)/2$ and amplitude $A = (c-a)/2$, the average excess over a threshold $b$ has a closed form \parencite{baskerville1969}; the double-sine construction follows \textcite{gammans2017}:
+\begin{equation}
+S(a, c; b) =
+\begin{cases}
+M - b & \text{if } b \le a,\\[2pt]
+\dfrac{(M - b)\left(\frac{\pi}{2} - \theta\right) + A\cos\theta}{\pi}, \quad \theta = \arcsin\dfrac{b - M}{A} & \text{if } a < b < c,\\[8pt]
+0 & \text{if } b \ge c.
+\end{cases}
+\end{equation}
+A half-cycle has the same average as the full cycle with the same bounds, so the degree-days of day $J$ above $b$ are
+\begin{equation}
+\mathrm{DD}_b(J) = \tfrac{1}{2}\, S\big(T_{\min}(J), T_{\max}(J); b\big) + \tfrac{1}{2}\, S\big(T_{\min}(J+1), T_{\max}(J); b\big).
+\end{equation}
+The implementation is tested against an independent numerical integration and on limit cases (\cref{app:degree_days}). The maize models use extreme degree-days above 32\,$^{\circ}$C, written \ddthirtytwo; the wheat models also use growing degree-days between 0 and 32\,$^{\circ}$C, $\mathrm{DD}_{>0} - \ddthirtytwo$.
+
+\paragraph{Limits.} The real daily cycle is not sinusoidal: temperature rises fast in the morning and falls slowly in the evening. The variable is air temperature at 2~m, not canopy temperature. And an 8~km reanalysis may smooth local extremes, so \ddthirtytwo{} may understate the heat measured at stations. A partial check is consistent with this: computed in the same way from E-OBS, a grid interpolated from station records, July--August degree-days above 32\,$^{\circ}$C are higher, on average over 2000--2025, in every department of the main maize sample (\cref{sec:maize}). E-OBS is itself an interpolation, so this is not a comparison with stations.
+
+\subsection{Over which weeks}
+
+Windows are fixed calendar periods, chosen before any estimation.
+\begin{itemize}
+  \item \textbf{Maize:} July and August, chosen to cover flowering and early grain filling.
+  \item \textbf{Wheat,} harvest year $t$: autumn (September to November of $t-1$), winter (December of $t-1$ to February), spring (March--April) and grain filling (May--June; strictly, heading to grain filling, since flowering falls in late May or early June in the main cereal-growing region; \cite{noiajunior2025}). Extreme heat is counted in the grain-filling window.
+\end{itemize}
+Fixed windows ignore the shift of crop stages from year to year and across regions; \textcite{leroux2024} show how earlier phenology can avoid part of the water deficit. This is a known limitation of the design (\cref{sec:discussion}).
+
+For wheat, the threshold of 32\,$^{\circ}$C came with a fallback rule: if the exposure carried too little information ($N_{\mathrm{eff}} < 4$, see below), the threshold would drop to 30\,$^{\circ}$C. The rule did not trigger, but narrowly: $N_{\mathrm{eff}} = \NeffWheatExact$, and \NeffWheatNoTwentyFive{} without the provisional year 2025. For maize, the threshold was set at 32\,$^{\circ}$C in the plan, with 30\,$^{\circ}$C as a robustness check; for French maize, \textcite{hawkins2013} find yield losses on days with a maximum above 32\,$^{\circ}$C (days, not degree-days).
+
+\subsection{Over which fields}
+
+Each cell-day value is first computed on the grid, then averaged over each department. The weights decide where in the department the heat is measured.
+\begin{itemize}
+  \item \textbf{Crop mask (main measure).} Each parcel of the RPG is attached to the cell and the department that contain its centroid. The weight of a cell in a department is its share of the department's maize (or wheat) area, averaged over 2015--2017 and kept fixed over the whole period, so that weights cannot respond to the weather.
+  \item \textbf{Department area (alternative).} The weight of a cell is the share of the department's surface that it covers, whatever is grown there. The resulting measure is called department-wide weather below.
+\end{itemize}
+For maize, a third measure uses the 2008 blocks of RPG version 1.0 with the same rule, to check whether the 2015--2017 mask is too recent for the 2000s.
+
+\subsection{How much information does the exposure carry?}
+
+With department and year fixed effects, the coefficient on \ddthirtytwo{} is identified by how much each department's heat deviates from both its own average and the national average of the year. If one summer carries almost all of that variation, the estimate rests on that summer alone.
+
+I summarise this with an effective number of years. Let $s_t$ be the share of year $t$ in the residual variance of \ddthirtytwo{} after removing department and year means. Then
+\begin{equation}
+N_{\mathrm{eff}} = \frac{1}{\sum_t s_t^2}.
+\end{equation}
+$N_{\mathrm{eff}}$ equals the number of years if they contribute equally and 1 if a single year carries everything. It is a description of the design, computed before the estimates of each phase.
+
+The numbers are small. For wheat over 2010--2025, $N_{\mathrm{eff}} = \NeffWheat$ years out of 16; extending the series to 1959--2025 only raises it to \NeffWheatLong{} out of 67, because very hot early summers remain rare. For maize over 2000--2025, $N_{\mathrm{eff}} = \NeffMaize$ out of 26, and 2003 alone carries \NeffMaizeShareTwoThousandThree\,\% of the residual variance. In the estimated model, with the area weights and soil moisture, the concentration is stronger: 2003 carries \LevThree\,\% of the residual variation of heat ($N_{\mathrm{eff}} = \NeffLevAll$), and \LevThreeEarly\,\% within 2000--2009 (\cref{subsec:maize-inference}). \Cref{fig:projections} shows how far 2003 stands above the other summers since 1976. These figures set expectations: whatever the method, the information on heat comes from a handful of summers. They are also why the choice of inference matters so much (\cref{sec:inference}).
+
+\subsection{Why the mask matters in departments with uplands}
+
+\textcite{benari2018} found no difference between the climate of whole departments and that of their cropland in the main cereal-growing region. For maize in the main sample, the choice turns out to matter a great deal, but only in some departments. \Cref{tab:relief} compares the heat of July--August 2003 under the three measures.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Degree-days above 32\,$^{\circ}$C in July--August 2003, by measure (main maize sample)}
+\label{tab:relief}
+\begin{threeparttable}
+{\footnotesize\setlength{\tabcolsep}{4pt}\input{tables/relief}}
+\begin{tablenotes}\footnotesize
+\item Degree-days above 32\,$^{\circ}$C by double sine, summed over July--August 2003, averaged over each department with weights from the 2015--2017 maize parcels (mask 2015--17), the 2008 maize blocks (mask 2008) or the surface of the department (dept.\ area). ``Area $-$ mask'': department area minus the 2015--2017 mask; negative values mean that department-wide weather understates the heat of maize fields. Mean altitude of the grid cells, from the IGN altimetry service, with the same weights. The altitude and degree-day gaps quoted in the text are computed before rounding, so they can differ by one unit of the last digit from the difference of the two rounded columns. Sorted by ``Area $-$ mask''.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+The two maize masks, drawn about eight years apart, agree closely, except in the Rhône, where the 2008 mask gives \ReliefRhoneMaskGap{} fewer degree-days in 2003. The department-wide measure departs from them mainly in \ReliefCount{} departments: Puy-de-Dôme, Isère, Drôme, Jura, Rhône and Ain. In 2003 it shows up to \ReliefGapMax{} fewer degree-days than the maize mask.
+
+The altitude columns explain why. In these \ReliefCount{} departments, the average maize field lies \ReliefAltDiffMin{} to \ReliefAltDiffMax{}~m below the average altitude of the department: maize is grown in the plains and valleys, while much of the department is upland where no maize grows. A department-wide average then measures largely the heat of the uplands. Across the 17 departments, the gap in measured heat and the gap in altitude, both computed as department area minus maize mask, have a correlation of $\ReliefAltCorr$. I looked for this explanation after seeing the results, so it is a description, not a test; but it is checked on the data rather than assumed.
+
+Elsewhere the measures are close, with one exception in the other direction: in the Yonne, the department-wide measure is \ReliefYonneGap{} degree-days higher than the maize mask. The consequences for the main result are reported in \cref{sec:maize}.

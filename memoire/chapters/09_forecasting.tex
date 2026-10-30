@@ -1,0 +1,80 @@
+\section{Forecasting wheat yields}
+\label{sec:forecasting}
+
+The econometric question asks whether heat is associated with yields. A separate, practical question is whether the weather known before harvest helps to predict them. This section answers it with a strictly chronological protocol. The answer is no, at least not better than the simplest benchmark.
+
+\subsection{Protocol}
+
+The protocol was fixed in a specification written before any forecast was computed (\cref{tab:specs}).
+\begin{itemize}
+  \item \textbf{Target and sample.} The log yield of soft wheat in the 83 departments of the main sample.
+  \item \textbf{Forecast dates.} 1 June and 1 July of the harvest year. Only weather up to the day before is used: autumn, winter, spring, and May (on 1 June) or May--June (on 1 July). Nine variables per window give 36 variables, fixed by the protocol.
+  \item \textbf{Validation.} Rolling origin: for each test year $t$ from 2016 to 2025, models are trained on 2010 to $t-1$, between 6 and 15 years. Department means, trends, standardisation and hyperparameters are all estimated within the training years. A variant trains from 1990 with the long wheat series.
+  \item \textbf{Benchmarks.} B0 is the mean log yield of the department over the training years. B1 adds a common linear trend.
+  \item \textbf{Models.} Each model predicts the residual of B1 from the weather variables: ordinary least squares on the variables of model M1, ridge regression, a random forest and gradient boosting. Their settings are those of the protocol; only the ridge penalty is tuned, by an inner leave-one-year-out loop on the training years. The penalty chosen is the largest of the protocol's grid in \AlphaTopFolds{} of the \AlphaFolds{} folds: the ridge would probably need more shrinkage than the grid allows, which weighs on its results; the grid was not changed after the fact.
+  \item \textbf{Uncertainty.} The difference in mean squared error between a model and a benchmark is given with a 95\,\% interval over the 10 test years. The specification planned a percentile bootstrap over test years, each year (83 departments) drawn as a whole; it is not a moving-block bootstrap, and it ignores any dependence between test years. With only 10 years, that interval is about 18\,\% narrower than a Student interval with 9 degrees of freedom, so it understates the uncertainty. After the results, I also report the Student interval and a sign test, and call a difference significant only when the Student interval excludes zero (\cref{app:deviations}). The bootstrap intervals remain in the project tables.
+\end{itemize}
+Tests check automatically that no variable uses information from after the forecast date. Some leakage cannot be removed: the SAA series were revised after the 2020 census, SIM2 is a reanalysis, the wheat mask comes from 2015--2017, and the 2025 yields are provisional. The sample itself is chosen with information later than some test years (the quality status published in 2025), so the exercise is a pseudo-real-time test, not a real-time one. Two smaller points: the degree-days of the last day before the forecast date use the next day's minimum temperature, which SIM2 measures until 18:00 UTC on the forecast day itself; and the inner loop that tunes the ridge penalty leaves out one training year at a time, so it uses training years later than the one left out, and the trend, centring and scaling it works on are estimated with that year included, which makes the choice of penalty slightly optimistic. The first adds a few hours of weather after the forecast date; neither uses the yields of the test year.
+
+\subsection{The benchmark that matters}
+
+The specification compared models with B1. Under that criterion, the random forest on 1 July formally qualifies as a gain: a skill of \RfVsBoneSkill\,\% with an interval excluding zero. But B1 turned out to be a weak benchmark: B0, the plain department mean, beats B1 in all \BzeroBeatsBone{} test years (sign test $p = \BzeroBeatsBoneP$), because French wheat yields have plateaued (\cref{fig:wheat-yield}), so extending a trend hurts. I decided, after seeing these results, to add the comparison with B0, a benchmark already defined in the specification, and logged this change (\cref{app:deviations}). The results against B1 remain in the project tables.
+
+There is a second consequence. The weather models were built, as specified, as corrections to B1, so they inherit its handicap: B1 itself is far worse than B0 (\cref{tab:forecast}). The comparison below therefore tests the models of the protocol, not the value of weather as such. A model that corrects B0 instead of B1 was evaluated afterwards, on the same test years (\cref{subsec:forecast-v12}); it can only suggest what to test on new years.
+
+\subsection{Results}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Forecast skill relative to the department mean (B0), test years 2016--2025}
+\label{tab:forecast}
+\begin{threeparttable}
+\input{tables/forecast}
+\begin{tablenotes}\footnotesize
+\item Skill $= 1 - \mathrm{MSE}/\mathrm{MSE}(\mathrm{B0})$, on log yield, weighted by area. Interval: 95\,\% Student interval of the mean difference over the 10 test years; $^*$: excludes zero. Positive values in the interval mean worse than B0. The protocol's bootstrap gives narrower intervals: with it, B1 is also significantly worse than B0, which it is not with the Student interval (B1 uses no weather, so its forecasts are the same at both dates and count as one comparison); its 0 years out of 10 better than B0 give a sign test $p = \BzeroBeatsBoneP$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\Cref{tab:forecast} gives the answer.
+\begin{itemize}
+  \item \textbf{Training from 2010:} every model does worse than B0 on average, by \ForecastBestPct\,\% to \ForecastWorstPct\,\%, and the OLS model is significantly worse.
+  \item \textbf{Training from 1990:} ridge, random forest and gradient boosting do better than B0 on average, but their intervals include zero over 10 test years.
+\end{itemize}
+No model of the protocol is significantly better than the department mean. These averages rest largely on two years: 2016 alone accounts for \BzeroMseShareSixteen\,\% of the mean squared error of B0, and 2016 and 2024 together for \BzeroMseShareTwoYears\,\%.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig3_prevision_par_annee.pdf}
+\caption{Forecast error by test year on 1 July: department mean (B0) and gradient boosting with weather and NDVI. Each model is trained only on the years before the test year.}
+\label{fig:forecast-year}
+\end{figure}
+
+\subsection{Adding satellite data}
+
+A natural objection is that weather describes the conditions, not the crop. The NDVI, a satellite index of green vegetation, describes the crop itself. I added MODIS NDVI at 250~m (16-day composites from April to June), aggregated to SIM2 cells and then to departments with the wheat mask. A composite is used only if its 16-day period ends before the forecast date, a rule checked by an automated test. The rule guarantees that the observation period is over, not that the product was already published: MODIS composites are distributed with a delay, and I use the reprocessed collection 6.1, so this part is also pseudo-real-time. The monthly means use the composites starting in April, May or June; the maximum also includes the composite of 22 March to 6 April, as the protocol defines it (all usable composites).
+
+\begin{table}[H]
+\centering
+\small
+\caption{What NDVI adds to each model, training from 2010}
+\label{tab:ndvi}
+\begin{threeparttable}
+\input{tables/ndvi}
+\begin{tablenotes}\footnotesize
+\item Gain: $1 - \mathrm{MSE}(\text{with NDVI})/\mathrm{MSE}(\text{without})$. Interval: 95\,\% Student interval of the MSE difference with minus without, over the 10 test years; $^*$: excludes zero. The protocol's bootstrap interval excludes zero in \NdviSigBoot{} of the 6 cases.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+NDVI may help each model a little: the gain over the same model without NDVI is positive in all \NdviTot{} cases, from \NdviGainMin{} to \NdviGainMax\,\%, but the Student interval excludes zero in \NdviSig{} of the \NdviTot{} cases over ten test years (\NdviSigBoot{} with the narrower bootstrap interval of the protocol; the best sign test gives $p = \NdviSignMinP$). The one significant case, the random forest on 1 June, depends on the random seed: with another seed, no case was significant (4 with the bootstrap) and the best sign test gave $p = 0.109$. The largest gain, for ridge on 1 July, mostly reflects the stabilisation of a model that was unstable without NDVI. But no model with NDVI does better than the department mean, even on average (\cref{tab:ndvi}, last column). The NDVI is measured on 8~km cells weighted by wheat, not on wheat parcels alone, so it mixes crops.
+
+\subsection{What the forecasting results mean}
+
+With 6 to 15 training years, the models of the protocol are not significantly better than a well-chosen naive benchmark, and NDVI adds a small improvement to each of them, too small to be distinguished reliably from noise over ten years (significant in one case out of six, and only with one of the two random seeds tried), without changing that conclusion. This is consistent with earlier warnings that validation on future years is much harder than cross-validation \parencite{gouache2015,morales2023}. The main methodological point is the benchmark: had I kept the protocol's comparison with B1 alone, I would have reported a forecasting gain over B1 that is not a gain over the simplest forecast. Whether weather can improve on B0 itself remains open.
+
+\subsection{Correcting the department mean}
+\label{subsec:forecast-v12}
+
+The previous section left open whether weather can improve on B0. An analysis added later addresses it; it uses test years that had already been seen, so it is exploratory. Tree models built as corrections to B0 instead of B1, with the same 36 variables and the same settings, do better than B0 by \BzeroTreeMin{} to \BzeroTreeMax\,\% in mean squared error. But the 95\,\% Student interval excludes zero in \BzeroTreeSig{} of the 4 cases (\BzeroTreeSigBoot{} with the narrower bootstrap interval), and the best sign test gives $p = \BzeroTreeSignMinP$ (the random forest on 1 July, better than B0 in 9 of the 10 years; $p = 0.109$ with another seed). The sign test rejects for one model, the Student interval for none, and the first depends on the seed: over ten test years, the gain cannot be reliably told apart from noise. Ridge regression does worse. This remains the most promising forecasting lead of the project, not a result: it was found after B1 had been seen to fail on the same years, and it needs confirmation on new harvests, with this protocol fixed. The 2026 forecast was computed in the same run that read the early estimates of the 2026 harvest (its provisional wheat yields are not used, but it is not blind), so 2027 will be the first prospective year; the confirmation will rest on the Student interval, the bootstrap being too narrow with five years (\cref{app:deviations}).

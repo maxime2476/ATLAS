@@ -1,0 +1,6 @@
+"diagnostic","taux","R","erreur_monte_carlo"
+"H1, placebo intra-année",0.04,300,0.0113137084989848
+"H2b (non irrigué), dérangement",0.0333333333333333,300,0.010363754503432
+"H2c (irrigué), dérangement",0.0566666666666667,300,0.0133486023682326
+"rappel H1, dérangement (R/14)",0.0366666666666667,300,0.0108508405545718
+"matrices de Conley corrigées (dérangement)",0.273333333333333,300,0.0257308001055947

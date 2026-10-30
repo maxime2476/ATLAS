@@ -1,0 +1,65 @@
+\section{Related literature}
+\label{sec:literature}
+
+This monograph sits where four literatures meet: the effect of heat on crop yields, how irrigation changes the response to heat, inference when shocks are shared across space, and yield forecasting. The review below is targeted, not exhaustive. For each strand I say what is known and what remains open for France.
+
+\subsection{Heat and crop yields}
+
+The modern empirical literature starts from a simple observation: yields respond to heat in a strongly non-linear way. Using United States counties, \textcite{schlenker2009} show that yields of maize, soybeans and cotton rise slowly with temperature up to a threshold of about 29 to 32\,$^{\circ}$C, depending on the crop, and fall steeply above it. The same relation appears in time series and in cross-section. This is why the analysis below separates ordinary growing degree-days from degree-days above a high threshold. Revisiting the question with recent reanalysis data, \textcite{hogan2024} conclude that correctly capturing daily extremes matters more than the choice of weather data set. I read this as support for building extremes at the level of the grid cell and the day before aggregating, as done here (\cref{sec:exposure}), although the study does not compare orders of aggregation directly.
+
+For France, the effect of heat on cereals is established. \textcite{gammans2017} estimate the response of wheat and barley yields to the full distribution of temperatures over 1950--2015, with department fixed effects, regional quadratic trends and spatially corrected standard errors. All yields fall when spring and summer temperatures rise. The authors also name two limits that matter here. Their data contain little exposure above 34\,$^{\circ}$C, and temperature anomalies may stand in for dry spells, which soil-moisture data would be needed to rule out. \textcite{ceglar2016} relate monthly weather to the year-to-year variability of wheat and maize yields department by department and find strong regional heterogeneity; for maize, irrigation masks the rainfall signal in dry years. \textcite{benari2018} study the unforeseen 2016 wheat loss in the main cereal-growing region, and \textcite{noiajunior2025} attribute past and projected wheat losses in the same region to climate and diseases with a random forest.
+
+Two related questions are not the object of this monograph but shape its reading. The first is the role of water, which \cref{subsec:maize-vpd} examines through checks with the vapour pressure deficit and irrigation volumes. For United States maize, \textcite{lobell2013} argue with a crop model that the damage associated with extreme heat runs largely through the water demand of hot, dry air, measured by the vapour pressure deficit, and through the soil water stress it causes. Heat and drought also tend to occur together, and their joint occurrence does more damage than either alone \parencite{haqiqi2021,lesk2022}. \textcite{rigden2020} find that United States maize yields are predicted better by the combination of atmospheric evaporative demand and soil moisture than by temperature and precipitation, and that a projection driven by atmospheric demand alone would indicate about twice the damage. Using irrigated maize, where soil moisture deficits are largely removed, \textcite{carter2016} find no direct negative effect of daytime air temperature on the yields of irrigated contest fields in Nebraska, Kansas and Missouri, which points the same way. In a crop-model ensemble for Europe, \textcite{webber2018} find that drought, not heat, drives the projected losses of grain maize. In United States counties, \textcite{ortizbobea2019} find that water stress matters for historical yields while direct heat dominates projections; for German districts, \textcite{lischeid2022} find soil moisture less relevant than meteorological drivers. The second is adaptation: \textcite{merel2021} examine when panel estimates of short-run weather effects can inform long-run responses. The estimates below are short-run responses to weather shocks, and I do not claim more.
+
+\subsection{Irrigation and heat sensitivity}
+
+Abroad, several studies compare irrigated and rainfed yields more directly.
+\begin{itemize}
+  \item In the United States, \textcite{schauberger2017} find that each day above 30\,$^{\circ}$C costs rainfed maize up to about 6\,\% of yield, and irrigated maize much less.
+  \item County statistics in the United States report yields separately for irrigated and rainfed land, as the French ones do. With them, \textcite{troy2015} find that irrigation reduces the yield response to every climate extreme they examine, including heat; \textcite{li2018} compare the two across counties of the western United States; and \textcite{luan2021} find that irrigation alleviates both heat and water stress and, for maize, reverses the response to temperature. A graduate thesis using the same paired yields argues that temperature predictors absorb part of the effect of water stress in statistical crop models \parencite{hunter2026}. With crop-insurance losses, \textcite{pinto2026} find the residual effect of extreme heat on irrigated maize indistinguishable from zero (a conference paper, not yet peer reviewed).
+  \item In India, \textcite{zaveri2019} estimate that irrigated wheat has about a quarter of the heat sensitivity of fully rainfed wheat.
+  \item In Kansas field trials, \textcite{tack2017} find that irrigation fully offsets the yield loss that warming causes to dryland wheat in their sample.
+  \item Irrigation acts through two channels. With satellite land-surface temperature for Nebraska maize, \textcite{zhu2022} attribute about two thirds of the yield benefit of irrigation to relieved water stress and one third to relieved heat stress, through cooling that air temperature does not show. For Europe, \textcite{siebert2017} show that heat stress computed from air temperature is overestimated on irrigated land. Both points matter here: the heat measure below is air temperature, the same for irrigated and rainfed fields.
+\end{itemize}
+
+For France, the evidence is indirect. \textcite{hawkins2013} document the growing influence of heat on French maize yields since the 1960s and infer a role for irrigation from the declining sensitivity of yields to rainfall. \textcite{vandervelde2010} simulate irrigated and rainfed maize with the EPIC crop model during the 2003 heatwave, weight the simulations by regional irrigated shares and check them against reported regional yields, and \textcite{vandervelde2012} evaluate regional crop simulations against observed yields in extreme years. None of these studies compares observed irrigated and rainfed yields within the same department and year. That comparison is the core of this monograph. Its design is not new: it follows the American studies above. What it adds is the French case, the gap within the same unit and year, a heat measure built on the parcels where maize grows, and tests whose size is measured on the data.
+
+\subsection{Inference when shocks are shared}
+
+Weather is a common shock. A hot summer raises temperatures in most departments at once, and it lowers yields in most of them at once. The resulting correlation across units within a year is not removed by year fixed effects, which only remove its average, whenever the intensity of the shock varies across space.
+
+Two standard responses exist. The first is to allow for spatial correlation within a distance cut-off, following \textcite{conley1999}. The second is to cluster by time period. Clustering by period leaves few clusters. \textcite{cameron2008} show that tests based on clustered standard errors can over-reject with few clusters (five to thirty), and that a wild cluster bootstrap-$t$ performs much better. \textcite{webb2023} proposes a six-point weight distribution for the case of very few clusters, and \textcite{mackinnon2017} study how the wild cluster bootstrap behaves when cluster sizes differ widely. This monograph uses the restricted wild cluster bootstrap-$t$ of \textcite{cameron2008}, with years as clusters and the weights of \textcite{webb2023}. \textcite{mackinnon2023} review these methods and also recommend the cluster jackknife (CV3) when a few clusters carry much of the leverage, as 2003 does here; it is reported as a check.
+
+\textcite{barrios2012} show that standard errors clustered at one level are valid when the variable of interest is, like a randomly assigned treatment, uncorrelated across clusters, and that spatial correlation in that variable can make them misleading; heat is strongly correlated across departments within a summer. \textcite{mackinnon2023summclust} provide diagnostics of cluster leverage, and \textcite{muller2022} a spatial-correlation robust test whose large-sample validity is shown for weak average correlation; a shock shared by the whole country in the same year is better handled by clustering on the year. Measuring how often a test rejects a true null with placebo treatments is an established practice: \textcite{bertrand2004} generate placebo laws in state panels and find ``significant'' effects for up to 45\,\% of them, and \textcite{mackinnon2017} also simulate placebo laws. I apply this practice to weather panels, with a placebo that keeps the real spatial structure of each year's exposure, run on the data of each question (\cref{sec:inference}). The answer turns out to decide which conclusions can be drawn.
+
+\subsection{Forecasting yields out of sample}
+
+The forecasting literature warns that validation design drives reported performance.
+\begin{itemize}
+  \item \textcite{gouache2015} build an operational forecasting tool for French departmental wheat yields. On new years (2011--2014), its errors are about twice as large as in leave-one-year-out cross-validation.
+  \item \textcite{paudel2021} stress the absence of information leakage and the comparison with naive benchmarks in large-scale machine-learning forecasts for European regions.
+  \item \textcite{morales2023} find that, with a time-ordered split, even a random forest has only a limited advantage over a sensible benchmark.
+\end{itemize}
+In the wheat studies reviewed above, variables, thresholds or trends are chosen in sample, on the same years as the results reported \parencite{benari2018,noiajunior2025}; they were not designed as out-of-sample forecasts. \Cref{sec:forecasting} therefore uses a strictly chronological protocol in which everything is estimated within each training window.
+
+\subsection{Where this monograph fits}
+
+\Cref{tab:positioning} summarises the position of this work. Its contribution is a French application of established designs, with particular attention to inference and to measurement. It is not a new method, and on wheat its estimate has the expected sign but cannot be distinguished from zero.
+
+\begin{table}[H]
+\centering
+\small
+\caption{What is known and what this monograph adds}
+\label{tab:positioning}
+\begin{tabular}{>{\raggedright}p{3.3cm}>{\raggedright}p{5.4cm}>{\raggedright\arraybackslash}p{5.4cm}}
+\toprule
+Question & Known & Added here \\
+\midrule
+Heat and French cereal yields & Established for 1950--2015 \parencite{gammans2017} & Wheat 1959--2025: negative but not distinguishable from zero with a correctly sized test \\
+Irrigation and heat sensitivity & Direct evidence abroad, from county yields reported by irrigation status (United States); indirect evidence for France & Within-department, within-year comparison of observed irrigated and rainfed maize yields, 2000--2025 \\
+Measuring exposure & Cropland weights or no mask; no difference found in the cereal belt \parencite{benari2018} & In departments with uplands, weighting by maize parcels changes the result \\
+Inference & Wild cluster bootstrap with few clusters & Size of every main test measured on its own data \\
+Forecasting & Validation design matters & Strictly chronological protocol: no model significantly better than the department mean \\
+\bottomrule
+\end{tabular}
+\end{table}

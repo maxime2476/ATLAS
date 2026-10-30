@@ -1,0 +1,10 @@
+variante,date,alpha_ridge,n_plis
+longue_1990,juillet,1000.0,6
+longue_1990,juillet,0.1,4
+longue_1990,juin,1000.0,10
+principale_2010,juillet,1000.0,7
+principale_2010,juillet,100.0,2
+principale_2010,juillet,0.1,1
+principale_2010,juin,1000.0,4
+principale_2010,juin,0.1,4
+principale_2010,juin,100.0,2

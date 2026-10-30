@@ -1,0 +1,19 @@
+\section{The \texttt{wcr} module}
+\label[appendix]{app:wcr}
+
+The bootstrap and the size check are released as a stand-alone R file (\texttt{R/wcr/wcr.R}), which depends only on \texttt{fixest}. The project's own scripts use it, and their results were checked to be identical, to the last digit, before and after the code was moved into the module (sizes were later recomputed after the seed change; see below).
+
+\paragraph{Functions.}
+\begin{itemize}
+  \item \texttt{wcr\_pvalue(data, y, x, z, fe, cluster, weights, B, seed)}: restricted wild cluster bootstrap test of one coefficient. It returns the observed $t$, the symmetric two-sided $p$-value and the two one-sided $p$-values.
+  \item \texttt{wcr\_wald\_pvalue(...)}: the same for a joint test of several coefficients, with a Wald statistic.
+  \item \texttt{placebo\_size(data, x, unit, period, tests, R, alpha, seed)}: replaces the exposure with the observed field of another period (a derangement of periods), applies any list of tests and returns their rejection rates.
+\end{itemize}
+
+\paragraph{Method.} The fixed effects and the other regressors are partialled out by weighted least squares (Frisch--Waugh--Lovell). Restricted residuals are multiplied by six-point weights drawn by cluster \parencite{webb2023}, and each simulated outcome is projected again on the fixed effects and the other regressors. The $t$-statistic uses cluster-robust standard errors without the small-sample factor, which is the same for the observed and the simulated statistics and cancels out. The demeaning runs to a tolerance of $10^{-12}$ rather than the \texttt{fixest} default of $10^{-6}$, so that the re-projection matches a full re-estimation to machine precision.
+
+\paragraph{Example.} \texttt{R/wcr/exemple.R} simulates 40 regions over 25 years with a spatially correlated random field of exposure and of outcome each year, and no true effect. Over 300 panels, clustering by region rejects in \ExRegion\,\% of cases, clustering by year in \ExCrOne\,\% and the bootstrap by year in \ExWcr\,\% (\cref{sec:inference}).
+
+\paragraph{A bug worth knowing about.} In early drafts, \texttt{wcr\_pvalue} set the global random seed at each call. In one draft of \texttt{placebo\_size}, the permutations were drawn inside the loop, after each call, so every permutation after the first was identical. The function now draws all permutations before running the tests and reports how many are distinct. All functions of the module now draw under a local seed and restore the caller's random state, so a call inside a simulation loop leaves the loop's own draws unchanged. The placebo sizes of the project were recomputed after this change (\cref{app:deviations}); they moved within Monte Carlo error. The equivalence of the re-projection with a full re-estimation, to less than $10^{-12}$, is checked by \texttt{tests/test\_r\_inference.R}.
+
+\paragraph{Limits.} The test handles one-way clustering and one coefficient, or one joint test, at a time. The placebo keeps the outcome fixed and only permutes the observed fields of exposure, so with few periods it is a diagnostic, not a proof, and it cannot detect over-rejection due to serial correlation (\cref{sec:inference}).

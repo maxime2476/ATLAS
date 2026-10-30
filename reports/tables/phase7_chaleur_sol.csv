@@ -1,0 +1,3 @@
+"specification","terme","estimation","se_cluster_dep","p_cluster_dep","se_conley","p_conley","conley_km","conley_non_dp_corrigee","p_wcb_annee","p_wcb_annee_unilateral_gauche","n_grappes_annee","effet_pct_par_unite","effet_pct_exposition_2019","n","r2_within","p_wcb_annee_unilateral_droite","ecart_type_swi_intra"
+"chaleur x SWI (centré)","dd32_x_swi",-0.109074488482903,0.0343798983056316,0.00590787161047112,NA,NA,200,TRUE,0.198019801980198,0.0983098309830983,26,NA,NA,435,0.122839751729694,0.901690169016902,0.129494775175159
+"pente de la chaleur au SWI moyen","dd_32_ja",0.00126967479792755,0.00680049104023541,0.854239996179951,NA,NA,200,TRUE,0.918291829182918,0.544054405440544,26,0.127048117621698,NA,435,0.122839751729694,0.455945594559456,0.129494775175159

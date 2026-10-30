@@ -1,0 +1,5 @@
+"specification","estimation","n","p_wcb_annee","p_wcb_annee_unilateral_droite","p_unilateral_droite_2x_mediane","estimation_min","estimation_max","part_p_unilateral_inf_005","se","p_unilateral_droite"
+"DML (forêts aléatoires, 5 plis par années, médiane de 50 découpages)",0.0134087062814284,435,0.0539053905390539,0.0281528152815281,0.0563056305630563,0.0107184469445385,0.0172442666863836,0.9,NA,NA
+"DML, variante Mundlak (médiane de 50 découpages)",0.0123263172064519,435,NA,0.0351535153515352,0.0703070307030703,0.00961673919241768,0.0170458221081564,0.82,NA,NA
+"jackknife par année (CV3)",0.0157778591926995,435,NA,NA,NA,NA,NA,NA,0.0105663963880881,0.0739481322240312
+"randomisation (5 000 dérangements, stat. beta)",0.0157778591926995,435,NA,NA,NA,NA,NA,NA,NA,0.0018

@@ -1,0 +1,3 @@
+"specification","terme","estimation","se_cluster_dep","p_cluster_dep","se_conley","p_conley","conley_km","conley_non_dp_corrigee","p_wcb_annee","p_wcb_annee_unilateral_gauche","n_grappes_annee","effet_pct_par_unite","effet_pct_exposition_2019","n","r2_within","p_wcb_annee_unilateral_droite","n_departements"
+"A1 + interaction décennie 2000-2009","dd32_x_2000s",-0.0113081792723663,0.0129072007935436,0.393931607975295,NA,NA,200,TRUE,0.491249124912491,0.242924292429243,26,-1.12444821387603,NA,435,0.0987654571426043,0.757075707570757,17
+"A1 + interaction décennie, sans 2003","dd32_x_2000s",0.0106218098605434,0.0253785871946377,0.681120517345809,NA,NA,200,TRUE,0.764676467646765,0.614161416141614,25,1.0678421544871,NA,418,0.101547126208783,0.385838583858386,17

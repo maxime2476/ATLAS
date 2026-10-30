@@ -1,0 +1,2 @@
+"specification","terme","estimation","se_cluster_dep","p_cluster_dep","se_conley","p_conley","conley_km","conley_non_dp_corrigee","p_wcb_annee","p_wcb_annee_unilateral_gauche","n_grappes_annee","effet_pct_par_unite","effet_pct_exposition_2019","n","r2_within","p_wcb_annee_unilateral_droite"
+"Q1-R9 masque maïs 2008 (îlots RPG 1.0)","dd_32_ja",0.0152643544110957,0.0054231996811675,0.0124591769470285,NA,NA,200,TRUE,0.0131013101310131,0.993799379937994,26,1.53814497049392,NA,435,0.0906525554947102,0.00620062006200617

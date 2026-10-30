@@ -1,0 +1,2 @@
+"specification","terme","estimation","se_cluster_dep","p_cluster_dep","se_conley","p_conley","conley_km","conley_non_dp_corrigee","p_wcb_annee","p_wcb_annee_unilateral_gauche","n_grappes_annee","effet_pct_par_unite","effet_pct_exposition_2019","n","r2_within","p_wcb_annee_unilateral_droite","n_departements","moyenne_part"
+"part fourrage du maïs non irrigué ~ chaleur","dd_32_ja",0.000482280066326825,0.00301044302528308,0.874726776786419,NA,NA,200,TRUE,0.868186818681868,0.567656765676568,16,0.0482396382056161,NA,270,0.0161256073704334,0.432343234323432,17,0.276723241526417

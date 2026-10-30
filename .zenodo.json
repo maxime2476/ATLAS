@@ -1,0 +1,20 @@
+{
+  "title": "ATLAS: summer heat, irrigation and crop yields in France (code and pipeline)",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Gourguechon, Maxime"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "heat stress",
+    "irrigation",
+    "maize",
+    "France",
+    "panel data",
+    "wild cluster bootstrap",
+    "reproducibility"
+  ],
+  "description": "Reproducible pipeline (Python, R, DuckDB) and LaTeX sources of a research monograph on the association between summer heat and the irrigated-rainfed grain maize yield gap in French departments (2000-2025) and a placebo check of the empirical size of inference in panels with common weather shocks. Includes the stand-alone R module wcr. Raw data are not redistributed; download scripts and SHA-256 manifest are included. Licences: code under MIT; text of the monograph and documentation under CC BY 4.0; data sources keep their own licences (see NOTICE.md)."
+}

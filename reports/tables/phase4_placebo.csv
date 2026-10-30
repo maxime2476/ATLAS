@@ -1,0 +1,2 @@
+"specification","terme","estimation","se_cluster_dep","p_cluster_dep","se_conley","p_conley","conley_km","conley_non_dp_corrigee","p_wcb_annee","p_wcb_annee_unilateral_gauche","n_grappes_annee","effet_pct_par_unite","effet_pct_exposition_2019","n","r2_within"
+"Placebo t+1","dd_32_remplissage_lead",-0.00177330255359506,0.00499101491757083,0.723277909646799,0.00628513302333044,0.777885440476847,200,FALSE,0.905090509050905,0.451145114511451,15,-0.177173118159835,NA,1245,0.0933911305759847

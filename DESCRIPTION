@@ -1,0 +1,6 @@
+Type: project
+Title: ATLAS - partie R (économétrie)
+Description: Dépendances R déclarées pour renv (snapshot explicite).
+Imports:
+    fixest,
+    nanoparquet

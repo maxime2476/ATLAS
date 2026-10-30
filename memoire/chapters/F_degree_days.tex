@@ -1,0 +1,13 @@
+\section{Validation of the degree-day computation}
+\label[appendix]{app:degree_days}
+
+The closed form of \cref{sec:exposure} is implemented in Python and tested in four ways.
+
+\begin{itemize}
+  \item \textbf{Against numerical integration.} The test suite compares four cases with a tolerance of $10^{-4}$. The script that builds this monograph adds \DdCases{} random cases (minimum between $-10$ and 30\,$^{\circ}$C, a daily range of 0.5 to 20\,$^{\circ}$C, thresholds between 0 and 40\,$^{\circ}$C); the closed form is then compared with the numerical mean of $\max(T - b, 0)$ over 100,000 points of the sine cycle. The largest absolute difference is $\DdMaxErr$\,$^{\circ}$C$\cdot$day.
+  \item \textbf{Limit cases.} The result is $M - b$ when the threshold is below the minimum, zero when it is above the maximum, and $A/\pi$ when it equals the mean.
+  \item \textbf{Monotonicity.} Degree-days increase with the maximum temperature and decrease with the threshold.
+  \item \textbf{Double sine.} When the next morning's minimum equals today's, the double sine reduces to the single sine, which the test suite checks; a warmer next morning increases exposure.
+\end{itemize}
+
+Missing temperatures propagate as missing values rather than zeros. The calculation is done for each cell and day before any aggregation, so that the non-linearity of the threshold is applied to actual daily temperatures rather than to averages.

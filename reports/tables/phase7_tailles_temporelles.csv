@@ -1,0 +1,29 @@
+"test","inference","taille_5pct","R","p_donnees"
+"Blé 2010-2025 (bilatéral)","cluster_dep",0.583333333333333,300,NA
+"Blé 2010-2025 (bilatéral)","cluster_annee",0.05,300,NA
+"Blé 2010-2025 (bilatéral)","cluster_dep_annee",0.06,300,NA
+"Blé 2010-2025 (bilatéral)","driscoll_kraay",0.116666666666667,300,NA
+"Blé 1959-2025 (unilatéral)","cluster_dep",0.256666666666667,300,NA
+"Blé 1959-2025 (unilatéral)","cluster_annee",0.08,300,NA
+"Blé 1959-2025 (unilatéral)","cluster_dep_annee",0.0766666666666667,300,NA
+"Blé 1959-2025 (unilatéral)","driscoll_kraay",0.0766666666666667,300,NA
+"Maïs, écart, phase 6 (bilatéral)","cluster_dep",0.235,200,NA
+"Maïs, écart, phase 6 (bilatéral)","cluster_annee",0.08,200,NA
+"Maïs, écart, phase 6 (bilatéral)","cluster_dep_annee",0.1,200,NA
+"Maïs, écart, phase 6 (bilatéral)","driscoll_kraay",0.11,200,NA
+"Maïs non irrigué, phase 6 (bilatéral)","cluster_dep",0.27,200,NA
+"Maïs non irrigué, phase 6 (bilatéral)","cluster_annee",0.1,200,NA
+"Maïs non irrigué, phase 6 (bilatéral)","cluster_dep_annee",0.1,200,NA
+"Maïs non irrigué, phase 6 (bilatéral)","driscoll_kraay",0.11,200,NA
+"Maïs, écart, A1 2000-2025 (unilatéral)","cluster_dep",0.146666666666667,300,NA
+"Maïs, écart, A1 2000-2025 (unilatéral)","cluster_annee",0.0666666666666667,300,NA
+"Maïs, écart, A1 2000-2025 (unilatéral)","cluster_dep_annee",0.0733333333333333,300,NA
+"Maïs, écart, A1 2000-2025 (unilatéral)","driscoll_kraay",0.08,300,NA
+"p sur données : blé M1 2010-2025 (bilatéral)","cluster_dep",NA,NA,0.00413836545393952
+"p sur données : blé M1 2010-2025 (bilatéral)","cluster_annee",NA,NA,0.345836625390064
+"p sur données : blé M1 2010-2025 (bilatéral)","cluster_dep_annee",NA,NA,0.313984237381272
+"p sur données : blé M1 2010-2025 (bilatéral)","driscoll_kraay",NA,NA,0.312556887881108
+"p sur données : A1 (unilatéral)","cluster_dep",NA,NA,0.00467102458145572
+"p sur données : A1 (unilatéral)","cluster_annee",NA,NA,0.0227315805255615
+"p sur données : A1 (unilatéral)","cluster_dep_annee",NA,NA,0.0227663147780558
+"p sur données : A1 (unilatéral)","driscoll_kraay",NA,NA,0.0285994254026859

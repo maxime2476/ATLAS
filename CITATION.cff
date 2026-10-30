@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or its results, please cite it as below."
+title: "ATLAS: summer heat, irrigation and crop yields in France"
+authors:
+  - family-names: Gourguechon
+    given-names: Maxime
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/maxime2476/ATLAS"
+keywords:
+  - heat stress
+  - irrigation
+  - maize
+  - France
+  - panel data
+  - wild cluster bootstrap
+abstract: >-
+  Reproducible pipeline and research monograph on the association between summer heat and the yield gap
+  between irrigated and rainfed grain maize in French departments (2000-2025), with a check of the
+  empirical size of inference in panels with common weather shocks. Includes the stand-alone R module
+  wcr (restricted wild cluster bootstrap and placebo size check).

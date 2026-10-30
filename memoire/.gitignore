@@ -1,0 +1,14 @@
+# Fichiers générés par LaTeX (le PDF ne sera versionné qu'à la version déposée)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*.synctex.gz
+main.pdf
+*-SAVE-ERROR

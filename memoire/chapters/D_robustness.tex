@@ -1,0 +1,30 @@
+\section{Full robustness tables}
+\label[appendix]{app:robustness}
+
+These tables report every robustness check with the three inferences. Only the bootstrap by year is used for conclusions; the other two are shown for comparison, since the size simulations of \cref{sec:inference} show that they over-reject on these data.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Wheat 2010--2025 (phase 4): heat coefficient in every specification}
+\label{tab:rob-wheat-full}
+\begin{threeparttable}
+{\scriptsize\setlength{\tabcolsep}{3.5pt}\input{tables/rob_wheat_full}}
+\begin{tablenotes}\footnotesize
+\item R1--R10 were planned; R11--R14 were added after the first estimates. R2 drops Vaucluse (84), Gard (30) and Lozère (48), small departments that carry much of the unweighted variation in heat. R9 changes only the Conley cut-off. ``---'': not reported, because \texttt{fixest} had to correct a Conley matrix that was not positive definite. R14 reports two temperature bins, 30--33\,$^{\circ}$C and above 33\,$^{\circ}$C, in days.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Maize 2000--2025 (phase 4 bis): main coefficient in every specification}
+\label{tab:rob-maize-full}
+\begin{threeparttable}
+\input{tables/rob_maize_full}
+\begin{tablenotes}\footnotesize
+\item One-sided: in the direction of the hypothesis $\beta > 0$. ``---'': Conley matrix not positive definite.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

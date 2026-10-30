@@ -1,0 +1,56 @@
+\section{Changes to the analysis and later additions}
+\label[appendix]{app:deviations}
+
+This appendix lists, by phase, the changes made to the planned analyses and the checks added after the main estimates. Checks added later are marked as such in the text, and are read as exploratory unless stated otherwise.
+
+{\footnotesize
+\renewcommand{\arraystretch}{0.97}
+\begin{longtable}{>{\raggedright}p{1.3cm}>{\raggedright}p{7.3cm}>{\raggedright\arraybackslash}p{4.6cm}}
+\caption{Changes and additions, by phase}
+\label{tab:deviations} \\
+\toprule
+Phase & Change & Status and effect \\
+\midrule
+\endfirsthead
+\toprule
+Phase & Change & Status and effect \\
+\midrule
+\endhead
+Long series & \textcite{schauberger2022}: RAW version used instead of FILTERED, although the compatibility criterion had been written for FILTERED; the filter mostly masks years of real losses, so using it would select on the outcome & Affects the long wheat panels \\
+4 (wheat) & Joint test of the soil-moisture terms under the bootstrap by year; one-sided bootstrap $p$-value for H1 & Planned tests initially omitted, added before interpretation \\
+4 & Two-sided 95\,\% interval for H1 & Omitted at first; computed later: $\WheatCiLow$ to $+\WheatCiHigh$\,\% per DD \\
+4 & Individual bootstrap test on the first soil-moisture term declared not interpretable (slope outside the observed support); test on the second term added & Added \\
+4 & Leave-one-year-out estimates; size and power simulation with a placebo (years permuted) & Added after the first estimates; reported as diagnostics \\
+4 & Four robustness checks R11--R14 (shifted windows, mountain departments, temperature bins) & Added after the first estimates \\
+4 & Two bugs: bootstrap outcome not re-projected (size 8.7\,\% $\to$ 6.6\,\%); operator precedence in the simulation script & Corrected before any interpretation \\
+4 & Conley matrices that \texttt{fixest} had to correct (not positive definite) & $p$-values set to missing, not reported \\
+5 (forecast) & Comparison with B0 added and put first, because B1 turned out to be weaker than B0 & Decided after seeing results; B1 results still reported \\
+5 (forecast) & Tree models built as corrections to B0 instead of B1, same variables and settings; share of folds where the ridge penalty hits the bound of its grid & Added after B1 was seen to fail; exploratory \\
+6 (explor\-atory) & Two maize observations with zero irrigated area dropped; size check on maize & Not foreseen in the plan; reported as such \\
+6 & Missing NDVI values (at most 1.13\,\% per variable) imputed within each fold by the department's training mean & Not foreseen in the protocol \\
+4 bis (maize) & Population: 2025 quality status applied to 2000--2009 & No earlier status exists \\
+4 bis & Factual correction: 18 missing wheat yields in the main sample, not 27 (27 is the count for the population) & Model unchanged \\
+4 bis & Execution fixes: outcome variable of the maize size simulation, columns of a wheat table; Conley $p$-values set to missing for several maize terms & No effect on the models \\
+4 bis & Robustness check with a 2008 mask of maize parcel blocks (Q1-R9) & Added after the first estimates \\
+4 bis & Power; size of the replication test; heat from E-OBS; interval of $\beta$, leave-one-department-out, soil moisture, decades & Added later \\
+4 bis & Inference variants (cluster jackknife, randomisation inference, double machine learning), within-year placebo, sizes of the secondary tests, leverage of each year, slope heterogeneity (interactions, shrinkage), silage & Added later; exploratory \\
+4 bis & Heat from MODIS surface temperature and from the average of SIM2 and E-OBS; silage-maize replication; timing placebos; instrumental variables; non-linearity; heat $\times$ soil moisture; vapour pressure deficit (also on silage maize); years dropped one at a time; specification curve; serial-correlation simulation & Added later; exploratory \\
+4 bis & Irrigation volumes and value per cubic metre (with a dose plausibility rule); heat and soil wetness under the French warming levels (DRIAS) & Added later; exploratory \\
+4 bis & Size and power of the cluster jackknife; signatures of imputation in the irrigated--rainfed split, with a conditional re-estimation; slopes by quality status; a first look at the 2026 harvest from early estimates & Added later; exploratory \\
+4 bis & Leverage of each year with a wild bootstrap of the cluster-jackknife statistic; estimate without the repeated irrigated--rainfed ratios & Added later; exploratory \\
+4 bis & Exploratory estimates by heat measure and period; composition check; altitude comparison; residual autocorrelation; 2003 linearity check & Added later; exploratory \\
+4, 4 bis, 6 & Bootstrap module made to draw under a local seed (the caller's random state is restored) and to demean with tolerance $10^{-12}$; placebo sizes and powers recomputed, because the permutations of several simulations changed & Estimates and $p$-values unchanged; sizes moved within Monte Carlo error \\
+5, 6, 4 bis & Forecast comparisons: Student interval and sign test over the 10 test years added to the bootstrap, which is too narrow with 10 years, and used for significance; double machine learning repeated over 50 splits of the years into folds (median estimate, $p$-value twice the median), and a Mundlak variant that does not remove the fixed effects before the folds; department slopes shrunk with their full covariance clustered by year, and their homogeneity test calibrated by the bootstrap by year (the $\chi^2$ test rejects in \HomogChiSize\,\% of placebos) & No leakage found; NDVI gains significant in \NdviSig{} of 6 cases with the Student interval and \NdviSigBoot{} with the bootstrap (\cref{sec:forecasting}) \\
+all & Every random seed of the project set to 123, after the results were known & The change cannot be shown to be neutral: readings that change with the seed are reported as sensitive to it (double machine learning within 15\,\% of the main estimate, NDVI and tree-correction gains); the first wheat forecast for 2026 is kept beside the recomputed one \\
+4 bis & Value of 2003 given as a range (observed gap instead of the linear formula, pairs carried over from 2002, Eurostat price of 2003); check of the linear formula recomputed with the weights of the valuation & Added later \\
+4 bis & Rainfed yields computed from production in the irrigated--rainfed split: estimates without these pairs, with only them, and with their interaction; total yields by irrigated share; silage ratios copied from grain, and silage replication without them & Added later; exploratory \\
+4, 4 bis, 6 & Size of clustering by year, two-way clustering and Driscoll--Kraay on the five tests of the size table (same placebo draws), and their $p$-values for wheat over 2010--2025 and for H1 & Added later \\
+4 bis, 5 & The wheat forecast for 2026 was computed in the same run that read the early estimates of the 2026 harvest, which contain provisional wheat yields; these yields do not enter the forecast, but it is not blind, and 2027 will be the first prospective year. The confirmation rule for future harvests uses the Student interval (4 degrees of freedom) instead of the bootstrap, which is too narrow with 5 years & Written into the specification for future harvests (\texttt{specification\_\allowbreak recoltes\_\allowbreak futures.md}) \\
+4, 4 bis & The projections of heat and soil wetness under warming go beyond the plans of phases 4 and 4 bis, which excluded any extrapolation to climate change & Reported as descriptive \\
+\bottomrule
+\end{longtable}
+}
+
+The specification for future harvests and the first wheat forecast for 2026 are protected by the tests of the repository, which check their SHA-256 hashes and fail if either file changes.
+
+\paragraph{Use of AI.} An AI assistant wrote much of the code and drafted much of the text under my direction, and helped search for data sources and literature. I chose the research questions and approved the plan of each phase and the analytical decisions. Every number in the text is generated from the result tables (\cref{app:reproduction}).

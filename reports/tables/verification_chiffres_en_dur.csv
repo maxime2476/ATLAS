@@ -1,0 +1,889 @@
+fichier,extrait,valeur_code,statut,note,partie,ligne,nombre,classe,contexte
+01_introduction.tex,so 83 departments are not 83,"83 départements (blé, principal)",OK,,B,,,,
+07_maize.tex,"435 department-years, 17 departments","435 paires, 17 départements",OK,,B,,,,
+07_maize.tex,"(435 department-years, 26 years)","435 paires, 26 années",OK,,B,,,,
+08_wheat.tex,the 85 departments of the population,85 départements,OK,,B,,,,
+08_wheat.tex,"83 departments, 16 harvests","83 dép., 16 récoltes",OK,,B,,,,
+09_forecasting.tex,the 83 departments of the main sample,83,OK,,B,,,,
+10_discussion.tex,across the 38 departments,38,OK,,B,,,,
+10_discussion.tex,the 21 departments with a lower status,21,OK,,B,,,,
+11_conclusion.tex,In 17 French departments over 26 summers,"17 dép., 26 étés",OK,,B,,,,
+06_inference.tex,"16 for wheat over 2010--2025, 26 for maize",16 et 26 années,OK,,B,,,,
+05_strategy.tex,three sub-periods of 22 to 23 years,"tiers des années 1959-2025 : [23, 22, 22]",OK,,B,,,,
+08_wheat.tex,Multiplying the number of harvests by four,67 / 16 = 4.19,OK,ordre de grandeur,B,,,,
+09_forecasting.tex,between 6 and 15 years,"années test 2016-2025, entraînement depuis 2010",OK,,B,,,,
+07_maize.tex,$t$ with 25 d.f.,26 années - 1,OK,,B,,,,
+A_reproduction.tex,that of 26 explicit re-estimations,26 années,OK,,B,,,,
+G_maize_checks.tex,a test on 16 restrictions,17 pentes - 1,OK,,B,,,,
+06_inference.tex,repeat 300 times (200 for the two exploratory,R = 300 ; phase 6 R = 200,OK,,B,,,,
+06_inference.tex,uses 399 draws within each repetition,B = 399,OK,,B,,,,
+06_inference.tex,"distribution of 9,999 simulated",B = 9999 (R/common.R),OK,,B,,,,
+06_inference.tex,about 1.3 points with 300 repetitions and 1.5 points with 200,1.26 et 1.54 points,OK,,B,,,,
+06_inference.tex,(about 0.04 with 26 years),1/25 = 0.040,OK,,B,,,,
+06_inference.tex,simulates 40 regions over 25 years,"N_REG <- 40, N_YEAR <- 25 (R/wcr/exemple.R)",OK,,B,,,,
+07_maize.tex,"5,000 derangements of years",seq_len(5000) (R/22),OK,,B,,,,
+07_maize.tex,over 50 random splits,50 découpages,OK,,B,,,,
+07_maize.tex,a true effect of the estimated size (0.016),β = 0.0158,OK,,B,,,,
+07_maize.tex,"(500 to 3\,000~m$^3$/ha)",500 <= dose <= 3000 (R/27),OK,,B,,,,
+01_introduction.tex,200~km cut-off,CONLEY_KM <- 200,OK,,B,,,,
+08_wheat.tex,a true effect of $-1.5$,"beta_vrai = [np.float64(-0.03), np.float64(-0.015), np.float64(0.0)]",OK,,B,,,,
+03_data.tex,below 0.002 euro per quintal per index point,"le script 24 s'arrête si l'écart ≥ 0,002",OK,,B,,,,
+F_degree_days.tex,"over 100,000 points of the sine cycle","np.linspace(0, 2π, 100_000) (script 26)",OK,,B,,,,
+03_data.tex,simplified to 800~m,simplify(800) (script 39),OK,,B,,,,
+07_maize.tex,known only to within a factor of eight,4.5 / 0.56 = 8.0,OK,,B,,,,
+07_maize.tex,The eight that are not,8,OK,,B,,,,
+07_maize.tex,only five of them with quality status~1,5 départements,OK,,B,,,,
+07_maize.tex,"(01, 03, 18, 63, 67, 68)",01 03 18 63 67 68,OK,,B,,,,
+07_maize.tex,price of maize was about twice as high,41.32 / 21.29 = 1.94,OK,,B,,,,
+10_discussion.tex,between a quarter and two fifths,26 % et 41 %,OK,,B,,,,
+10_discussion.tex,raises the estimate by about a third,rapport IV / MCO = 1.3,OK,,B,,,,
+07_maize.tex,second only to 2003,2026 : 10.6 DD ; 2003 : 14.7 ; suivant : 4.0,OK,,B,,,,
+08_wheat.tex,"only one summer, 1976",1976 : 1.16 DD ; autres < 2000 : ≤ 0.16,OK,1976 au moins deux fois l'été suivant d'avant 2000,B,,,,
+09_forecasting.tex,Nine variables per window give 36 variables,"9 variables x fenêtres ; par date : {'juin': 36, 'juillet': 36}",OK,,B,,,,
+09_forecasting.tex,better than B0 in 9 of the 10 years,9 années,OK,,B,,,,
+09_forecasting.tex,its 0 years out of 10 better than B0,"[0, 0]",OK,,B,,,,
+09_forecasting.tex,"about 18\,\% narrower than a Student interval",rétrécissement moyen 20.7% (de 17.2% à 27.5%),OK,moyenne sur les 20 comparaisons à B0,B,,,,
+C_deviations.tex,"at most 1.13\,\% per variable",1.13 %,OK,"83 départements, 2010-2025",B,,,,
+C_deviations.tex,"18 missing wheat yields in the main sample, not 27",18 (principal) ; 27 (population),OK,,B,,,,
+06_inference.tex,"gave 8.7\,\% false rejections",version antérieure de l'analyse,SOURCE EXTERNE,"valeur historique, citée comme telle",B,,,,
+C_deviations.tex,"(size 8.7\,\% $\to$ 6.6\,\%)",version antérieure de l'analyse,SOURCE EXTERNE,"valeur historique, citée comme telle",B,,,,
+06_inference.tex,"(it was 6.0\,\% with other random seeds)",version antérieure de l'analyse,SOURCE EXTERNE,"valeur historique, citée comme telle",B,,,,
+07_maize.tex,"it was 12\,\% below, with a combined $p$ of 0.044",version antérieure de l'analyse,SOURCE EXTERNE,"valeur historique, citée comme telle",B,,,,
+09_forecasting.tex,the best sign test gave $p = 0.109$,version antérieure de l'analyse,SOURCE EXTERNE,"valeur historique, citée comme telle",B,,,,
+07_maize.tex,"the 15\,\% set for calling",règle de lecture du DML : « à moins de 15 % de β̂(A1) »,SOURCE EXTERNE,seuil de la règle de lecture,B,,,,
+C_deviations.tex,"double machine learning within 15\,\%",règle de lecture du DML : « à moins de 15 % de β̂(A1) »,SOURCE EXTERNE,seuil de la règle de lecture,B,,,,
+07_maize.tex,"1\,410~m$^3$/ha",source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+07_maize.tex,0.20 to 0.28 euros per cubic metre,source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+07_maize.tex,for 1.4~kg of maize per cubic metre,source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+03_data.tex,"10\,000~m$^3$ a year",source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+10_discussion.tex,"falls above 35\,$^{\circ}$C, less so for maize",source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+10_discussion.tex,about a third of the benefit,source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+07_maize.tex,taken around 10:30,source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+09_forecasting.tex,until 18:00 UTC,source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+01_introduction.tex,about a quarter of the heat sensitivity,source citée,SOURCE EXTERNE,"à vérifier dans la référence, pas dans le code",B,,,,
+00_abstract.tex,,,,,C,2.0,2000,année ou période,"epartment. I relate the gap between the two, 2000--2025, to degree-days above 3"
+00_abstract.tex,,,,,C,2.0,2025,année ou période,"ent. I relate the gap between the two, 2000--2025, to degree-days above 32\,$^{"
+00_abstract.tex,,,,,C,2.0,32,"constante de conception, unité ou ordinal","en the two, 2000--2025, to degree-days above 32\,$^{ }$C in July--August, com"
+00_abstract.tex,,,,,C,2.0,8,"constante de conception, unité ou ordinal","32\,$^{ }$C in July--August, computed on an 8~km grid and averaged with wei"
+00_abstract.tex,,,,,C,2.0,2010,année ou période,"was suggested by an exploratory analysis of 2010--2025; the decade 2000--2009,"
+00_abstract.tex,,,,,C,2.0,2025,année ou période,"uggested by an exploratory analysis of 2010--2025; the decade 2000--2009, which"
+00_abstract.tex,,,,,C,2.0,2000,année ou période,"ploratory analysis of 2010--2025; the decade 2000--2009, which that analysis di"
+00_abstract.tex,,,,,C,2.0,2009,année ou période,"ory analysis of 2010--2025; the decade 2000--2009, which that analysis did not u"
+00_abstract.tex,,,,,C,2.0,17,compte du plan (contrôlé en partie B),"sis did not use, serves as a replication. In 17 departments outside the South"
+01_introduction.tex,,,,,C,4.0,2003,année ou période,"ze departments studied here, July and August 2003 brought  {} degree-days above"
+01_introduction.tex,,,,,C,4.0,32,"constante de conception, unité ou ordinal","nd August 2003 brought  {} degree-days above 32\,$^{ }$C on average,  {} time"
+01_introduction.tex,,,,,C,4.0,2000,année ou période,"age,  {} times more than any other summer of 2000--2025 ( ). Maize suffered, bu"
+01_introduction.tex,,,,,C,4.0,2025,année ou période,"{} times more than any other summer of 2000--2025 ( ). Maize suffered, but not"
+01_introduction.tex,,,,,C,12.0,2003,année ou période,d rainfed maize with a crop model during the 2003 heatwave and weight the simul
+01_introduction.tex,,,,,C,16.0,2000,année ou période,lder release that extends this split back to 2000 and checked it against the cu
+01_introduction.tex,,,,,C,16.0,26,compte du plan (contrôlé en partie B),"cked it against the current one, which gives 26 harvests. The outcome is the"
+01_introduction.tex,,,,,C,18.0,8,"constante de conception, unité ou ordinal","res heat where the maize grows, as far as an 8~km grid allows.} Degree-days"
+01_introduction.tex,,,,,C,18.0,32,"constante de conception, unité ou ordinal","r as an 8~km grid allows.} Degree-days above 32\,$^{ }$C are computed for eac"
+01_introduction.tex,,,,,C,18.0,8,"constante de conception, unité ou ordinal","days above 32\,$^{ }$C are computed for each 8~km grid cell and each day, th"
+01_introduction.tex,,,,,C,18.0,2003,année ou période,heat that maize experienced in July--August 2003 by  {} to  {} degree-days ( ;
+01_introduction.tex,,,,,C,22.0,200,"constante de conception, unité ou ordinal","d by department and   standard errors with a 200~km cut-off (uniform kernel, n"
+01_introduction.tex,,,,,C,24.0,0.05,"constante de conception, unité ou ordinal",f its one-sided bootstrap $p$-value is below 0.05  {and} the measured size of t
+01_introduction.tex,,,,,C,24.0,10,"constante de conception, unité ou ordinal","nd} the measured size of the test is at most 10\,\"
+01_introduction.tex,,,,,C,28.0,17,compte du plan (contrôlé en partie B),In the 17 departments with the best qua
+01_introduction.tex,,,,,C,28.0,2025,année ou période,"epartments with the best quality status (the 2025 status, applied to the whole"
+01_introduction.tex,,,,,C,28.0,32,"constante de conception, unité ou ordinal","to the whole period), each degree-day above 32\,$^{ }$C in July--August is a"
+01_introduction.tex,,,,,C,30.0,2026,année ou période,"evidence will come from a test fixed for the 2026--2030 harvests ( ).  \,\"
+01_introduction.tex,,,,,C,30.0,2030,année ou période,"ce will come from a test fixed for the 2026--2030 harvests ( ).  \,\"
+01_introduction.tex,,,,,C,34.0,2000,année ou période,"{New years.} On 2000--2009 alone, a decade no earl"
+01_introduction.tex,,,,,C,34.0,2009,année ou période,"{New years.} On 2000--2009 alone, a decade no earlier an"
+01_introduction.tex,,,,,C,34.0,2010,année ou période,"sign with the maize mask, at about half the 2010--2025 estimate ( \,\"
+01_introduction.tex,,,,,C,34.0,2025,année ou période,"with the maize mask, at about half the 2010--2025 estimate ( \,\"
+01_introduction.tex,,,,,C,35.0,2008,année ou période,{An older map of maize.} With a 2008 map of parcel blocks (grain a
+01_introduction.tex,,,,,C,35.0,2015,année ou période,"l blocks (grain and silage maize) instead of 2015--2017 parcels, almost nothing"
+01_introduction.tex,,,,,C,35.0,2017,année ou période,"ks (grain and silage maize) instead of 2015--2017 parcels, almost nothing chang"
+01_introduction.tex,,,,,C,36.0,2003,année ou période,).   shows that this measure understates the 2003 heat where maize grows in dep
+01_introduction.tex,,,,,C,36.0,2010,année ou période,is measure gives a stronger association over 2010--2025 is unexplained.
+01_introduction.tex,,,,,C,36.0,2025,année ou période,sure gives a stronger association over 2010--2025 is unexplained.
+01_introduction.tex,,,,,C,38.0,2003,année ou période,"{Another inference.} 2003 carries  \,\"
+01_introduction.tex,,,,,C,39.0,2010,année ou période,"ainfed yields the statistics also report for 2010--2025, shows the same associa"
+01_introduction.tex,,,,,C,39.0,2025,année ou période,"yields the statistics also report for 2010--2025, shows the same association ("
+01_introduction.tex,,,,,C,44.0,2016,année ou période,action with crisis-level water restrictions (2016--2025) has the opposite sign
+01_introduction.tex,,,,,C,44.0,2025,année ou période,with crisis-level water restrictions (2016--2025) has the opposite sign to the
+01_introduction.tex,,,,,C,44.0,1959,année ou période,"lly as the positive one. For soft wheat over 1959--2025, heat at the end of the"
+01_introduction.tex,,,,,C,44.0,2025,année ou période,"the positive one. For soft wheat over 1959--2025, heat at the end of the cycle"
+01_introduction.tex,,,,,C,48.0,2000,année ou période,"ully measured: in the older release used for 2000--2009, the irrigated-to-rainf"
+01_introduction.tex,,,,,C,48.0,2009,année ou période,"easured: in the older release used for 2000--2009, the irrigated-to-rainfed rati"
+02_literature.tex,,,,,C,8.0,29,source externe (littérature),"with temperature up to a threshold of about 29 to 32\,$^{ }$C, depending on"
+02_literature.tex,,,,,C,8.0,32,source externe (littérature),"temperature up to a threshold of about 29 to 32\,$^{ }$C, depending on the cr"
+02_literature.tex,,,,,C,10.0,1950,année ou période,"o the full distribution of temperatures over 1950--2015, with department fixed"
+02_literature.tex,,,,,C,10.0,2015,année ou période,"full distribution of temperatures over 1950--2015, with department fixed effects"
+02_literature.tex,,,,,C,10.0,34,source externe (littérature),"re. Their data contain little exposure above 34\,$^{ }$C, and temperature ano"
+02_literature.tex,,,,,C,10.0,2016,année ou période,signal in dry years.   study the unforeseen 2016 wheat loss in the main cereal
+02_literature.tex,,,,,C,18.0,30,source externe (littérature),"he United States,   find that each day above 30\,$^{ }$C costs rainfed maize"
+02_literature.tex,,,,,C,18.0,6,source externe (littérature),"30\,$^{ }$C costs rainfed maize up to about 6\,\"
+02_literature.tex,,,,,C,25.0,1960,année ou période,nce of heat on French maize yields since the 1960s and infer a role for irrigat
+02_literature.tex,,,,,C,25.0,2003,année ou période,"ed maize with the EPIC crop model during the 2003 heatwave, weight the simulati"
+02_literature.tex,,,,,C,31.0,2003,année ou période,"few clusters carry much of the leverage, as 2003 does here; it is reported as"
+02_literature.tex,,,,,C,33.0,45,source externe (littérature),"s and find ``significant'' effects for up to 45\,\"
+02_literature.tex,,,,,C,39.0,2011,année ou période,"nch departmental wheat yields. On new years (2011--2014), its errors are about"
+02_literature.tex,,,,,C,39.0,2014,année ou période,"partmental wheat yields. On new years (2011--2014), its errors are about twice"
+02_literature.tex,,,,,C,58.0,1950,année ou période,t and French cereal yields & Established for 1950--2015   & Wheat 1959--2025: n
+02_literature.tex,,,,,C,58.0,2015,année ou période,French cereal yields & Established for 1950--2015   & Wheat 1959--2025: negativ
+02_literature.tex,,,,,C,58.0,1959,année ou période,ields & Established for 1950--2015   & Wheat 1959--2025: negative but not disti
+02_literature.tex,,,,,C,58.0,2025,année ou période,& Established for 1950--2015   & Wheat 1959--2025: negative but not distinguish
+02_literature.tex,,,,,C,59.0,2000,année ou période,"observed irrigated and rainfed maize yields, 2000--2025 \\"
+02_literature.tex,,,,,C,59.0,2025,année ou période,"ed irrigated and rainfed maize yields, 2000--2025 \\"
+03_data.tex,,,,,C,4.0,256,"identifiant, version, licence ou code","le is stored unmodified with its URL and SHA-256 hash, and an automated test v"
+03_data.tex,,,,,C,15.0,2010,année ou période,"gated and rainfed grain maize & Departments, 2010--2025 & Free reuse with attri"
+03_data.tex,,,,,C,15.0,2025,année ou période,"and rainfed grain maize & Departments, 2010--2025 & Free reuse with attribution"
+03_data.tex,,,,,C,15.0,2.0,"identifiant, version, licence ou code",Free reuse with attribution; Licence Ouverte 2.0 \\
+03_data.tex,,,,,C,16.0,2000,année ou période,"gated and rainfed grain maize & Departments, 2000--2020 & Free reuse with attri"
+03_data.tex,,,,,C,16.0,2020,année ou période,"and rainfed grain maize & Departments, 2000--2020 & Free reuse with attribution"
+03_data.tex,,,,,C,17.0,1959,année ou période,"a paper   & Soft wheat yields & Departments, 1959--2009 & CC BY 4.0 \\"
+03_data.tex,,,,,C,17.0,2009,année ou période,"r   & Soft wheat yields & Departments, 1959--2009 & CC BY 4.0 \\"
+03_data.tex,,,,,C,17.0,4.0,"identifiant, version, licence ou code","eat yields & Departments, 1959--2009 & CC BY 4.0 \\"
+03_data.tex,,,,,C,18.0,8,"constante de conception, unité ou ordinal","on, evapotranspiration, soil wetness index & 8~km grid, Aug.~1958--2025 (202"
+03_data.tex,,,,,C,18.0,1958,année ou période,"ration, soil wetness index & 8~km grid, Aug.~1958--2025 (2026: first look only)"
+03_data.tex,,,,,C,18.0,2025,année ou période,", soil wetness index & 8~km grid, Aug.~1958--2025 (2026: first look only) & Lic"
+03_data.tex,,,,,C,18.0,2026,année ou période,"wetness index & 8~km grid, Aug.~1958--2025 (2026: first look only) & Licence O"
+03_data.tex,,,,,C,18.0,2.0,"identifiant, version, licence ou code",25 (2026: first look only) & Licence Ouverte 2.0 \\
+03_data.tex,,,,,C,19.0,2015,année ou période,"rain maize and soft wheat parcels & Parcels, 2015--2017 & Licence Ouverte 2.0 \"
+03_data.tex,,,,,C,19.0,2017,année ou période,"aize and soft wheat parcels & Parcels, 2015--2017 & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,19.0,2.0,"identifiant, version, licence ou code","cels & Parcels, 2015--2017 & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,20.0,4,"constante de conception, unité ou ordinal","blocks) & Blocks whose main crop is maize & 4 regions, 2008 & Licence Ouver"
+03_data.tex,,,,,C,20.0,2008,année ou période,"Blocks whose main crop is maize & 4 regions, 2008 & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,20.0,2.0,"identifiant, version, licence ou code","is maize & 4 regions, 2008 & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,21.0,2026,année ou période,EXPRESS COG CARTO & Department boundaries & 2026 edition & Licence Ouverte 2.0
+03_data.tex,,,,,C,21.0,2.0,"identifiant, version, licence ou code",boundaries & 2026 edition & Licence Ouverte 2.0 \\
+03_data.tex,,,,,C,22.0,8,"constante de conception, unité ou ordinal",e (RGE ALTI) & Mean altitude of grid cells & 8~km cells & Licence Ouverte 2.
+03_data.tex,,,,,C,22.0,2.0,"identifiant, version, licence ou code",of grid cells & 8~km cells & Licence Ouverte 2.0 \\
+03_data.tex,,,,,C,23.0,2010,année ou période,"d severity levels & Departments, orders from 2010 (built 2012--2025, used 2016-"
+03_data.tex,,,,,C,23.0,2012,année ou période,"evels & Departments, orders from 2010 (built 2012--2025, used 2016--2025) & Lic"
+03_data.tex,,,,,C,23.0,2025,année ou période,"& Departments, orders from 2010 (built 2012--2025, used 2016--2025) & Licence Ou"
+03_data.tex,,,,,C,23.0,2016,année ou période,"ts, orders from 2010 (built 2012--2025, used 2016--2025) & Licence Ouverte 2.0"
+03_data.tex,,,,,C,23.0,2025,année ou période,"ders from 2010 (built 2012--2025, used 2016--2025) & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,23.0,2.0,"identifiant, version, licence ou code","12--2025, used 2016--2025) & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,24.0,2000,année ou période,PPAP); Eurostat   & Maize and wheat prices & 2000--2025 & INSEE: Licence Ouvert
+03_data.tex,,,,,C,24.0,2025,année ou période,Eurostat   & Maize and wheat prices & 2000--2025 & INSEE: Licence Ouverte 2.0;
+03_data.tex,,,,,C,24.0,2.0,"identifiant, version, licence ou code",prices & 2000--2025 & INSEE: Licence Ouverte 2.0; Eurostat: reuse with attribu
+03_data.tex,,,,,C,25.0,250,"constante de conception, unité ou ordinal","NASA LP DAAC, MOD13Q1 v6.1   & NDVI, 250~m, 16-day composites & 2010--"
+03_data.tex,,,,,C,25.0,16,"constante de conception, unité ou ordinal","NASA LP DAAC, MOD13Q1 v6.1   & NDVI, 250~m, 16-day composites & 2010--2025 &"
+03_data.tex,,,,,C,25.0,2010,année ou période,"Q1 v6.1   & NDVI, 250~m, 16-day composites & 2010--2025 & CC0 (NASA), citation"
+03_data.tex,,,,,C,25.0,2025,année ou période,"1   & NDVI, 250~m, 16-day composites & 2010--2025 & CC0 (NASA), citation reques"
+03_data.tex,,,,,C,26.0,1,"constante de conception, unité ou ordinal","2 v6.1   & Daytime land-surface temperature, 1~km, 8-day composites (check o"
+03_data.tex,,,,,C,26.0,8,"constante de conception, unité ou ordinal","& Daytime land-surface temperature, 1~km, 8-day composites (check only) &"
+03_data.tex,,,,,C,26.0,2000,année ou période,"8-day composites (check only) & July--August 2000--2025 & CC0 (NASA), citation"
+03_data.tex,,,,,C,26.0,2025,année ou période,"composites (check only) & July--August 2000--2025 & CC0 (NASA), citation reques"
+03_data.tex,,,,,C,27.0,0.1,"constante de conception, unité ou ordinal","min, Tmax (check of the heat measure only) & 0.1$^{ }$ grid, 2000--2025 & Non-"
+03_data.tex,,,,,C,27.0,2000,année ou période,"of the heat measure only) & 0.1$^{ }$ grid, 2000--2025 & Non-commercial resear"
+03_data.tex,,,,,C,27.0,2025,année ou période,"e heat measure only) & 0.1$^{ }$ grid, 2000--2025 & Non-commercial research and"
+03_data.tex,,,,,C,28.0,2012,année ou période,"all crops (check only) & Withdrawal points, 2012--2023 & Licence Ouverte 2.0 \"
+03_data.tex,,,,,C,28.0,2023,année ou période,"rops (check only) & Withdrawal points, 2012--2023 & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,28.0,2.0,"identifiant, version, licence ou code","hdrawal points, 2012--2023 & Licence Ouverte 2.0 \\"
+03_data.tex,,,,,C,29.0,2020,année ou période,"Agreste, 2020 agricultural census (table RA"
+03_data.tex,,,,,C,29.0,2010,année ou période,"n maize in the irrigated area & Departments, 2010 and 2020 & Free reuse with at"
+03_data.tex,,,,,C,29.0,2020,année ou période,"n the irrigated area & Departments, 2010 and 2020 & Free reuse with attribution"
+03_data.tex,,,,,C,30.0,2022,année ou période,"DRIAS, Explore2-Climat 2022, bias-corrected (ADAMONT)   &"
+03_data.tex,,,,,C,30.0,8,"constante de conception, unité ou ordinal","specific humidity (discussion only) & SAFRAN 8~km grid, 1976--2005 and RCP\,"
+03_data.tex,,,,,C,30.0,1976,année ou période,"midity (discussion only) & SAFRAN 8~km grid, 1976--2005 and RCP\,8.5 to 2100 &"
+03_data.tex,,,,,C,30.0,2005,année ou période,"(discussion only) & SAFRAN 8~km grid, 1976--2005 and RCP\,8.5 to 2100 & Licenc"
+03_data.tex,,,,,C,30.0,8.5,"identifiant, version, licence ou code","nly) & SAFRAN 8~km grid, 1976--2005 and RCP\,8.5 to 2100 & Licence Etalab (DRI"
+03_data.tex,,,,,C,30.0,2100,année ou période,"SAFRAN 8~km grid, 1976--2005 and RCP\,8.5 to 2100 & Licence Etalab (DRIAS terms"
+03_data.tex,,,,,C,31.0,2026,année ou période,"este, early crop estimates ( {Infos rapides} 2026-131)   & Irrigated and rainfe"
+03_data.tex,,,,,C,31.0,131,"identifiant, version, licence ou code",early crop estimates ( {Infos rapides} 2026-131)   & Irrigated and rainfed gr
+03_data.tex,,,,,C,31.0,2026,année ou période,"-131)   & Irrigated and rainfed grain maize, 2026 (first look only) & Departmen"
+03_data.tex,,,,,C,31.0,1,"constante de conception, unité ou ordinal","first look only) & Departments, estimates at 1 Oct.~2026 & As the SAA \\"
+03_data.tex,,,,,C,31.0,2026,année ou période,"ook only) & Departments, estimates at 1 Oct.~2026 & As the SAA \\"
+03_data.tex,,,,,C,38.0,2020,année ou période,"B, water agencies), via Hub'Eau; Agreste, RA 2020; Drias, données Météo-France,"
+03_data.tex,,,,,C,45.0,2010,année ou période,"istics.} The current long series of the SAA (2010--2025) report, for each depar"
+03_data.tex,,,,,C,45.0,2025,année ou période,".} The current long series of the SAA (2010--2025) report, for each department,"
+03_data.tex,,,,,C,45.0,2000,année ou période,"d crops'' published as one file per year for 2000--2020, which contains the sam"
+03_data.tex,,,,,C,45.0,2020,année ou période,"s'' published as one file per year for 2000--2020, which contains the same split"
+03_data.tex,,,,,C,45.0,2020,année ou période,"The older release was not revised after the 2020 agricultural census, while th"
+03_data.tex,,,,,C,45.0,2010,année ou période,"efore splicing them, I compared the two over 2010--2020, where they overlap. Ov"
+03_data.tex,,,,,C,45.0,2020,année ou période,"splicing them, I compared the two over 2010--2020, where they overlap. Over  {}"
+03_data.tex,,,,,C,47.0,"1,000","constante de conception, unité ou ordinal","ted and rainfed grain maize covered at least 1,000~ha on average over 2010--2012"
+03_data.tex,,,,,C,47.0,2010,année ou période,"ze covered at least 1,000~ha on average over 2010--2012:  {} departments. The t"
+03_data.tex,,,,,C,47.0,2012,année ou période,"ered at least 1,000~ha on average over 2010--2012:  {} departments. The thresho"
+03_data.tex,,,,,C,47.0,2010,année ou période,":  {} departments. The threshold is fixed on 2010--2012, inside the estimation"
+03_data.tex,,,,,C,47.0,2012,année ou période,"departments. The threshold is fixed on 2010--2012, inside the estimation period;"
+03_data.tex,,,,,C,47.0,1,"constante de conception, unité ou ordinal","ents whose irrigated maize series has status~1, the best. This status is only"
+03_data.tex,,,,,C,47.0,2025,année ou période,"s is only published for recent years, so the 2025 status is applied to the whol"
+03_data.tex,,,,,C,52.0,38,compte du plan (contrôlé en partie B),{The maize population (38 departments where irrigated a
+03_data.tex,,,,,C,52.0,"1,000","constante de conception, unité ou ordinal","nd rainfed grain maize each covered at least 1,000~ha on average over 2010--2012"
+03_data.tex,,,,,C,52.0,2010,année ou période,"ch covered at least 1,000~ha on average over 2010--2012) and the main sample (1"
+03_data.tex,,,,,C,52.0,2012,année ou période,"ered at least 1,000~ha on average over 2010--2012) and the main sample (17 depa"
+03_data.tex,,,,,C,52.0,17,compte du plan (contrôlé en partie B),verage over 2010--2012) and the main sample (17 departments whose irrigated s
+03_data.tex,,,,,C,52.0,1,"constante de conception, unité ou ordinal",ts whose irrigated series has quality status~1). Outlined: the six departmen
+03_data.tex,,,,,C,52.0,2026,année ou période,". Boundaries: IGN, ADMIN EXPRESS COG CARTO 2026, simplified to 800~m; Lambert"
+03_data.tex,,,,,C,52.0,800,"constante de conception, unité ou ordinal","ADMIN EXPRESS COG CARTO 2026, simplified to 800~m; Lambert 93.}"
+03_data.tex,,,,,C,52.0,93,"identifiant, version, licence ou code","COG CARTO 2026, simplified to 800~m; Lambert 93.}"
+03_data.tex,,,,,C,58.0,2010,année ou période,"ft wheat'' below), the SAA long series cover 2010--2025. Over 1959--2009, I use"
+03_data.tex,,,,,C,58.0,2025,année ou période,"at'' below), the SAA long series cover 2010--2025. Over 1959--2009, I use the R"
+03_data.tex,,,,,C,58.0,1959,année ou période,", the SAA long series cover 2010--2025. Over 1959--2009, I use the RAW version"
+03_data.tex,,,,,C,58.0,2009,année ou période,"SAA long series cover 2010--2025. Over 1959--2009, I use the RAW version of the"
+03_data.tex,,,,,C,58.0,1989,année ou période,a come from hand-digitised statistics before 1989 and from the former Agreste d
+03_data.tex,,,,,C,58.0,2010,année ou période,cked their compatibility with the SAA on the 2010--2018 overlap. The population
+03_data.tex,,,,,C,58.0,2018,année ou période,heir compatibility with the SAA on the 2010--2018 overlap. The population is th
+03_data.tex,,,,,C,58.0,"1,000","constante de conception, unité ou ordinal","ulation is the  {} departments with at least 1,000~ha of wheat on average over 2"
+03_data.tex,,,,,C,58.0,2010,année ou période,"h at least 1,000~ha of wheat on average over 2010--2012; the main sample keeps"
+03_data.tex,,,,,C,58.0,2012,année ou période,"east 1,000~ha of wheat on average over 2010--2012; the main sample keeps the  {"
+03_data.tex,,,,,C,58.0,1,"constante de conception, unité ou ordinal","ain sample keeps the  {} with quality status~1, which gives  {} observations"
+03_data.tex,,,,,C,58.0,2010,année ou période,"status~1, which gives  {} observations over 2010--2025. In the long panel,  {}"
+03_data.tex,,,,,C,58.0,2025,année ou période,"s~1, which gives  {} observations over 2010--2025. In the long panel,  {} yield"
+03_data.tex,,,,,C,58.0,1959,année ou période,"ields of the main sample are missing, all in 1959-- ; they are dropped, not imp"
+03_data.tex,,,,,C,64.0,8,"constante de conception, unité ou ordinal","etness index (SWI) on a grid of  {} cells of 8~km, of which  {} intersect a"
+03_data.tex,,,,,C,64.0,0,"constante de conception, unité ou ordinal","al definition of Météo-France's index, about 0 at the wilting point and abou"
+03_data.tex,,,,,C,64.0,1,"constante de conception, unité ou ordinal","ndex, about 0 at the wilting point and about 1 at field capacity, a reading"
+03_data.tex,,,,,C,64.0,1,"constante de conception, unité ou ordinal","s not state explicitly. The series starts on 1~August~1958, which covers the"
+03_data.tex,,,,,C,64.0,1958,année ou période,"te explicitly. The series starts on 1~August~1958, which covers the sowing of th"
+03_data.tex,,,,,C,64.0,1959,année ou période,"~August~1958, which covers the sowing of the 1959 wheat harvest."
+03_data.tex,,,,,C,66.0,32,"constante de conception, unité ou ordinal","ations, indeed counts more degree-days above 32\,$^{ }$C in the maize departm"
+03_data.tex,,,,,C,70.0,2.0,"identifiant, version, licence ou code",for the Common Agricultural Policy. Version 2.0 (from 2015) gives each parcel
+03_data.tex,,,,,C,70.0,2015,année ou période,ommon Agricultural Policy. Version 2.0 (from 2015) gives each parcel its crop.
+03_data.tex,,,,,C,70.0,2015,année ou période,2015) gives each parcel its crop. I use the 2015--2017 vintages to build fixed
+03_data.tex,,,,,C,70.0,2017,année ou période,gives each parcel its crop. I use the 2015--2017 vintages to build fixed masks
+03_data.tex,,,,,C,72.0,"2,000",année ou période,"t the SAA. Across departments with more than 2,000~ha, the area of   parcels has"
+03_data.tex,,,,,C,72.0,4,"constante de conception, unité ou ordinal","of grain and seed maize (seed maize is about 4\,\"
+03_data.tex,,,,,C,74.0,1.0,"identifiant, version, licence ou code",Version 1.0 (2007--2014) only maps anonym
+03_data.tex,,,,,C,74.0,2007,année ou période,Version 1.0 (2007--2014) only maps anonymised b
+03_data.tex,,,,,C,74.0,2014,année ou période,Version 1.0 (2007--2014) only maps anonymised blocks
+03_data.tex,,,,,C,74.0,2008,année ou période,"aize group mixes grain and silage. I use the 2008 vintage, for the four regions"
+03_data.tex,,,,,C,74.0,2015,année ou période,"in maize sample, to test whether a mask from 2015--2017 is too recent for the 2"
+03_data.tex,,,,,C,74.0,2017,année ou période,"ze sample, to test whether a mask from 2015--2017 is too recent for the 2000s ("
+03_data.tex,,,,,C,74.0,2000,année ou période,a mask from 2015--2017 is too recent for the 2000s ( ).
+03_data.tex,,,,,C,78.0,2010,année ou période,"ty level is missing for almost all orders in 2010--2011, which are dropped, and"
+03_data.tex,,,,,C,78.0,2011,année ou période,"el is missing for almost all orders in 2010--2011, which are dropped, and for  \"
+03_data.tex,,,,,C,82.0,2016,année ou période,iation. Eurostat gives absolute prices up to 2016. I convert the index into eur
+03_data.tex,,,,,C,82.0,2012,année ou période,per quintal with its ratio to Eurostat over 2012--2016. A stability criterion
+03_data.tex,,,,,C,82.0,2016,année ou période,uintal with its ratio to Eurostat over 2012--2016. A stability criterion is app
+03_data.tex,,,,,C,82.0,0.002,contrôlé (partie B),pplied (largest deviation of the ratio below 0.002 euro per quintal per index po
+03_data.tex,,,,,C,82.0,10000,contrôlé (partie B),low the fee threshold of the water agencies (10000~m$^3$ a year in most areas) n
+03_data.tex,,,,,C,82.0,3,"constante de conception, unité ou ordinal",ee threshold of the water agencies (10000~m$^3$ a year in most areas) need n
+03_data.tex,,,,,C,82.0,2020,année ou période,ear in most areas) need not be declared. The 2020 agricultural census gives the
+03_data.tex,,,,,C,82.0,250,"constante de conception, unité ou ordinal","of SIM2  . The satellite data, MODIS NDVI at 250~m, are only used in the forec"
+03_data.tex,,,,,C,97.0,2,"constante de conception, unité ou ordinal","{2}{l}{ {Maize, 2000--2025}} \\"
+03_data.tex,,,,,C,97.0,2000,année ou période,"{2}{l}{ {Maize, 2000--2025}} \\"
+03_data.tex,,,,,C,97.0,2025,année ou période,"{2}{l}{ {Maize, 2000--2025}} \\"
+03_data.tex,,,,,C,98.0,"1,000","constante de conception, unité ou ordinal","Population (both modes $ $ 1,000~ha, 2010--2012) &  {} departm"
+03_data.tex,,,,,C,98.0,2010,année ou période,"Population (both modes $ $ 1,000~ha, 2010--2012) &  {} departments $ $"
+03_data.tex,,,,,C,98.0,2012,année ou période,"Population (both modes $ $ 1,000~ha, 2010--2012) &  {} departments $ $  {} ye"
+03_data.tex,,,,,C,98.0,2,"constante de conception, unité ou ordinal",0--2012) &  {} departments $ $  {} years $ $ 2 modes \\
+03_data.tex,,,,,C,103.0,2,"constante de conception, unité ou ordinal",{2}{l}{ {Soft wheat}} \\
+03_data.tex,,,,,C,104.0,"1,000","constante de conception, unité ou ordinal","Population ($ $ 1,000~ha, 2010--2012) &  {} departm"
+03_data.tex,,,,,C,104.0,2010,année ou période,"Population ($ $ 1,000~ha, 2010--2012) &  {} departments \\"
+03_data.tex,,,,,C,104.0,2012,année ou période,"Population ($ $ 1,000~ha, 2010--2012) &  {} departments \\"
+03_data.tex,,,,,C,105.0,2010,année ou période,"Main sample, 2010--2025 &  {} departments,  {}"
+03_data.tex,,,,,C,105.0,2025,année ou période,"Main sample, 2010--2025 &  {} departments,  {} observ"
+03_data.tex,,,,,C,106.0,1959,année ou période,"Long panel, 1959--2025 &  {} missing yields dr"
+03_data.tex,,,,,C,106.0,2025,année ou période,"Long panel, 1959--2025 &  {} missing yields dropped"
+03_data.tex,,,,,C,106.0,1959,année ou période,"el, 1959--2025 &  {} missing yields dropped (1959-- ) \\"
+04_exposure.tex,,,,,C,8.0,24,"constante de conception, unité ou ordinal","erature   and a maximum  , each taken over a 24-hour window. The documentatio"
+04_exposure.tex,,,,,C,10.0,1,"constante de conception, unité ou ordinal","th those of   on the same day $J$, not on $J-1$ or $J+1$.   shows the correl"
+04_exposure.tex,,,,,C,10.0,1,"constante de conception, unité ou ordinal","of   on the same day $J$, not on $J-1$ or $J+1$.   shows the correlations ov"
+04_exposure.tex,,,,,C,10.0,2009,année ou période,.   shows the correlations over all cells in 2009. Both variables move most wit
+04_exposure.tex,,,,,C,10.0,2022,année ou période,m of the afternoon of $J$. The same check on 2022 gives the same answer.
+04_exposure.tex,,,,,C,20.0,1,"constante de conception, unité ou ordinal",ion of the daily change with $  (J+k)$ & $k=-1$ & $k=0$ & $k=+1$ \\
+04_exposure.tex,,,,,C,20.0,0,"constante de conception, unité ou ordinal",he daily change with $  (J+k)$ & $k=-1$ & $k=0$ & $k=+1$ \\
+04_exposure.tex,,,,,C,20.0,1,"constante de conception, unité ou ordinal",change with $  (J+k)$ & $k=-1$ & $k=0$ & $k=+1$ \\
+04_exposure.tex,,,,,C,27.0,365,"constante de conception, unité ou ordinal","All  {} cells, 365 days of 2009. Differences rem"
+04_exposure.tex,,,,,C,27.0,2009,année ou période,"All  {} cells, 365 days of 2009. Differences remove the persi"
+04_exposure.tex,,,,,C,32.0,1,"constante de conception, unité ou ordinal","J)$, one falling from $T_{ }(J)$ to $T_{ }(J+1)$. For a full sine between $a"
+04_exposure.tex,,,,,C,32.0,2,"constante de conception, unité ou ordinal","ne between $a$ and $c$, with mean $M = (a+c)/2$ and amplitude $A = (c-a)/2$,"
+04_exposure.tex,,,,,C,32.0,2,"constante de conception, unité ou ordinal","mean $M = (a+c)/2$ and amplitude $A = (c-a)/2$, the average excess over a t"
+04_exposure.tex,,,,,C,37.0,2,"constante de conception, unité ou ordinal","{(M - b) ( { }{2} -   ) + A  }{ },     =   {b"
+04_exposure.tex,,,,,C,38.0,0,"constante de conception, unité ou ordinal",0 &  {if } b   c.
+04_exposure.tex,,,,,C,43.0,1,"constante de conception, unité ou ordinal","{DD}_b(J) =  {1}{2}\, S (T_{ }(J), T_{ }(J);"
+04_exposure.tex,,,,,C,43.0,2,"constante de conception, unité ou ordinal","{DD}_b(J) =  {1}{2}\, S (T_{ }(J), T_{ }(J); b )"
+04_exposure.tex,,,,,C,43.0,1,"constante de conception, unité ou ordinal",") =  {1}{2}\, S (T_{ }(J), T_{ }(J); b ) +  {1}{2}\, S (T_{ }(J+1), T_{ }(J)"
+04_exposure.tex,,,,,C,43.0,2,"constante de conception, unité ou ordinal","{1}{2}\, S (T_{ }(J), T_{ }(J); b ) +  {1}{2}\, S (T_{ }(J+1), T_{ }(J); b"
+04_exposure.tex,,,,,C,43.0,1,"constante de conception, unité ou ordinal","{ }(J), T_{ }(J); b ) +  {1}{2}\, S (T_{ }(J+1), T_{ }(J); b )."
+04_exposure.tex,,,,,C,45.0,32,"constante de conception, unité ou ordinal","e maize models use extreme degree-days above 32\,$^{ }$C, written  ; the whea"
+04_exposure.tex,,,,,C,45.0,0,"constante de conception, unité ou ordinal","models also use growing degree-days between 0 and 32\,$^{ }$C, $ {DD}_{>0}"
+04_exposure.tex,,,,,C,45.0,32,"constante de conception, unité ou ordinal","s also use growing degree-days between 0 and 32\,$^{ }$C, $ {DD}_{>0} -  $."
+04_exposure.tex,,,,,C,45.0,0,"constante de conception, unité ou ordinal","ree-days between 0 and 32\,$^{ }$C, $ {DD}_{>0} -  $."
+04_exposure.tex,,,,,C,47.0,2,"constante de conception, unité ou ordinal","evening. The variable is air temperature at 2~m, not canopy temperature. An"
+04_exposure.tex,,,,,C,47.0,8,"constante de conception, unité ou ordinal","ature at 2~m, not canopy temperature. And an 8~km reanalysis may smooth loca"
+04_exposure.tex,,,,,C,47.0,32,"constante de conception, unité ou ordinal","tion records, July--August degree-days above 32\,$^{ }$C are higher, on avera"
+04_exposure.tex,,,,,C,47.0,2000,année ou période,"bove 32\,$^{ }$C are higher, on average over 2000--2025, in every department of"
+04_exposure.tex,,,,,C,47.0,2025,année ou période,"2\,$^{ }$C are higher, on average over 2000--2025, in every department of the ma"
+04_exposure.tex,,,,,C,54.0,1,"constante de conception, unité ou ordinal","ear $t$: autumn (September to November of $t-1$), winter (December of $t-1$"
+04_exposure.tex,,,,,C,54.0,1,"constante de conception, unité ou ordinal","o November of $t-1$), winter (December of $t-1$ to February), spring (March-"
+04_exposure.tex,,,,,C,58.0,32,"constante de conception, unité ou ordinal","For wheat, the threshold of 32\,$^{ }$C came with a fallback"
+04_exposure.tex,,,,,C,58.0,4,"constante de conception, unité ou ordinal","arried too little information ($N_{ {eff}} < 4$, see below), the threshold w"
+04_exposure.tex,,,,,C,58.0,30,"constante de conception, unité ou ordinal","4$, see below), the threshold would drop to 30\,$^{ }$C. The rule did not tr"
+04_exposure.tex,,,,,C,58.0,2025,année ou période,"} =  $, and  {} without the provisional year 2025. For maize, the threshold was"
+04_exposure.tex,,,,,C,58.0,32,"constante de conception, unité ou ordinal","ar 2025. For maize, the threshold was set at 32\,$^{ }$C in the plan, with 30"
+04_exposure.tex,,,,,C,58.0,30,"constante de conception, unité ou ordinal","old was set at 32\,$^{ }$C in the plan, with 30\,$^{ }$C as a robustness chec"
+04_exposure.tex,,,,,C,58.0,32,"constante de conception, unité ou ordinal","nd yield losses on days with a maximum above 32\,$^{ }$C (days, not degree-da"
+04_exposure.tex,,,,,C,64.0,2015,année ou période,"tment's maize (or wheat) area, averaged over 2015--2017 and kept fixed over the"
+04_exposure.tex,,,,,C,64.0,2017,année ou période,"s maize (or wheat) area, averaged over 2015--2017 and kept fixed over the whole"
+04_exposure.tex,,,,,C,67.0,2008,année ou période,"For maize, a third measure uses the 2008 blocks of RPG version 1.0 wit"
+04_exposure.tex,,,,,C,67.0,1.0,"identifiant, version, licence ou code","measure uses the 2008 blocks of RPG version 1.0 with the same rule, to check"
+04_exposure.tex,,,,,C,67.0,2015,année ou période,"1.0 with the same rule, to check whether the 2015--2017 mask is too recent for"
+04_exposure.tex,,,,,C,67.0,2017,année ou période,"th the same rule, to check whether the 2015--2017 mask is too recent for the 20"
+04_exposure.tex,,,,,C,67.0,2000,année ou période,er the 2015--2017 mask is too recent for the 2000s.
+04_exposure.tex,,,,,C,75.0,1,"constante de conception, unité ou ordinal",N_{ {eff}} =  {1}{ _t s_t^2}.
+04_exposure.tex,,,,,C,75.0,2,"constante de conception, unité ou ordinal",N_{ {eff}} =  {1}{ _t s_t^2}.
+04_exposure.tex,,,,,C,77.0,1,"constante de conception, unité ou ordinal",mber of years if they contribute equally and 1 if a single year carries ever
+04_exposure.tex,,,,,C,79.0,2010,année ou période,"The numbers are small. For wheat over 2010--2025, $N_{ {eff}} =  $ years"
+04_exposure.tex,,,,,C,79.0,2025,année ou période,"The numbers are small. For wheat over 2010--2025, $N_{ {eff}} =  $ years out of"
+04_exposure.tex,,,,,C,79.0,16,"constante de conception, unité ou ordinal","er 2010--2025, $N_{ {eff}} =  $ years out of 16; extending the series to 1959"
+04_exposure.tex,,,,,C,79.0,1959,année ou période,$ years out of 16; extending the series to 1959--2025 only raises it to  {} o
+04_exposure.tex,,,,,C,79.0,2025,année ou période,ars out of 16; extending the series to 1959--2025 only raises it to  {} out of
+04_exposure.tex,,,,,C,79.0,67,compte du plan (contrôlé en partie B),"s to 1959--2025 only raises it to  {} out of 67, because very hot early summer"
+04_exposure.tex,,,,,C,79.0,2000,année ou période,"ot early summers remain rare. For maize over 2000--2025, $N_{ {eff}} =  $ out o"
+04_exposure.tex,,,,,C,79.0,2025,année ou période,"ly summers remain rare. For maize over 2000--2025, $N_{ {eff}} =  $ out of 26, a"
+04_exposure.tex,,,,,C,79.0,26,compte du plan (contrôlé en partie B),"ize over 2000--2025, $N_{ {eff}} =  $ out of 26, and 2003 alone carries  \,\"
+04_exposure.tex,,,,,C,79.0,2003,année ou période,"2000--2025, $N_{ {eff}} =  $ out of 26, and 2003 alone carries  \,\"
+04_exposure.tex,,,,,C,83.0,2003,année ou période,rtments.   compares the heat of July--August 2003 under the three measures.
+04_exposure.tex,,,,,C,88.0,32,"constante de conception, unité ou ordinal","{Degree-days above 32\,$^{ }$C in July--August 2003"
+04_exposure.tex,,,,,C,88.0,2003,année ou période,"egree-days above 32\,$^{ }$C in July--August 2003, by measure (main maize sample"
+04_exposure.tex,,,,,C,93.0,32,"constante de conception, unité ou ordinal","Degree-days above 32\,$^{ }$C by double sine, summ"
+04_exposure.tex,,,,,C,93.0,2003,année ou période,"}$C by double sine, summed over July--August 2003, averaged over each department"
+04_exposure.tex,,,,,C,93.0,2015,année ou période,d over each department with weights from the 2015--2017 maize parcels (mask 201
+04_exposure.tex,,,,,C,93.0,2017,année ou période,each department with weights from the 2015--2017 maize parcels (mask 2015--17)
+04_exposure.tex,,,,,C,93.0,2015,année ou période,"ghts from the 2015--2017 maize parcels (mask 2015--17), the 2008 maize blocks ("
+04_exposure.tex,,,,,C,93.0,17,compte du plan (contrôlé en partie B),"rom the 2015--2017 maize parcels (mask 2015--17), the 2008 maize blocks (mask"
+04_exposure.tex,,,,,C,93.0,2008,année ou période,"015--2017 maize parcels (mask 2015--17), the 2008 maize blocks (mask 2008) or t"
+04_exposure.tex,,,,,C,93.0,2008,année ou période,"(mask 2015--17), the 2008 maize blocks (mask 2008) or the surface of the depart"
+04_exposure.tex,,,,,C,93.0,2015,année ou période,``Area $-$ mask'': department area minus the 2015--2017 mask; negative values m
+04_exposure.tex,,,,,C,93.0,2017,année ou période,$-$ mask'': department area minus the 2015--2017 mask; negative values mean th
+04_exposure.tex,,,,,C,98.0,2008,année ou période,"gree closely, except in the Rhône, where the 2008 mask gives  {} fewer degree-d"
+04_exposure.tex,,,,,C,98.0,2003,année ou période,the 2008 mask gives  {} fewer degree-days in 2003. The department-wide measure
+04_exposure.tex,,,,,C,98.0,2003,année ou période,"-Dôme, Isère, Drôme, Jura, Rhône and Ain. In 2003 it shows up to  {} fewer degr"
+04_exposure.tex,,,,,C,100.0,17,compte du plan (contrôlé en partie B),"largely the heat of the uplands. Across the 17 departments, the gap in measu"
+05_strategy.tex,,,,,C,10.0,32,"constante de conception, unité ou ordinal","ze associated with one more degree-day above 32\,$^{ }$C in July--August, hol"
+05_strategy.tex,,,,,C,11.0,32,"constante de conception, unité ou ordinal","ld associated with one more degree-day above 32\,$^{ }$C in May--June."
+05_strategy.tex,,,,,C,20.0,32,"constante de conception, unité ou ordinal","dt} -   Y^{R}_{dt} =  _d +  _t +  \,  {DD}_{>32,dt} +  \,  {SWI}_{dt} +  _{dt}"
+05_strategy.tex,,,,,C,22.0,2010,année ou période,ual to each department's grain maize area in 2010--2012. Heat and the soil wetn
+05_strategy.tex,,,,,C,22.0,2012,année ou période,each department's grain maize area in 2010--2012. Heat and the soil wetness in
+05_strategy.tex,,,,,C,32.0,2016,année ou période,"{Water restrictions (H3).} On 2016--2025, the years with usable"
+05_strategy.tex,,,,,C,32.0,2025,année ou période,"{Water restrictions (H3).} On 2016--2025, the years with usable severit"
+05_strategy.tex,,,,,C,35.0,32,"constante de conception, unité ou ordinal","dt} -   Y^{R}_{dt} =  _d +  _t +  \,  {DD}_{>32,dt} +  \, C_{dt} +  \,  {DD}_{"
+05_strategy.tex,,,,,C,35.0,32,"constante de conception, unité ou ordinal","\,  {DD}_{>32,dt} +  \, C_{dt} +  \,  {DD}_{>32,dt}   C_{dt} +  \,  {SWI}_{dt}"
+05_strategy.tex,,,,,C,37.0,0,"constante de conception, unité ou ordinal",H3 is $  < 0$: the slope of the gap on hea
+05_strategy.tex,,,,,C,41.0,4,"constante de conception, unité ou ordinal","The wheat model of phase 4 (M1, 2010--2025) is"
+05_strategy.tex,,,,,C,41.0,2010,année ou période,"The wheat model of phase 4 (M1, 2010--2025) is"
+05_strategy.tex,,,,,C,41.0,2025,année ou période,"The wheat model of phase 4 (M1, 2010--2025) is"
+05_strategy.tex,,,,,C,44.0,32,"constante de conception, unité ou ordinal","_d +  _t +  _1  {GDD}_{dt} +  _2\,  {DD}_{>32,dt} +  _1 P^{ {spring}}_{dt} +"
+05_strategy.tex,,,,,C,44.0,0,"constante de conception, unité ou ordinal","P^{ {spring}}_{dt} +  _2  {DD}^{ {autumn}}_{0,dt} +  _3 P^{ {autumn}}_{dt} +"
+05_strategy.tex,,,,,C,46.0,0,"constante de conception, unité ou ordinal","where GDD are growing degree-days between 0 and 32\,$^{ }$C in May--June,"
+05_strategy.tex,,,,,C,46.0,32,"constante de conception, unité ou ordinal","re GDD are growing degree-days between 0 and 32\,$^{ }$C in May--June, $P$ is"
+05_strategy.tex,,,,,C,46.0,0,"constante de conception, unité ou ordinal",$P$ is precipitation and $ {DD}^{ {autumn}}_{0}$ the warmth of the sowing pe
+05_strategy.tex,,,,,C,48.0,1959,année ou période,"The long-series model (M3, 1959--2025) keeps the same variabl"
+05_strategy.tex,,,,,C,48.0,2025,année ou période,"The long-series model (M3, 1959--2025) keeps the same variables but"
+05_strategy.tex,,,,,C,48.0,1959,année ou période,"$p$ is the source period of the yield data: 1959--1988 (hand-digitised), 1989-"
+05_strategy.tex,,,,,C,48.0,1988,année ou période,"s the source period of the yield data: 1959--1988 (hand-digitised), 1989--2009"
+05_strategy.tex,,,,,C,48.0,1989,année ou période,"the yield data: 1959--1988 (hand-digitised), 1989--2009 (former Agreste databas"
+05_strategy.tex,,,,,C,48.0,2009,année ou période,"eld data: 1959--1988 (hand-digitised), 1989--2009 (former Agreste database) and"
+05_strategy.tex,,,,,C,48.0,2010,année ou période,"d), 1989--2009 (former Agreste database) and 2010--2025 (current SAA). These ef"
+05_strategy.tex,,,,,C,48.0,2025,année ou période,89--2009 (former Agreste database) and 2010--2025 (current SAA). These effects
+05_strategy.tex,,,,,C,50.0,22,contrôlé (partie B),"llowed to differ across three sub-periods of 22 to 23 years (1959--1981, 1982"
+05_strategy.tex,,,,,C,50.0,23,contrôlé (partie B),"to differ across three sub-periods of 22 to 23 years (1959--1981, 1982--2003"
+05_strategy.tex,,,,,C,50.0,1959,année ou période,"across three sub-periods of 22 to 23 years (1959--1981, 1982--2003, 2004--2025"
+05_strategy.tex,,,,,C,50.0,1981,année ou période,"s three sub-periods of 22 to 23 years (1959--1981, 1982--2003, 2004--2025). This"
+05_strategy.tex,,,,,C,50.0,1982,année ou période,"e sub-periods of 22 to 23 years (1959--1981, 1982--2003, 2004--2025). This ques"
+05_strategy.tex,,,,,C,50.0,2003,année ou période,"periods of 22 to 23 years (1959--1981, 1982--2003, 2004--2025). This question is"
+05_strategy.tex,,,,,C,50.0,2004,année ou période,"s of 22 to 23 years (1959--1981, 1982--2003, 2004--2025). This question is desc"
+05_strategy.tex,,,,,C,50.0,2025,année ou période,"2 to 23 years (1959--1981, 1982--2003, 2004--2025). This question is descriptiv"
+05_strategy.tex,,,,,C,65.0,4,"constante de conception, unité ou ordinal","4 & Wheat 2010--2025: M1, M2, t"
+05_strategy.tex,,,,,C,65.0,2010,année ou période,"4 & Wheat 2010--2025: M1, M2, three inferenc"
+05_strategy.tex,,,,,C,65.0,2025,année ou période,"4 & Wheat 2010--2025: M1, M2, three inferences, 10"
+05_strategy.tex,,,,,C,65.0,10,"constante de conception, unité ou ordinal","Wheat 2010--2025: M1, M2, three inferences, 10 robustness checks \\"
+05_strategy.tex,,,,,C,66.0,5,"constante de conception, unité ou ordinal",5 & Forecasting protocol and be
+05_strategy.tex,,,,,C,67.0,6,"constante de conception, unité ou ordinal",6 & Exploratory maize analysis
+05_strategy.tex,,,,,C,67.0,2010,année ou période,"6 & Exploratory maize analysis 2010--2025, valuation, NDVI \\"
+05_strategy.tex,,,,,C,67.0,2025,année ou période,"6 & Exploratory maize analysis 2010--2025, valuation, NDVI \\"
+05_strategy.tex,,,,,C,68.0,4,"constante de conception, unité ou ordinal",4 bis & Maize 2000--2025 (A1) a
+05_strategy.tex,,,,,C,68.0,2000,année ou période,4 bis & Maize 2000--2025 (A1) and wheat 1959--20
+05_strategy.tex,,,,,C,68.0,2025,année ou période,4 bis & Maize 2000--2025 (A1) and wheat 1959--2025 (M3
+05_strategy.tex,,,,,C,68.0,1959,année ou période,4 bis & Maize 2000--2025 (A1) and wheat 1959--2025 (M3) \\
+05_strategy.tex,,,,,C,68.0,2025,année ou période,bis & Maize 2000--2025 (A1) and wheat 1959--2025 (M3) \\
+05_strategy.tex,,,,,C,73.0,4,"constante de conception, unité ou ordinal","n them, not in the order of this text: phase 4 (wheat 2010--2025), phase 5 ("
+05_strategy.tex,,,,,C,73.0,2010,année ou période,"ot in the order of this text: phase 4 (wheat 2010--2025), phase 5 (forecasting)"
+05_strategy.tex,,,,,C,73.0,2025,année ou période,"the order of this text: phase 4 (wheat 2010--2025), phase 5 (forecasting), phas"
+05_strategy.tex,,,,,C,73.0,5,"constante de conception, unité ou ordinal","this text: phase 4 (wheat 2010--2025), phase 5 (forecasting), phase 6 (explo"
+05_strategy.tex,,,,,C,73.0,6,"constante de conception, unité ou ordinal","at 2010--2025), phase 5 (forecasting), phase 6 (exploratory maize analysis),"
+05_strategy.tex,,,,,C,73.0,4,"constante de conception, unité ou ordinal","e 6 (exploratory maize analysis), then phase 4 bis (maize 2000--2025 and whe"
+05_strategy.tex,,,,,C,73.0,2000,année ou période,"ory maize analysis), then phase 4 bis (maize 2000--2025 and wheat 1959--2025)."
+05_strategy.tex,,,,,C,73.0,2025,année ou période,"ize analysis), then phase 4 bis (maize 2000--2025 and wheat 1959--2025).   list"
+05_strategy.tex,,,,,C,73.0,1959,année ou période,then phase 4 bis (maize 2000--2025 and wheat 1959--2025).   lists the labels us
+05_strategy.tex,,,,,C,73.0,2025,année ou période,hase 4 bis (maize 2000--2025 and wheat 1959--2025).   lists the labels used in
+05_strategy.tex,,,,,C,84.0,2000,année ou période,"of  : log yield gap irrigated minus rainfed, 2000--2025 \\"
+05_strategy.tex,,,,,C,84.0,2025,année ou période,"log yield gap irrigated minus rainfed, 2000--2025 \\"
+05_strategy.tex,,,,,C,85.0,4,"constante de conception, unité ou ordinal","M1, M2 & Wheat models of phase 4, 2010--2025; M2 adds the soil"
+05_strategy.tex,,,,,C,85.0,2010,année ou période,"M1, M2 & Wheat models of phase 4, 2010--2025; M2 adds the soil wetne"
+05_strategy.tex,,,,,C,85.0,2025,année ou période,"M1, M2 & Wheat models of phase 4, 2010--2025; M2 adds the soil wetness ind"
+05_strategy.tex,,,,,C,86.0,1959,année ou période,"M3 & Long wheat model, 1959--2025, with department-by-per"
+05_strategy.tex,,,,,C,86.0,2025,année ou période,"M3 & Long wheat model, 1959--2025, with department-by-period eff"
+05_strategy.tex,,,,,C,86.0,4,"constante de conception, unité ou ordinal",nt-by-period effects (called B1 in the phase 4 bis specification) \\
+05_strategy.tex,,,,,C,88.0,4,"constante de conception, unité ou ordinal","Q1, Q2 & Questions of phase 4 bis: maize (Q1) and long-seri"
+05_strategy.tex,,,,,C,94.0,4,"constante de conception, unité ou ordinal",ecision rules.} The first wheat phase (phase 4) used a strict rule: conclude
+05_strategy.tex,,,,,C,94.0,4,"constante de conception, unité ou ordinal","ap by year was reliable on these data, phase 4 bis replaced it: a main hypot"
+05_strategy.tex,,,,,C,94.0,0.05,"constante de conception, unité ou ordinal","p $p$-value, with clusters by year, is below 0.05  {and} the empirical size of"
+05_strategy.tex,,,,,C,94.0,10,"constante de conception, unité ou ordinal","test, measured on the same data, is at most 10\,\"
+05_strategy.tex,,,,,C,96.0,6,"constante de conception, unité ou ordinal",ten blind. The exploratory analysis of phase 6 had already estimated a versi
+05_strategy.tex,,,,,C,96.0,2010,année ou période,"ad already estimated a version of model~  on 2010--2025, with department-wide w"
+05_strategy.tex,,,,,C,96.0,2025,année ou période,"eady estimated a version of model~  on 2010--2025, with department-wide weather."
+05_strategy.tex,,,,,C,96.0,2000,année ou période,her. What had never been used were the years 2000--2009. The plan therefore des
+05_strategy.tex,,,,,C,96.0,2009,année ou période,hat had never been used were the years 2000--2009. The plan therefore designate
+05_strategy.tex,,,,,C,98.0,2008,année ou période,s (R11--R14) and the robustness check with a 2008 mask of maize parcel blocks.
+06_inference.tex,,,,,C,8.0,4,"constante de conception, unité ou ordinal",The first estimation phase (phase 4) studied wheat over 2010--202
+06_inference.tex,,,,,C,8.0,2010,année ou période,stimation phase (phase 4) studied wheat over 2010--2025. Heat during grain fill
+06_inference.tex,,,,,C,8.0,2025,année ou période,ion phase (phase 4) studied wheat over 2010--2025. Heat during grain filling wa
+06_inference.tex,,,,,C,11.0,200,"constante de conception, unité ou ordinal",ow correlation between departments less than 200~km apart (as implemented here
+06_inference.tex,,,,,C,14.0,4,"constante de conception, unité ou ordinal",he bootstrap gave $p =  $. The rule of phase 4 was to conclude only on what
+06_inference.tex,,,,,C,20.0,2,"constante de conception, unité ou ordinal","\,   x_{dt}\,  _{dt}}{ _t  _d w_d\,   x_{dt}^2},"
+06_inference.tex,,,,,C,26.0,200,"constante de conception, unité ou ordinal","ey standard errors capture correlation up to 200~km, but a hot summer can cove"
+06_inference.tex,,,,,C,26.0,16,"constante de conception, unité ou ordinal","ce of having only as many clusters as years: 16 for wheat over 2010--2025, 26"
+06_inference.tex,,,,,C,26.0,2010,année ou période,"as many clusters as years: 16 for wheat over 2010--2025, 26 for maize. With so"
+06_inference.tex,,,,,C,26.0,2025,année ou période,"y clusters as years: 16 for wheat over 2010--2025, 26 for maize. With so few clu"
+06_inference.tex,,,,,C,26.0,26,compte du plan (contrôlé en partie B),"ters as years: 16 for wheat over 2010--2025, 26 for maize. With so few cluste"
+06_inference.tex,,,,,C,33.0,0,"constante de conception, unité ou ordinal","Under the null hypothesis $  = 0$, the restricted residuals ar"
+06_inference.tex,,,,,C,35.0,"9,999",compte du plan (contrôlé en partie B),"atistic is compared with the distribution of 9,999 simulated $t$-statistics."
+06_inference.tex,,,,,C,38.0,3,"constante de conception, unité ou ordinal","{Getting it right took two attempts.} Step~3 is easy to forget, and my fir"
+06_inference.tex,,,,,C,38.0,8.7,contrôlé (partie B),"ze check, with pure noise as a placebo, gave 8.7\,\"
+06_inference.tex,,,,,C,49.0,300,compte du plan (contrôlé en partie B),"n place of heat, apply each test, and repeat 300 times (200 for the two explor"
+06_inference.tex,,,,,C,49.0,200,"constante de conception, unité ou ordinal","heat, apply each test, and repeat 300 times (200 for the two exploratory lines"
+06_inference.tex,,,,,C,49.0,6,"constante de conception, unité ou ordinal",(200 for the two exploratory lines of phase 6). A reliable test rejects in
+06_inference.tex,,,,,C,49.0,5,"constante de conception, unité ou ordinal","f phase 6). A reliable test rejects in about 5\,\"
+06_inference.tex,,,,,C,51.0,1,"constante de conception, unité ou ordinal","cts bias this measure downwards, by roughly $1/(N_{ {years}}-1)$ (about 0.04"
+06_inference.tex,,,,,C,51.0,1,"constante de conception, unité ou ordinal","asure downwards, by roughly $1/(N_{ {years}}-1)$ (about 0.04 with 26 years),"
+06_inference.tex,,,,,C,51.0,0.04,contrôlé (partie B),"ards, by roughly $1/(N_{ {years}}-1)$ (about 0.04 with 26 years), so the true a"
+06_inference.tex,,,,,C,51.0,26,compte du plan (contrôlé en partie B),"oughly $1/(N_{ {years}}-1)$ (about 0.04 with 26 years), so the true autocorre"
+06_inference.tex,,,,,C,51.0,1,"constante de conception, unité ou ordinal","pecific loadings, plus a department-level AR(1) component, and no true effec"
+06_inference.tex,,,,,C,55.0,5,"constante de conception, unité ou ordinal","the share of false rejections at the nominal 5\,\"
+06_inference.tex,,,,,C,65.0,4,"constante de conception, unité ou ordinal","ts are those of the main hypotheses of phase 4 bis. Clustering by year, two-"
+06_inference.tex,,,,,C,72.0,2010,année ou période,a true effect to the placebo for wheat over 2010--2025. With a true effect of
+06_inference.tex,,,,,C,72.0,2025,année ou période,e effect to the placebo for wheat over 2010--2025. With a true effect of $-1.5$
+06_inference.tex,,,,,C,72.0,1.5,contrôlé (partie B),"eat over 2010--2025. With a true effect of $-1.5$\,\"
+06_inference.tex,,,,,C,82.0,2010,année ou période,"In other words, the wheat data over 2010--2025 cannot answer the quest"
+06_inference.tex,,,,,C,82.0,2025,année ou période,"In other words, the wheat data over 2010--2025 cannot answer the question wi"
+06_inference.tex,,,,,C,82.0,4,"constante de conception, unité ou ordinal",s what motivated the two extensions of phase 4 bis: more years for wheat (19
+06_inference.tex,,,,,C,82.0,1959,année ou période,"nsions of phase 4 bis: more years for wheat (1959--2025), and a design with mor"
+06_inference.tex,,,,,C,82.0,2025,année ou période,"of phase 4 bis: more years for wheat (1959--2025), and a design with more vari"
+06_inference.tex,,,,,C,86.0,40,"constante de conception, unité ou ordinal",e released with this monograph ( ) simulates 40 regions over 25 years. Exposu
+06_inference.tex,,,,,C,86.0,25,compte du plan (contrôlé en partie B),this monograph ( ) simulates 40 regions over 25 years. Exposure and outcome e
+06_inference.tex,,,,,C,86.0,300,compte du plan (contrôlé en partie B),"very year, and the true effect is zero. Over 300 simulated panels, clustering"
+06_inference.tex,,,,,C,90.0,4,"constante de conception, unité ou ordinal","From phase 4 bis on, the bootstrap by year"
+06_inference.tex,,,,,C,90.0,10,"constante de conception, unité ou ordinal","the decision rule requires it to be at most 10\,\"
+07_maize.tex,,,,,C,28.0,32,"constante de conception, unité ou ordinal","er the decision rule.} Each degree-day above 32\,$^{ }$C in July--August is a"
+07_maize.tex,,,,,C,30.0,2003,année ou période,"Many of the extreme heat residuals come from 2003, which carries  \,\"
+07_maize.tex,,,,,C,35.0,32,"constante de conception, unité ou ordinal","nfed log yield gap against degree-days above 32\,$^{ }$C in July--August, bot"
+07_maize.tex,,,,,C,35.0,2003,année ou période,The line has the slope of the main estimate. 2003 in orange. 435 department-yea
+07_maize.tex,,,,,C,35.0,435,compte du plan (contrôlé en partie B),"slope of the main estimate. 2003 in orange. 435 department-years, 17 departme"
+07_maize.tex,,,,,C,35.0,17,compte du plan (contrôlé en partie B),"imate. 2003 in orange. 435 department-years, 17 departments. The 90\,\"
+07_maize.tex,,,,,C,35.0,90,"constante de conception, unité ou ordinal","e. 435 department-years, 17 departments. The 90\,\"
+07_maize.tex,,,,,C,39.0,90,"constante de conception, unité ou ordinal","nverting the bootstrap (added later) gives a 90\,\"
+07_maize.tex,,,,,C,43.0,10,"constante de conception, unité ou ordinal","ator is also coarse, and the sample has only 10 summers. For water policy, th"
+07_maize.tex,,,,,C,48.0,2003,année ou période,"ne cluster dominates: in the weighted model, 2003 alone carries  \,\"
+07_maize.tex,,,,,C,58.0,5,"constante de conception, unité ou ordinal","erence & One-sided $p$ & Size check (nominal 5\,\"
+07_maize.tex,,,,,C,61.0,25,compte du plan (contrôlé en partie B),"Cluster jackknife by year (CV3), $t$ with 25 d.f. &   &  \,\"
+07_maize.tex,,,,,C,63.0,"5,000",contrôlé (partie B),"Randomisation inference, 5,000 derangements of years &   & v"
+07_maize.tex,,,,,C,67.0,435,compte du plan (contrôlé en partie B),"All tests use model A1 on the main sample (435 department-years, 26 years)."
+07_maize.tex,,,,,C,67.0,26,compte du plan (contrôlé en partie B),"A1 on the main sample (435 department-years, 26 years). CV3: $  $ divided by"
+07_maize.tex,,,,,C,67.0,26,compte du plan (contrôlé en partie B),ded by the jackknife standard error from the 26 estimates that each leave out
+07_maize.tex,,,,,C,67.0,25,compte du plan (contrôlé en partie B),"r, compared with a Student distribution with 25 degrees of freedom. Randomisa"
+07_maize.tex,,,,,C,67.0,"5,000",contrôlé (partie B),"degrees of freedom. Randomisation: share of 5,000 derangements of the years of"
+07_maize.tex,,,,,C,67.0,5,"constante de conception, unité ou ordinal","te is at least $  $. Size: rejection rate at 5\,\"
+07_maize.tex,,,,,C,72.0,5,"constante de conception, unité ou ordinal","$: with it, H1 would not be significant at 5\,\"
+07_maize.tex,,,,,C,77.0,2010,année ou période,"alysis that motivated this question had used 2010--2025. On 2000--2009 alone, a"
+07_maize.tex,,,,,C,77.0,2025,année ou période,"that motivated this question had used 2010--2025. On 2000--2009 alone, a decad"
+07_maize.tex,,,,,C,77.0,2000,année ou période,"ivated this question had used 2010--2025. On 2000--2009 alone, a decade that no"
+07_maize.tex,,,,,C,77.0,2009,année ou période,"this question had used 2010--2025. On 2000--2009 alone, a decade that no earli"
+07_maize.tex,,,,,C,79.0,10,"constante de conception, unité ou ordinal",two-sided $p$-value is  . The test rests on 10 years: measured later with th
+07_maize.tex,,,,,C,79.0,10,"constante de conception, unité ou ordinal","same placebo, the size of the bootstrap with 10 clusters is  \,\"
+07_maize.tex,,,,,C,81.0,2010,année ou période,"ever estimated on. The SAA also reports, for 2010--2025, the yields of silage m"
+07_maize.tex,,,,,C,81.0,2025,année ou période,"stimated on. The SAA also reports, for 2010--2025, the yields of silage maize on"
+07_maize.tex,,,,,C,81.0,1,"constante de conception, unité ou ordinal","ments (only five of them with quality status~1, so all are kept and the data"
+07_maize.tex,,,,,C,83.0,2026,année ou période,{A first look at 2026.} The summer of 2026 brought
+07_maize.tex,,,,,C,83.0,2026,année ou période,{A first look at 2026.} The summer of 2026 brought  {} degree-days above
+07_maize.tex,,,,,C,83.0,32,"constante de conception, unité ou ordinal","summer of 2026 brought  {} degree-days above 32\,$^{ }$C in the main sample,"
+07_maize.tex,,,,,C,83.0,2000,année ou période,"main sample,  {} more than the departments' 2000--2025 average and second only"
+07_maize.tex,,,,,C,83.0,2025,année ou période,"sample,  {} more than the departments' 2000--2025 average and second only to 20"
+07_maize.tex,,,,,C,83.0,2003,année ou période,ments' 2000--2025 average and second only to 2003. Only the definitive statisti
+07_maize.tex,,,,,C,97.0,2010,année ou période,"ust soil wetness index, weights equal to the 2010--2012 grain maize area, unles"
+07_maize.tex,,,,,C,97.0,2012,année ou période,"il wetness index, weights equal to the 2010--2012 grain maize area, unless the"
+07_maize.tex,,,,,C,105.0,0.05,"constante de conception, unité ou ordinal",sided bootstrap $p$-value; open circle: $p   0.05$. Diamonds: exploratory point
+07_maize.tex,,,,,C,109.0,2003,année ou période,"significant in  . The estimate holds without 2003, the dominant summer; without"
+07_maize.tex,,,,,C,109.0,2025,année ou période,ominant summer; without the provisional year 2025; in the  {} departments of al
+07_maize.tex,,,,,C,111.0,2008,année ou période,"f heat measure (maize mask, department area, 2008 mask, E-OBS), threshold (30 o"
+07_maize.tex,,,,,C,111.0,30,"constante de conception, unité ou ordinal","partment area, 2008 mask, E-OBS), threshold (30 or 32\,$^{ }$C), window (July"
+07_maize.tex,,,,,C,111.0,32,"constante de conception, unité ou ordinal","nt area, 2008 mask, E-OBS), threshold (30 or 32\,$^{ }$C), window (July--Augu"
+07_maize.tex,,,,,C,111.0,17,compte du plan (contrôlé en partie B),"w (July--August or July), weighting, sample (17 or 38 departments) and the in"
+07_maize.tex,,,,,C,111.0,38,compte du plan (contrôlé en partie B),"y--August or July), weighting, sample (17 or 38 departments) and the inclusio"
+07_maize.tex,,,,,C,111.0,2003,année ou période,(17 or 38 departments) and the inclusion of 2003:  {} specifications in all (
+07_maize.tex,,,,,C,116.0,2003,année ou période,", window, weighting, sample and inclusion of 2003, sorted by size. Filled circle"
+07_maize.tex,,,,,C,116.0,0.05,"constante de conception, unité ou ordinal",ze. Filled circles: one-sided bootstrap $p < 0.05$. Lower panel: the choices of
+07_maize.tex,,,,,C,116.0,2015,année ou période,"; the main specification uses the maize mask 2015--17, 32\,$^{ }$C, July--Augus"
+07_maize.tex,,,,,C,116.0,17,compte du plan (contrôlé en partie B),"main specification uses the maize mask 2015--17, 32\,$^{ }$C, July--August, ar"
+07_maize.tex,,,,,C,116.0,32,"constante de conception, unité ou ordinal","specification uses the maize mask 2015--17, 32\,$^{ }$C, July--August, area"
+07_maize.tex,,,,,C,116.0,17,compte du plan (contrôlé en partie B),"17, 32\,$^{ }$C, July--August, area weights, 17 departments, with 2003). Coef"
+07_maize.tex,,,,,C,116.0,2003,année ou période,"--August, area weights, 17 departments, with 2003). Coefficients with a 30\,$^{"
+07_maize.tex,,,,,C,116.0,30,"constante de conception, unité ou ordinal","departments, with 2003). Coefficients with a 30\,$^{ }$C threshold are smalle"
+07_maize.tex,,,,,C,142.0,2000,année ou période,The divergence is concentrated in 2000--2009 ($ $ with the maize mas
+07_maize.tex,,,,,C,142.0,2009,année ou période,"The divergence is concentrated in 2000--2009 ($ $ with the maize mask, $ $"
+07_maize.tex,,,,,C,142.0,2003,année ou période,"ea) and persists in that decade even without 2003. On 2010--2025, department-wi"
+07_maize.tex,,,,,C,142.0,2010,année ou période,"ersists in that decade even without 2003. On 2010--2025, department-wide weathe"
+07_maize.tex,,,,,C,142.0,2025,année ou période,"s in that decade even without 2003. On 2010--2025, department-wide weather gives"
+07_maize.tex,,,,,C,146.0,2008,année ou période,he mask is not the cause.} A mask drawn from 2008 blocks gives almost the same
+07_maize.tex,,,,,C,146.0,2015,année ou période,blocks gives almost the same exposure as the 2015--2017 mask and the same estim
+07_maize.tex,,,,,C,146.0,2017,année ou période,gives almost the same exposure as the 2015--2017 mask and the same estimate.
+07_maize.tex,,,,,C,148.0,8,"constante de conception, unité ou ordinal","perature of July--August, averaged over each 8~km cell and then weighted by"
+07_maize.tex,,,,,C,148.0,8,"constante de conception, unité ou ordinal","by maize area as for degree-days, from MODIS 8-day composites starting in Ju"
+07_maize.tex,,,,,C,148.0,3,"constante de conception, unité ou ordinal",starting in July--August (so covering about 3 July to 4 September)   (added
+07_maize.tex,,,,,C,148.0,4,"constante de conception, unité ou ordinal",in July--August (so covering about 3 July to 4 September)   (added later; pr
+07_maize.tex,,,,,C,149.0,2003,année ou période,{The department-wide measure understates the 2003 heat where maize grows in dep
+07_maize.tex,,,,,C,149.0,2003,année ou période,nd department-wide weather understates their 2003 heat by up to  {} degree-days
+07_maize.tex,,,,,C,149.0,2003,année ou période,"up to  {} degree-days ( ). This is shown for 2003 only, while the divergence pe"
+07_maize.tex,,,,,C,149.0,2000,année ou période,"2003 only, while the divergence persists on 2000--2009 without 2003. An error"
+07_maize.tex,,,,,C,149.0,2009,année ou période,"only, while the divergence persists on 2000--2009 without 2003. An error that s"
+07_maize.tex,,,,,C,149.0,2003,année ou période,he divergence persists on 2000--2009 without 2003. An error that scaled heat by
+07_maize.tex,,,,,C,151.0,2000,année ou période,"e author, was written before any estimate on 2000--2009."
+07_maize.tex,,,,,C,151.0,2009,année ou période,"or, was written before any estimate on 2000--2009."
+07_maize.tex,,,,,C,152.0,6,"constante de conception, unité ou ordinal","was written, the only known estimate (phase 6, 2010--2025) used department-w"
+07_maize.tex,,,,,C,152.0,2010,année ou période,"s written, the only known estimate (phase 6, 2010--2025) used department-wide w"
+07_maize.tex,,,,,C,152.0,2025,année ou période,"ten, the only known estimate (phase 6, 2010--2025) used department-wide weather"
+07_maize.tex,,,,,C,154.0,2010,année ou période,"de weather gives a stronger association over 2010--2025, and the altitude patte"
+07_maize.tex,,,,,C,154.0,2025,année ou période,"ther gives a stronger association over 2010--2025, and the altitude pattern was"
+07_maize.tex,,,,,C,156.0,2003,année ou période,"e machine learning, the linear prediction of 2003), so the net direction of the"
+07_maize.tex,,,,,C,170.0,2012,année ou période,"al database (BNPE), summed by department for 2012--2023, allow a check of the f"
+07_maize.tex,,,,,C,170.0,2023,année ou période,"abase (BNPE), summed by department for 2012--2023, allow a check of the first li"
+07_maize.tex,,,,,C,170.0,32,"constante de conception, unité ou ordinal","s) but not detectably with degree-days above 32\,$^{ }$C ( \,\"
+07_maize.tex,,,,,C,175.0,17,compte du plan (contrôlé en partie B),"ted by the bootstrap by year ($p =  $). With 17 departments, the data cannot"
+07_maize.tex,,,,,C,180.0,2010,année ou période,"aize harvested as silage (one-sided $p =  $, 2010--2025 only) moves detectably"
+07_maize.tex,,,,,C,180.0,2025,année ou période,"arvested as silage (one-sided $p =  $, 2010--2025 only) moves detectably with h"
+07_maize.tex,,,,,C,187.0,1,"constante de conception, unité ou ordinal","ield}    [e^{  \,(  -  {department mean})} - 1 ],"
+07_maize.tex,,,,,C,189.0,2003,année ou période,"choice; applied to the irrigated yield, the 2003 figure would be about  \,\"
+07_maize.tex,,,,,C,194.0,17,compte du plan (contrôlé en partie B),"n associated with irrigation in hot summers (17 departments, descriptive)}"
+07_maize.tex,,,,,C,199.0,32,"constante de conception, unité ou ordinal",mal'': area-weighted mean excess of $ {DD}_{>32}$ over each department's 2000
+07_maize.tex,,,,,C,199.0,2000,année ou période,cess of $ {DD}_{>32}$ over each department's 2000--2025 mean. The range recompu
+07_maize.tex,,,,,C,199.0,2025,année ou période,f $ {DD}_{>32}$ over each department's 2000--2025 mean. The range recomputes th
+07_maize.tex,,,,,C,199.0,90,"constante de conception, unité ou ordinal","ge recomputes the value at the bounds of the 90\,\"
+07_maize.tex,,,,,C,204.0,17,compte du plan (contrôlé en partie B),"In the 17 departments, the extra produc"
+07_maize.tex,,,,,C,204.0,2003,année ou période,associated with irrigation in the summer of 2003 is worth between  {} and  {}
+07_maize.tex,,,,,C,204.0,90,"constante de conception, unité ou ordinal","rice ( {} million euros;  {} to  {} over the 90\,\"
+07_maize.tex,,,,,C,206.0,01,contrôlé (partie B),"tion. In six departments of the main sample (01, 03, 18, 63, 67, 68), grain ma"
+07_maize.tex,,,,,C,206.0,03,contrôlé (partie B),". In six departments of the main sample (01, 03, 18, 63, 67, 68), grain maize"
+07_maize.tex,,,,,C,206.0,18,contrôlé (partie B),"six departments of the main sample (01, 03, 18, 63, 67, 68), grain maize occu"
+07_maize.tex,,,,,C,206.0,63,contrôlé (partie B),"departments of the main sample (01, 03, 18, 63, 67, 68), grain maize occupied"
+07_maize.tex,,,,,C,206.0,67,compte du plan (contrôlé en partie B),"artments of the main sample (01, 03, 18, 63, 67, 68), grain maize occupied mor"
+07_maize.tex,,,,,C,206.0,68,contrôlé (partie B),"ents of the main sample (01, 03, 18, 63, 67, 68), grain maize occupied more t"
+07_maize.tex,,,,,C,206.0,2020,année ou période,more than half of the irrigated area in the 2020 agricultural census. There I
+07_maize.tex,,,,,C,206.0,3,"constante de conception, unité ou ordinal","rea. The resulting dose has a median of  ~m$^3$/ha over 2012--2023, close to"
+07_maize.tex,,,,,C,206.0,2012,année ou période,"sulting dose has a median of  ~m$^3$/ha over 2012--2023, close to the 1410~m$^3"
+07_maize.tex,,,,,C,206.0,2023,année ou période,"g dose has a median of  ~m$^3$/ha over 2012--2023, close to the 1410~m$^3$/ha re"
+07_maize.tex,,,,,C,206.0,1410,contrôlé (partie B),"of  ~m$^3$/ha over 2012--2023, close to the 1410~m$^3$/ha reported for grain m"
+07_maize.tex,,,,,C,206.0,3,"constante de conception, unité ou ordinal","^3$/ha over 2012--2023, close to the 1410~m$^3$/ha reported for grain maize"
+07_maize.tex,,,,,C,206.0,2021,année ou période,/ha reported for grain maize in Occitanie in 2021  . A plausibility rule (500 t
+07_maize.tex,,,,,C,206.0,500,"constante de conception, unité ou ordinal",in Occitanie in 2021  . A plausibility rule (500 to 3000~m$^3$/ha) excludes  {
+07_maize.tex,,,,,C,206.0,3000,contrôlé (partie B),tanie in 2021  . A plausibility rule (500 to 3000~m$^3$/ha) excludes  {} of the
+07_maize.tex,,,,,C,206.0,3,"constante de conception, unité ou ordinal",2021  . A plausibility rule (500 to 3000~m$^3$/ha) excludes  {} of the  {}
+07_maize.tex,,,,,C,206.0,2010,année ou période,oss production per cubic metre ( {} with the 2010 shares; from  {} to  {} acros
+07_maize.tex,,,,,C,206.0,3,"constante de conception, unité ou ordinal",", where the median dose over all years,  ~m$^3$/ha, lies close to the upper"
+07_maize.tex,,,,,C,206.0,0.20,contrôlé (partie B),e margin attributable to irrigation water at 0.20 to 0.28 euros per cubic metre
+07_maize.tex,,,,,C,206.0,0.28,contrôlé (partie B),attributable to irrigation water at 0.20 to 0.28 euros per cubic metre in 2012
+07_maize.tex,,,,,C,206.0,2012,année ou période,"ter at 0.20 to 0.28 euros per cubic metre in 2012--2014, before depreciation of"
+07_maize.tex,,,,,C,206.0,2014,année ou période,"0.20 to 0.28 euros per cubic metre in 2012--2014, before depreciation of equipm"
+07_maize.tex,,,,,C,206.0,1.4,contrôlé (partie B),"-2014, before depreciation of equipment, for 1.4~kg of maize per cubic metre"
+07_maize.tex,,,,,C,206.0,3,"constante de conception, unité ou ordinal","average. In hot summers the dose rises ( ~m$^3$/ha per degree-day, two-sided"
+07_maize.tex,,,,,C,206.0,17,compte du plan (contrôlé en partie B),"olumes are totals for all irrigated crops in 17 departments, in which crops l"
+08_wheat.tex,,,,,C,1.0,1959,année ou période,"{Results: soft wheat, 1959--2025}"
+08_wheat.tex,,,,,C,1.0,2025,année ou période,"{Results: soft wheat, 1959--2025}"
+08_wheat.tex,,,,,C,4.0,2010,année ou période,"them in two steps: the original analysis on 2010--2025, then the extension to"
+08_wheat.tex,,,,,C,4.0,2025,année ou période,"in two steps: the original analysis on 2010--2025, then the extension to 1959--2"
+08_wheat.tex,,,,,C,4.0,1959,année ou période,"nalysis on 2010--2025, then the extension to 1959--2025."
+08_wheat.tex,,,,,C,4.0,2025,année ou période,"s on 2010--2025, then the extension to 1959--2025."
+08_wheat.tex,,,,,C,9.0,1990,année ou période,"{Soft winter wheat yield, 1990--2025 (the full series starts"
+08_wheat.tex,,,,,C,9.0,2025,année ou période,"{Soft winter wheat yield, 1990--2025 (the full series starts in 19"
+08_wheat.tex,,,,,C,9.0,1959,année ou période,"yield, 1990--2025 (the full series starts in 1959), area-weighted mean of the 8"
+08_wheat.tex,,,,,C,9.0,85,compte du plan (contrôlé en partie B),"s starts in 1959), area-weighted mean of the 85 departments of the population"
+08_wheat.tex,,,,,C,9.0,1990,année ou période,"the SAA. Yields have plateaued since the mid-1990s, a break also modelled by  ;"
+08_wheat.tex,,,,,C,9.0,2016,année ou période,"e the mid-1990s, a break also modelled by  ; 2016 and 2024 are the two largest"
+08_wheat.tex,,,,,C,9.0,2024,année ou période,"-1990s, a break also modelled by  ; 2016 and 2024 are the two largest losses si"
+08_wheat.tex,,,,,C,9.0,2010,année ou période,16 and 2024 are the two largest losses since 2010.}
+08_wheat.tex,,,,,C,13.0,2010,année ou période,{2010--2025: a negative association
+08_wheat.tex,,,,,C,13.0,2025,année ou période,{2010--2025: a negative association that
+08_wheat.tex,,,,,C,15.0,4,"constante de conception, unité ou ordinal",with the three inferences planned for phase 4.
+08_wheat.tex,,,,,C,20.0,2010,année ou période,"{Wheat 2010--2025: heat above 32\,$^{ }$C"
+08_wheat.tex,,,,,C,20.0,2025,année ou période,"{Wheat 2010--2025: heat above 32\,$^{ }$C in Ma"
+08_wheat.tex,,,,,C,20.0,32,"constante de conception, unité ou ordinal","{Wheat 2010--2025: heat above 32\,$^{ }$C in May--June}"
+08_wheat.tex,,,,,C,25.0,83,compte du plan (contrôlé en partie B),"May--June soil wetness index and its square. 83 departments, 16 harvests. One"
+08_wheat.tex,,,,,C,25.0,16,"constante de conception, unité ou ordinal","etness index and its square. 83 departments, 16 harvests. One-sided: in the d"
+08_wheat.tex,,,,,C,25.0,0,"constante de conception, unité ou ordinal",d: in the direction of the hypothesis $ _2 < 0$.
+08_wheat.tex,,,,,C,30.0,32,"constante de conception, unité ou ordinal","Each degree-day above 32\,$^{ }$C during grain filling"
+08_wheat.tex,,,,,C,34.0,2025,année ou période,"without the provisional year 2025, the association doubles, to a"
+08_wheat.tex,,,,,C,37.0,4,"constante de conception, unité ou ordinal","Under the rule of phase 4, which required all three infe"
+08_wheat.tex,,,,,C,39.0,16,"constante de conception, unité ou ordinal",he data carry little information on it. With 16 harvests and very hot early s
+08_wheat.tex,,,,,C,39.0,1.5,contrôlé (partie B),"rectly sized test detects a true effect of $-1.5$\,\"
+08_wheat.tex,,,,,C,41.0,1959,année ou période,"{1959--2025: more years, still not"
+08_wheat.tex,,,,,C,41.0,2025,année ou période,"{1959--2025: more years, still not enough"
+08_wheat.tex,,,,,C,43.0,1959,année ou période,"answer to too few years is more years. Over 1959--2025, the model M3 keeps the"
+08_wheat.tex,,,,,C,43.0,2025,année ou période,"r to too few years is more years. Over 1959--2025, the model M3 keeps the variab"
+08_wheat.tex,,,,,C,48.0,1959,année ou période,"{Wheat 1959--2025: heat above 32\,$^{ }$C"
+08_wheat.tex,,,,,C,48.0,2025,année ou période,"{Wheat 1959--2025: heat above 32\,$^{ }$C in Ma"
+08_wheat.tex,,,,,C,48.0,32,"constante de conception, unité ou ordinal","{Wheat 1959--2025: heat above 32\,$^{ }$C in May--June (83 dep"
+08_wheat.tex,,,,,C,48.0,83,compte du plan (contrôlé en partie B),"--2025: heat above 32\,$^{ }$C in May--June (83 departments,  {} observations"
+08_wheat.tex,,,,,C,53.0,"9,999",compte du plan (contrôlé en partie B),": restricted wild cluster bootstrap by year, 9,999 draws; one-sided in the direc"
+08_wheat.tex,,,,,C,53.0,0,"constante de conception, unité ou ordinal",999 draws; one-sided in the direction $ _2 < 0$. ``---'': two-sided $p$-valu
+08_wheat.tex,,,,,C,60.0,2000,année ou période,"r of informative years from  {} to  . Before 2000, only one summer, 1976, brough"
+08_wheat.tex,,,,,C,60.0,1976,année ou période,"from  {} to  . Before 2000, only one summer, 1976, brought substantial heat abov"
+08_wheat.tex,,,,,C,60.0,32,"constante de conception, unité ou ordinal","summer, 1976, brought substantial heat above 32\,$^{ }$C in May--June across"
+08_wheat.tex,,,,,C,60.0,2000,année ou période,"against at most  {} in any other year before 2000), so most of the added years"
+09_forecasting.tex,,,,,C,10.0,83,compte du plan (contrôlé en partie B),sample.} The log yield of soft wheat in the 83 departments of the main sampl
+09_forecasting.tex,,,,,C,11.0,1,"constante de conception, unité ou ordinal",{Forecast dates.} 1 June and 1 July of the harves
+09_forecasting.tex,,,,,C,11.0,1,"constante de conception, unité ou ordinal",{Forecast dates.} 1 June and 1 July of the harvest year. Onl
+09_forecasting.tex,,,,,C,11.0,1,"constante de conception, unité ou ordinal","is used: autumn, winter, spring, and May (on 1 June) or May--June (on 1 July"
+09_forecasting.tex,,,,,C,11.0,1,"constante de conception, unité ou ordinal","spring, and May (on 1 June) or May--June (on 1 July). Nine variables per win"
+09_forecasting.tex,,,,,C,11.0,36,contrôlé (partie B),"(on 1 July). Nine variables per window give 36 variables, fixed by the proto"
+09_forecasting.tex,,,,,C,12.0,2016,année ou période,"Rolling origin: for each test year $t$ from 2016 to 2025, models are trained o"
+09_forecasting.tex,,,,,C,12.0,2025,année ou période,"origin: for each test year $t$ from 2016 to 2025, models are trained on 2010 to"
+09_forecasting.tex,,,,,C,12.0,2010,année ou période,"$t$ from 2016 to 2025, models are trained on 2010 to $t-1$, between 6 and 15 ye"
+09_forecasting.tex,,,,,C,12.0,1,"constante de conception, unité ou ordinal","16 to 2025, models are trained on 2010 to $t-1$, between 6 and 15 years. Dep"
+09_forecasting.tex,,,,,C,12.0,6,"constante de conception, unité ou ordinal","models are trained on 2010 to $t-1$, between 6 and 15 years. Department mean"
+09_forecasting.tex,,,,,C,12.0,15,contrôlé (partie B),"are trained on 2010 to $t-1$, between 6 and 15 years. Department means, tren"
+09_forecasting.tex,,,,,C,12.0,1990,année ou période,in the training years. A variant trains from 1990 with the long wheat series.
+09_forecasting.tex,,,,,C,15.0,95,"constante de conception, unité ou ordinal","ween a model and a benchmark is given with a 95\,\"
+09_forecasting.tex,,,,,C,17.0,2020,année ou période,"moved: the SAA series were revised after the 2020 census, SIM2 is a reanalysis,"
+09_forecasting.tex,,,,,C,17.0,2015,année ou période,"2 is a reanalysis, the wheat mask comes from 2015--2017, and the 2025 yields ar"
+09_forecasting.tex,,,,,C,17.0,2017,année ou période,"reanalysis, the wheat mask comes from 2015--2017, and the 2025 yields are provi"
+09_forecasting.tex,,,,,C,17.0,2025,année ou période,"he wheat mask comes from 2015--2017, and the 2025 yields are provisional. The s"
+09_forecasting.tex,,,,,C,17.0,2025,année ou période,"test years (the quality status published in 2025), so the exercise is a pseudo"
+09_forecasting.tex,,,,,C,17.0,18,contrôlé (partie B),"nimum temperature, which SIM2 measures until 18:00 UTC on the forecast day it"
+09_forecasting.tex,,,,,C,17.0,00,contrôlé (partie B),"um temperature, which SIM2 measures until 18:00 UTC on the forecast day itsel"
+09_forecasting.tex,,,,,C,21.0,1,"constante de conception, unité ou ordinal",". Under that criterion, the random forest on 1 July formally qualifies as a"
+09_forecasting.tex,,,,,C,30.0,2016,année ou période,"tive to the department mean (B0), test years 2016--2025}"
+09_forecasting.tex,,,,,C,30.0,2025,année ou période,"o the department mean (B0), test years 2016--2025}"
+09_forecasting.tex,,,,,C,35.0,1,"constante de conception, unité ou ordinal","Skill $= 1 -  {MSE}/ {MSE}( {B0})$, on l"
+09_forecasting.tex,,,,,C,35.0,95,"constante de conception, unité ou ordinal","$, on log yield, weighted by area. Interval: 95\,\"
+09_forecasting.tex,,,,,C,42.0,2010,année ou période,{Training from 2010:} every model does worse than
+09_forecasting.tex,,,,,C,43.0,1990,année ou période,"{Training from 1990:} ridge, random forest and gr"
+09_forecasting.tex,,,,,C,43.0,10,"constante de conception, unité ou ordinal","erage, but their intervals include zero over 10 test years."
+09_forecasting.tex,,,,,C,45.0,2016,année ou période,"n. These averages rest largely on two years: 2016 alone accounts for  \,\"
+09_forecasting.tex,,,,,C,50.0,1,"constante de conception, unité ou ordinal",{Forecast error by test year on 1 July: department mean (B0) an
+09_forecasting.tex,,,,,C,56.0,250,"constante de conception, unité ou ordinal",ribes the crop itself. I added MODIS NDVI at 250~m (16-day composites from Apr
+09_forecasting.tex,,,,,C,56.0,16,"constante de conception, unité ou ordinal",he crop itself. I added MODIS NDVI at 250~m (16-day composites from April to
+09_forecasting.tex,,,,,C,56.0,16,"constante de conception, unité ou ordinal",wheat mask. A composite is used only if its 16-day period ends before the fo
+09_forecasting.tex,,,,,C,56.0,6.1,"identifiant, version, licence ou code","delay, and I use the reprocessed collection 6.1, so this part is also pseudo-"
+09_forecasting.tex,,,,,C,56.0,22,"non vérifiable par le code (durée, historique, calendrier MODIS)","; the maximum also includes the composite of 22 March to 6 April, as the prot"
+09_forecasting.tex,,,,,C,56.0,6,"constante de conception, unité ou ordinal","m also includes the composite of 22 March to 6 April, as the protocol define"
+09_forecasting.tex,,,,,C,61.0,2010,année ou période,"{What NDVI adds to each model, training from 2010}"
+09_forecasting.tex,,,,,C,66.0,1,"constante de conception, unité ou ordinal",Gain: $1 -  {MSE}( {with NDVI})/ {MSE}
+09_forecasting.tex,,,,,C,66.0,95,"constante de conception, unité ou ordinal","{with NDVI})/ {MSE}( {without})$. Interval: 95\,\"
+09_forecasting.tex,,,,,C,75.0,6,"constante de conception, unité ou ordinal","With 6 to 15 training years, the mod"
+09_forecasting.tex,,,,,C,75.0,15,contrôlé (partie B),"With 6 to 15 training years, the models of"
+09_forecasting.tex,,,,,C,80.0,36,contrôlé (partie B),"rrections to B0 instead of B1, with the same 36 variables and the same settin"
+10_discussion.tex,,,,,C,4.0,17,compte du plan (contrôlé en partie B),it wrong? How far does it travel beyond the 17 departments studied? And what
+10_discussion.tex,,,,,C,10.0,2003,année ou période,"on rests largely on a few summers, above all 2003, which carries between a quart"
+10_discussion.tex,,,,,C,10.0,2003,année ou période,"e-day is a convenient summary, not a law: in 2003 the observed widening of the"
+10_discussion.tex,,,,,C,12.0,32,"constante de conception, unité ou ordinal","ance the summers with many degree-days above 32\,$^{ }$C (2003, 2019, 2022) w"
+10_discussion.tex,,,,,C,12.0,2003,année ou période,"ers with many degree-days above 32\,$^{ }$C (2003, 2019, 2022) were also dry: in"
+10_discussion.tex,,,,,C,12.0,2019,année ou période,"th many degree-days above 32\,$^{ }$C (2003, 2019, 2022) were also dry: in the m"
+10_discussion.tex,,,,,C,12.0,2022,année ou période,"y degree-days above 32\,$^{ }$C (2003, 2019, 2022) were also dry: in the main s"
+10_discussion.tex,,,,,C,12.0,2000,année ou période,three are among the  {} driest summers since 2000. The soil wetness index absor
+10_discussion.tex,,,,,C,12.0,32,"constante de conception, unité ou ordinal","the association moves from degree-days above 32\,$^{ }$C to the drying power"
+10_discussion.tex,,,,,C,12.0,8,"constante de conception, unité ou ordinal","it, since that temperature is averaged over 8~km cells in which maize cover"
+10_discussion.tex,,,,,C,12.0,38,compte du plan (contrôlé en partie B),"ith the water stress of the crop: across the 38 departments, surface temperat"
+10_discussion.tex,,,,,C,12.0,32,"constante de conception, unité ou ordinal","s by about  {}\,$^{ }$C per degree-day above 32\,$^{ }$C, a little less where"
+10_discussion.tex,,,,,C,21.0,35,"constante de conception, unité ou ordinal","re of planted maize and soybeans falls above 35\,$^{ }$C, less so for maize"
+10_discussion.tex,,,,,C,21.0,2010,année ou période,"The SAA areas of silage maize, available for 2010--2025, show no detectable inc"
+10_discussion.tex,,,,,C,21.0,2025,année ou période,"A areas of silage maize, available for 2010--2025, show no detectable increase i"
+10_discussion.tex,,,,,C,21.0,2003,année ou période,"rvested as silage in hotter summers ( ), but 2003 is outside that period and th"
+10_discussion.tex,,,,,C,32.0,8,"constante de conception, unité ou ordinal","SIM2 is an 8~km reanalysis; E-OBS, interpo"
+10_discussion.tex,,,,,C,32.0,32,"constante de conception, unité ou ordinal","from stations, counts more degree-days above 32\,$^{ }$C, and the result hold"
+10_discussion.tex,,,,,C,38.0,2025,année ou période,"{The data on yields.} The quality status of 2025 is applied to 2000--2009, two"
+10_discussion.tex,,,,,C,38.0,2000,année ou période,"s.} The quality status of 2025 is applied to 2000--2009, two releases of the st"
+10_discussion.tex,,,,,C,38.0,2009,année ou période,"e quality status of 2025 is applied to 2000--2009, two releases of the statistic"
+10_discussion.tex,,,,,C,38.0,2010,année ou période,"wo releases of the statistics are spliced in 2010, many yields are rounded, and"
+10_discussion.tex,,,,,C,38.0,2025,année ou période,"ed in 2010, many yields are rounded, and the 2025 values are provisional. The s"
+10_discussion.tex,,,,,C,38.0,2025,année ou période,"the overlap and the results do not depend on 2025, but the older decade rests on"
+10_discussion.tex,,,,,C,50.0,8,"constante de conception, unité ou ordinal","ations of the Explore2 ensemble, on the same 8~km grid and the same maize ma"
+10_discussion.tex,,,,,C,50.0,32,"constante de conception, unité ou ordinal","ame maize mask, I computed degree-days above 32\,$^{ }$C in July--August exac"
+10_discussion.tex,,,,,C,50.0,1976,année ou période,"sets them against the observed summers. Over 1976--2005, the simulations give"
+10_discussion.tex,,,,,C,50.0,2005,année ou période,"hem against the observed summers. Over 1976--2005, the simulations give  {} to"
+10_discussion.tex,,,,,C,50.0,2.0,"constante de conception, unité ou ordinal","oss simulations, reaches  {} degree-days at +2.0\,$^{ }$C (range across simula"
+10_discussion.tex,,,,,C,50.0,2.7,"constante de conception, unité ou ordinal","}$C (range across simulations  -- ),  {} at +2.7\,$^{ }$C ( -- ) and  {} at +4"
+10_discussion.tex,,,,,C,50.0,4.0,"constante de conception, unité ou ordinal","- ),  {} at +2.7\,$^{ }$C ( -- ) and  {} at +4.0\,$^{ }$C ( -- ), against  {}"
+10_discussion.tex,,,,,C,50.0,1976,année ou période,"{} at +4.0\,$^{ }$C ( -- ), against  {} in 1976--2005 and  {} on average over"
+10_discussion.tex,,,,,C,50.0,2005,année ou période,"t +4.0\,$^{ }$C ( -- ), against  {} in 1976--2005 and  {} on average over 2000-"
+10_discussion.tex,,,,,C,50.0,2000,année ou période,"st  {} in 1976--2005 and  {} on average over 2000--2025. At +2.7\,$^{ }$C this"
+10_discussion.tex,,,,,C,50.0,2025,année ou période,"in 1976--2005 and  {} on average over 2000--2025. At +2.7\,$^{ }$C this averag"
+10_discussion.tex,,,,,C,50.0,2.7,"constante de conception, unité ou ordinal","2005 and  {} on average over 2000--2025. At +2.7\,$^{ }$C this average summer"
+10_discussion.tex,,,,,C,50.0,2000,année ou période,"verage summer is hotter than every summer of 2000--2025 except 2003; at +4.0\,$"
+10_discussion.tex,,,,,C,50.0,2025,année ou période,"summer is hotter than every summer of 2000--2025 except 2003; at +4.0\,$^{ }$C"
+10_discussion.tex,,,,,C,50.0,2003,année ou période,"otter than every summer of 2000--2025 except 2003; at +4.0\,$^{ }$C it is hotte"
+10_discussion.tex,,,,,C,50.0,4.0,"constante de conception, unité ou ordinal","every summer of 2000--2025 except 2003; at +4.0\,$^{ }$C it is hotter than 20"
+10_discussion.tex,,,,,C,50.0,2003,année ou période,"ept 2003; at +4.0\,$^{ }$C it is hotter than 2003 ( ). These are averages: indi"
+10_discussion.tex,,,,,C,50.0,4.0,"constante de conception, unité ou ordinal","l summers vary around them, so that even at +4.0\,$^{ }$C many summers would r"
+10_discussion.tex,,,,,C,50.0,2003,année ou période,^{ }$C many summers would remain cooler than 2003. Multiplying the median chang
+10_discussion.tex,,,,,C,55.0,32,"constante de conception, unité ou ordinal","{Degree-days above 32\,$^{ }$C in July--August on t"
+10_discussion.tex,,,,,C,55.0,17,compte du plan (contrôlé en partie B),"July--August on the maize mask, mean of the 17 departments of the main sampl"
+10_discussion.tex,,,,,C,55.0,1976,année ou période,"e main sample weighted as in A1. Bars: SIM2, 1976--2025. Points: median of the"
+10_discussion.tex,,,,,C,55.0,2025,année ou période,"sample weighted as in A1. Bars: SIM2, 1976--2025. Points: median of the  {} Ex"
+10_discussion.tex,,,,,C,55.0,2.0,"constante de conception, unité ou ordinal","of the French adaptation trajectory (France +2.0, +2.7 and +4.0\,$^{ }$C), wit"
+10_discussion.tex,,,,,C,55.0,2.7,"constante de conception, unité ou ordinal","French adaptation trajectory (France +2.0, +2.7 and +4.0\,$^{ }$C), with the"
+10_discussion.tex,,,,,C,55.0,4.0,"constante de conception, unité ou ordinal","daptation trajectory (France +2.0, +2.7 and +4.0\,$^{ }$C), with the range acr"
+10_discussion.tex,,,,,C,55.0,20,"constante de conception, unité ou ordinal","ns; each simulation is averaged over its own 20-year window, except at +2.0\,"
+10_discussion.tex,,,,,C,55.0,2.0,"constante de conception, unité ou ordinal","aged over its own 20-year window, except at +2.0\,$^{ }$C, where the windows o"
+10_discussion.tex,,,,,C,55.0,2021,année ou période,"the windows of five simulations begin before 2021, the first projected year down"
+10_discussion.tex,,,,,C,55.0,9,"constante de conception, unité ou ordinal","jected year downloaded, and are shortened to 9 to 16 years; the upper end of"
+10_discussion.tex,,,,,C,55.0,16,"constante de conception, unité ou ordinal","d year downloaded, and are shortened to 9 to 16 years; the upper end of the r"
+10_discussion.tex,,,,,C,55.0,2.0,"constante de conception, unité ou ordinal","to 16 years; the upper end of the range at +2.0\,$^{ }$C comes from one of th"
+10_discussion.tex,,,,,C,55.0,2022,année ou période,"Météo-France, CERFACS, IPSL (Explore2-Climat 2022, ADAMONT).}"
+10_discussion.tex,,,,,C,62.0,1,"constante de conception, unité ou ordinal",ecord irrigation; maps derived from Sentinel-1 and Sentinel-2 exist for some
+10_discussion.tex,,,,,C,62.0,2,"constante de conception, unité ou ordinal","n; maps derived from Sentinel-1 and Sentinel-2 exist for some basins, not fo"
+10_discussion.tex,,,,,C,65.0,2010,année ou période,SAA areas of silage maize show no shift over 2010--2025; field-level data on th
+10_discussion.tex,,,,,C,65.0,2025,année ou période,eas of silage maize show no shift over 2010--2025; field-level data on the harv
+10_discussion.tex,,,,,C,65.0,2003,année ou période,"a on the harvest decision, and data covering 2003, would test the main selection"
+10_discussion.tex,,,,,C,67.0,2026,année ou période,eanest test of the result. The hot summer of 2026 is a first opportunity ( ); i
+10_discussion.tex,,,,,C,74.0,10,"constante de conception, unité ou ordinal","and on these panels their size stays within 10\,\"
+10_discussion.tex,,,,,C,78.0,2025,année ou période,ariant that worked: the wheat result without 2025 was significant in the one-si
+10_discussion.tex,,,,,C,78.0,2026,année ou période,s also changed; the first wheat forecast for 2026 is kept beside the recomputed
+10_discussion.tex,,,,,C,78.0,2026,année ou période,"the run that read the early estimates of the 2026 harvest, so it is not blind."
+11_conclusion.tex,,,,,C,4.0,17,compte du plan (contrôlé en partie B),In 17 French departments over 26 su
+11_conclusion.tex,,,,,C,4.0,26,compte du plan (contrôlé en partie B),"In 17 French departments over 26 summers, hot summers are asso"
+11_conclusion.tex,,,,,C,6.0,1959,année ou période,"questions gave null results. For wheat over 1959--2025, heat at the end of the"
+11_conclusion.tex,,,,,C,6.0,2025,année ou période,"ions gave null results. For wheat over 1959--2025, heat at the end of the cycle"
+A_reproduction.tex,,,,,C,6.0,3.12,"identifiant, version, licence ou code",{Environments.} Python~3.12 is managed with  . Its lock f
+A_reproduction.tex,,,,,C,8.0,256,"identifiant, version, licence ou code",ifest lists  {} files with their URL and SHA-256 hash; an automated test check
+A_reproduction.tex,,,,,C,16.0,4,"constante de conception, unité ou ordinal",the main analyses of phase 4 bis;
+A_reproduction.tex,,,,,C,20.0,15,"non vérifiable par le code (durée, historique, calendrier MODIS)","(orders depend on the NASA queue, then about 15 minutes of aggregation and 30"
+A_reproduction.tex,,,,,C,20.0,30,"constante de conception, unité ou ordinal","ue, then about 15 minutes of aggregation and 30 minutes of forecasting) and t"
+A_reproduction.tex,,,,,C,20.0,20,"constante de conception, unité ou ordinal",of forecasting) and the daily weather (about 20 minutes). Two sources require
+A_reproduction.tex,,,,,C,22.0,2,"constante de conception, unité ou ordinal","g, run in parallel, which differ by at most $2  10^{-14}$, floating-point ro"
+A_reproduction.tex,,,,,C,22.0,10,"constante de conception, unité ou ordinal","run in parallel, which differ by at most $2  10^{-14}$, floating-point roundi"
+A_reproduction.tex,,,,,C,22.0,14,à examiner,"n parallel, which differ by at most $2  10^{-14}$, floating-point rounding),"
+A_reproduction.tex,,,,,C,24.0,17,compte du plan (contrôlé en partie B),"text by hand: counts that define the design (17 and 83 departments, the numbe"
+A_reproduction.tex,,,,,C,24.0,83,compte du plan (contrôlé en partie B),"hand: counts that define the design (17 and 83 departments, the numbers of y"
+A_reproduction.tex,,,,,C,24.0,300,compte du plan (contrôlé en partie B),"ents, the numbers of years and clusters, the 300 placebo repetitions), a few f"
+A_reproduction.tex,,,,,C,24.0,2003,année ou période,The script also checks that the valuation of 2003 is reproduced exactly; it sto
+A_reproduction.tex,,,,,C,26.0,10,"constante de conception, unité ou ordinal",full weighted re-estimation by   to within $10^{-12}$; the cluster-jackknife
+A_reproduction.tex,,,,,C,26.0,12,"constante de conception, unité ou ordinal",weighted re-estimation by   to within $10^{-12}$; the cluster-jackknife stan
+A_reproduction.tex,,,,,C,26.0,26,compte du plan (contrôlé en partie B),ster-jackknife standard error equals that of 26 explicit re-estimations; nega
+A_reproduction.tex,,,,,C,28.0,123,compte du plan (contrôlé en partie B),recorded in the code. All seeds were set to 123 after the results (derived se
+A_reproduction.tex,,,,,C,28.0,123,compte du plan (contrôlé en partie B),"derived seeds keep their derivation, such as 123 + $r$ for the 50 splits of th"
+A_reproduction.tex,,,,,C,28.0,50,compte du plan (contrôlé en partie B),"their derivation, such as 123 + $r$ for the 50 splits of the double machine"
+B_variables.tex,,,,,C,13.0,1,"constante de conception, unité ou ordinal","crop and, for maize, irrigation mode & q/ha (1~q = 100~kg) & SAA;   \\"
+B_variables.tex,,,,,C,13.0,100,"constante de conception, unité ou ordinal","nd, for maize, irrigation mode & q/ha (1~q = 100~kg) & SAA;   \\"
+B_variables.tex,,,,,C,15.0,32,"constante de conception, unité ou ordinal","$ {DD}_{>32}$ & Degree-days above 32\,$^{"
+B_variables.tex,,,,,C,15.0,32,"constante de conception, unité ou ordinal","$ {DD}_{>32}$ & Degree-days above 32\,$^{ }$C by double sine, summ"
+B_variables.tex,,,,,C,16.0,0,"constante de conception, unité ou ordinal","GDD & Degree-days between 0 and 32\,$^{ }$C ($ {DD}_{>0}"
+B_variables.tex,,,,,C,16.0,32,"constante de conception, unité ou ordinal","GDD & Degree-days between 0 and 32\,$^{ }$C ($ {DD}_{>0} -  {DD}"
+B_variables.tex,,,,,C,16.0,0,"constante de conception, unité ou ordinal","ree-days between 0 and 32\,$^{ }$C ($ {DD}_{>0} -  {DD}_{>32}$) & $^{ }$C$ $"
+B_variables.tex,,,,,C,16.0,32,"constante de conception, unité ou ordinal","een 0 and 32\,$^{ }$C ($ {DD}_{>0} -  {DD}_{>32}$) & $^{ }$C$ $day & SIM2, RP"
+B_variables.tex,,,,,C,17.0,0,"constante de conception, unité ou ordinal","l wetness index, mean over the window (about 0 at wilting point, 1 at field"
+B_variables.tex,,,,,C,17.0,1,"constante de conception, unité ou ordinal","n over the window (about 0 at wilting point, 1 at field capacity) & none & S"
+B_variables.tex,,,,,C,20.0,8,"constante de conception, unité ou ordinal","& Daytime land-surface temperature, mean of 8-day composites over July--Aug"
+B_variables.tex,,,,,C,21.0,3,"constante de conception, unité ou ordinal","ll crops, summed by department and year & m$^3$ & BNPE \\"
+B_variables.tex,,,,,C,22.0,3,"constante de conception, unité ou ordinal","ted area, over the irrigated maize area & m$^3$/ha & BNPE, RA2020, SAA \\"
+B_variables.tex,,,,,C,23.0,32,"constante de conception, unité ou ordinal","Projected $ {DD}_{>32}$, VPD & As observed, from da"
+B_variables.tex,,,,,C,23.0,20,"constante de conception, unité ou ordinal","humidity, with pressure from cell altitude), 20-year window per warming level"
+B_variables.tex,,,,,C,25.0,2010,année ou période,Weights & Mean area 2010--2012 (wheat; or irrigated pl
+B_variables.tex,,,,,C,25.0,2012,année ou période,Weights & Mean area 2010--2012 (wheat; or irrigated plus rai
+B_variables.tex,,,,,C,26.0,1,"constante de conception, unité ou ordinal",Windows (wheat) & Autumn: Sep--Nov of $t-1$; winter: Dec--Feb; spring: M
+B_variables.tex,,,,,C,28.0,16,"constante de conception, unité ou ordinal","NDVI & Monthly means of 16-day composites, April--June,"
+C_deviations.tex,,,,,C,20.0,4,"constante de conception, unité ou ordinal",4 (wheat) & Joint test of the s
+C_deviations.tex,,,,,C,21.0,4,"constante de conception, unité ou ordinal","4 & Two-sided 95\,\"
+C_deviations.tex,,,,,C,21.0,95,"constante de conception, unité ou ordinal","4 & Two-sided 95\,\"
+C_deviations.tex,,,,,C,22.0,4,"constante de conception, unité ou ordinal",4 & Individual bootstrap test o
+C_deviations.tex,,,,,C,23.0,4,"constante de conception, unité ou ordinal",4 & Leave-one-year-out estimate
+C_deviations.tex,,,,,C,24.0,4,"constante de conception, unité ou ordinal",4 & Four robustness checks R11-
+C_deviations.tex,,,,,C,25.0,4,"constante de conception, unité ou ordinal",4 & Two bugs: bootstrap outcome
+C_deviations.tex,,,,,C,25.0,8.7,contrôlé (partie B),"gs: bootstrap outcome not re-projected (size 8.7\,\"
+C_deviations.tex,,,,,C,26.0,4,"constante de conception, unité ou ordinal",4 & Conley matrices that   had
+C_deviations.tex,,,,,C,27.0,5,"constante de conception, unité ou ordinal",5 (forecast) & Comparison with
+C_deviations.tex,,,,,C,28.0,5,"constante de conception, unité ou ordinal",5 (forecast) & Tree models buil
+C_deviations.tex,,,,,C,29.0,6,"constante de conception, unité ou ordinal",6 (explor\-atory) & Two maize o
+C_deviations.tex,,,,,C,30.0,6,"constante de conception, unité ou ordinal",6 & Missing NDVI values (at mos
+C_deviations.tex,,,,,C,30.0,1.13,contrôlé (partie B),"6 & Missing NDVI values (at most 1.13\,\"
+C_deviations.tex,,,,,C,31.0,4,"constante de conception, unité ou ordinal",4 bis (maize) & Population: 202
+C_deviations.tex,,,,,C,31.0,2025,année ou période,4 bis (maize) & Population: 2025 quality status applied to 200
+C_deviations.tex,,,,,C,31.0,2000,année ou période,& Population: 2025 quality status applied to 2000--2009 & No earlier status exi
+C_deviations.tex,,,,,C,31.0,2009,année ou période,lation: 2025 quality status applied to 2000--2009 & No earlier status exists \\
+C_deviations.tex,,,,,C,32.0,4,"constante de conception, unité ou ordinal",4 bis & Factual correction: 18
+C_deviations.tex,,,,,C,32.0,18,contrôlé (partie B),4 bis & Factual correction: 18 missing wheat yields in the m
+C_deviations.tex,,,,,C,32.0,27,contrôlé (partie B),"missing wheat yields in the main sample, not 27 (27 is the count for the popu"
+C_deviations.tex,,,,,C,32.0,27,contrôlé (partie B),"ing wheat yields in the main sample, not 27 (27 is the count for the populati"
+C_deviations.tex,,,,,C,33.0,4,"constante de conception, unité ou ordinal",4 bis & Execution fixes: outcom
+C_deviations.tex,,,,,C,34.0,4,"constante de conception, unité ou ordinal",4 bis & Robustness check with a
+C_deviations.tex,,,,,C,34.0,2008,année ou période,4 bis & Robustness check with a 2008 mask of maize parcel blocks (
+C_deviations.tex,,,,,C,35.0,4,"constante de conception, unité ou ordinal",4 bis & Power; size of the repl
+C_deviations.tex,,,,,C,36.0,4,"constante de conception, unité ou ordinal",4 bis & Inference variants (clu
+C_deviations.tex,,,,,C,37.0,4,"constante de conception, unité ou ordinal",4 bis & Heat from MODIS surface
+C_deviations.tex,,,,,C,38.0,4,"constante de conception, unité ou ordinal",4 bis & Irrigation volumes and
+C_deviations.tex,,,,,C,39.0,4,"constante de conception, unité ou ordinal",4 bis & Size and power of the c
+C_deviations.tex,,,,,C,39.0,2026,année ou période,lopes by quality status; a first look at the 2026 harvest from early estimates
+C_deviations.tex,,,,,C,40.0,4,"constante de conception, unité ou ordinal",4 bis & Leverage of each year w
+C_deviations.tex,,,,,C,41.0,4,"constante de conception, unité ou ordinal",4 bis & Exploratory estimates b
+C_deviations.tex,,,,,C,41.0,2003,année ou période,titude comparison; residual autocorrelation; 2003 linearity check & Added later
+C_deviations.tex,,,,,C,42.0,4,"constante de conception, unité ou ordinal","4, 4 bis, 6 & Bootstrap module m"
+C_deviations.tex,,,,,C,42.0,4,"constante de conception, unité ou ordinal","4, 4 bis, 6 & Bootstrap module mad"
+C_deviations.tex,,,,,C,42.0,6,"constante de conception, unité ou ordinal","4, 4 bis, 6 & Bootstrap module made to dr"
+C_deviations.tex,,,,,C,42.0,10,"constante de conception, unité ou ordinal",e is restored) and to demean with tolerance $10^{-12}$; placebo sizes and pow
+C_deviations.tex,,,,,C,42.0,12,"constante de conception, unité ou ordinal",restored) and to demean with tolerance $10^{-12}$; placebo sizes and powers r
+C_deviations.tex,,,,,C,43.0,5,"constante de conception, unité ou ordinal","5, 6, 4 bis & Forecast compariso"
+C_deviations.tex,,,,,C,43.0,6,"constante de conception, unité ou ordinal","5, 6, 4 bis & Forecast comparisons:"
+C_deviations.tex,,,,,C,43.0,4,"constante de conception, unité ou ordinal","5, 6, 4 bis & Forecast comparisons: S"
+C_deviations.tex,,,,,C,43.0,10,"constante de conception, unité ou ordinal",ons: Student interval and sign test over the 10 test years added to the boots
+C_deviations.tex,,,,,C,43.0,10,"constante de conception, unité ou ordinal","d to the bootstrap, which is too narrow with 10 years, and used for significa"
+C_deviations.tex,,,,,C,43.0,50,compte du plan (contrôlé en partie B),cance; double machine learning repeated over 50 splits of the years into fold
+C_deviations.tex,,,,,C,43.0,2,"constante de conception, unité ou ordinal","calibrated by the bootstrap by year (the $ ^2$ test rejects in  \,\"
+C_deviations.tex,,,,,C,44.0,123,compte du plan (contrôlé en partie B),"ll & Every random seed of the project set to 123, after the results were known"
+C_deviations.tex,,,,,C,44.0,15,contrôlé (partie B),"sitive to it (double machine learning within 15\,\"
+C_deviations.tex,,,,,C,45.0,4,"constante de conception, unité ou ordinal",4 bis & Value of 2003 given as
+C_deviations.tex,,,,,C,45.0,2003,année ou période,4 bis & Value of 2003 given as a range (observed ga
+C_deviations.tex,,,,,C,45.0,2002,année ou période,"the linear formula, pairs carried over from 2002, Eurostat price of 2003); chec"
+C_deviations.tex,,,,,C,45.0,2003,année ou période,"rs carried over from 2002, Eurostat price of 2003); check of the linear formula"
+C_deviations.tex,,,,,C,46.0,4,"constante de conception, unité ou ordinal",4 bis & Rainfed yields computed
+C_deviations.tex,,,,,C,47.0,4,"constante de conception, unité ou ordinal","4, 4 bis, 6 & Size of clustering"
+C_deviations.tex,,,,,C,47.0,4,"constante de conception, unité ou ordinal","4, 4 bis, 6 & Size of clustering b"
+C_deviations.tex,,,,,C,47.0,6,"constante de conception, unité ou ordinal","4, 4 bis, 6 & Size of clustering by year,"
+C_deviations.tex,,,,,C,47.0,2010,année ou période,"draws), and their $p$-values for wheat over 2010--2025 and for H1 & Added late"
+C_deviations.tex,,,,,C,47.0,2025,année ou période,"), and their $p$-values for wheat over 2010--2025 and for H1 & Added later \\"
+C_deviations.tex,,,,,C,48.0,4,"constante de conception, unité ou ordinal","4 bis, 5 & The wheat forecast f"
+C_deviations.tex,,,,,C,48.0,5,"constante de conception, unité ou ordinal","4 bis, 5 & The wheat forecast for 2026"
+C_deviations.tex,,,,,C,48.0,2026,année ou période,"4 bis, 5 & The wheat forecast for 2026 was computed in the same run"
+C_deviations.tex,,,,,C,48.0,2026,année ou période,"ame run that read the early estimates of the 2026 harvest, which contain provis"
+C_deviations.tex,,,,,C,48.0,2027,année ou période,"enter the forecast, but it is not blind, and 2027 will be the first prospective"
+C_deviations.tex,,,,,C,48.0,4,"constante de conception, unité ou ordinal",r future harvests uses the Student interval (4 degrees of freedom) instead o
+C_deviations.tex,,,,,C,48.0,5,"constante de conception, unité ou ordinal","d of the bootstrap, which is too narrow with 5 years & Written into the spec"
+C_deviations.tex,,,,,C,49.0,4,"constante de conception, unité ou ordinal","4, 4 bis & The projections of he"
+C_deviations.tex,,,,,C,49.0,4,"constante de conception, unité ou ordinal","4, 4 bis & The projections of heat"
+C_deviations.tex,,,,,C,49.0,4,"constante de conception, unité ou ordinal","under warming go beyond the plans of phases 4 and 4 bis, which excluded any"
+C_deviations.tex,,,,,C,49.0,4,"constante de conception, unité ou ordinal","warming go beyond the plans of phases 4 and 4 bis, which excluded any extra"
+C_deviations.tex,,,,,C,54.0,2026,année ou période,re harvests and the first wheat forecast for 2026 are protected by the tests of
+C_deviations.tex,,,,,C,54.0,256,"identifiant, version, licence ou code","sts of the repository, which check their SHA-256 hashes and fail if either fil"
+D_robustness.tex,,,,,C,9.0,2010,année ou période,{Wheat 2010--2025 (phase 4): heat coeffic
+D_robustness.tex,,,,,C,9.0,2025,année ou période,{Wheat 2010--2025 (phase 4): heat coefficient i
+D_robustness.tex,,,,,C,9.0,4,"constante de conception, unité ou ordinal",{Wheat 2010--2025 (phase 4): heat coefficient in every s
+D_robustness.tex,,,,,C,14.0,84,"identifiant, version, licence ou code","fter the first estimates. R2 drops Vaucluse (84), Gard (30) and Lozère (48),"
+D_robustness.tex,,,,,C,14.0,30,"identifiant, version, licence ou code","rst estimates. R2 drops Vaucluse (84), Gard (30) and Lozère (48), small depar"
+D_robustness.tex,,,,,C,14.0,48,"identifiant, version, licence ou code","2 drops Vaucluse (84), Gard (30) and Lozère (48), small departments that carr"
+D_robustness.tex,,,,,C,14.0,30,"constante de conception, unité ou ordinal","definite. R14 reports two temperature bins, 30--33\,$^{ }$C and above 33\,$^"
+D_robustness.tex,,,,,C,14.0,33,"constante de conception, unité ou ordinal","inite. R14 reports two temperature bins, 30--33\,$^{ }$C and above 33\,$^{ }$"
+D_robustness.tex,,,,,C,14.0,33,"constante de conception, unité ou ordinal","temperature bins, 30--33\,$^{ }$C and above 33\,$^{ }$C, in days."
+D_robustness.tex,,,,,C,22.0,2000,année ou période,{Maize 2000--2025 (phase 4 bis): main coe
+D_robustness.tex,,,,,C,22.0,2025,année ou période,{Maize 2000--2025 (phase 4 bis): main coefficie
+D_robustness.tex,,,,,C,22.0,4,"constante de conception, unité ou ordinal",{Maize 2000--2025 (phase 4 bis): main coefficient in eve
+D_robustness.tex,,,,,C,27.0,0,"constante de conception, unité ou ordinal",ded: in the direction of the hypothesis $  > 0$. ``---'': Conley matrix not
+E_wcr.tex,,,,,C,13.0,10,"constante de conception, unité ou ordinal",s out. The demeaning runs to a tolerance of $10^{-12}$ rather than the   defa
+E_wcr.tex,,,,,C,13.0,12,"constante de conception, unité ou ordinal",. The demeaning runs to a tolerance of $10^{-12}$ rather than the   default o
+E_wcr.tex,,,,,C,13.0,10,"constante de conception, unité ou ordinal","of $10^{-12}$ rather than the   default of $10^{-6}$, so that the re-project"
+E_wcr.tex,,,,,C,13.0,6,"constante de conception, unité ou ordinal","10^{-12}$ rather than the   default of $10^{-6}$, so that the re-projection"
+E_wcr.tex,,,,,C,15.0,40,"constante de conception, unité ou ordinal",{Example.}   simulates 40 regions over 25 years with a
+E_wcr.tex,,,,,C,15.0,25,compte du plan (contrôlé en partie B),{Example.}   simulates 40 regions over 25 years with a spatially correl
+E_wcr.tex,,,,,C,15.0,300,compte du plan (contrôlé en partie B),"outcome each year, and no true effect. Over 300 panels, clustering by region"
+E_wcr.tex,,,,,C,17.0,10,"constante de conception, unité ou ordinal","ion with a full re-estimation, to less than $10^{-12}$, is checked by  ."
+E_wcr.tex,,,,,C,17.0,12,"constante de conception, unité ou ordinal","ith a full re-estimation, to less than $10^{-12}$, is checked by  ."
+F_degree_days.tex,,,,,C,7.0,10,"constante de conception, unité ou ordinal",ite compares four cases with a tolerance of $10^{-4}$. The script that builds
+F_degree_days.tex,,,,,C,7.0,4,"constante de conception, unité ou ordinal",ompares four cases with a tolerance of $10^{-4}$. The script that builds thi
+F_degree_days.tex,,,,,C,7.0,10,"constante de conception, unité ou ordinal","aph adds  {} random cases (minimum between $-10$ and 30\,$^{ }$C, a daily ran"
+F_degree_days.tex,,,,,C,7.0,30,"constante de conception, unité ou ordinal","{} random cases (minimum between $-10$ and 30\,$^{ }$C, a daily range of 0."
+F_degree_days.tex,,,,,C,7.0,0.5,"constante de conception, unité ou ordinal","ween $-10$ and 30\,$^{ }$C, a daily range of 0.5 to 20\,$^{ }$C, thresholds be"
+F_degree_days.tex,,,,,C,7.0,20,"constante de conception, unité ou ordinal","10$ and 30\,$^{ }$C, a daily range of 0.5 to 20\,$^{ }$C, thresholds between"
+F_degree_days.tex,,,,,C,7.0,0,"constante de conception, unité ou ordinal","ge of 0.5 to 20\,$^{ }$C, thresholds between 0 and 40\,$^{ }$C); the closed"
+F_degree_days.tex,,,,,C,7.0,40,"constante de conception, unité ou ordinal","0.5 to 20\,$^{ }$C, thresholds between 0 and 40\,$^{ }$C); the closed form is"
+F_degree_days.tex,,,,,C,7.0,0,"constante de conception, unité ou ordinal","ompared with the numerical mean of $ (T - b, 0)$ over 100,000 points of the"
+F_degree_days.tex,,,,,C,7.0,"100,000",contrôlé (partie B),"ith the numerical mean of $ (T - b, 0)$ over 100,000 points of the sine cycle. The"
+G_maize_checks.tex,,,,,C,8.0,2,"constante de conception, unité ou ordinal","above the pooled estimate, and the usual $ ^2$ test of homogeneity rejects"
+G_maize_checks.tex,,,,,C,8.0,26,compte du plan (contrôlé en partie B),"owards it. That covariance is estimated from 26 years, and a test on 16 restr"
+G_maize_checks.tex,,,,,C,8.0,16,"constante de conception, unité ou ordinal","ce is estimated from 26 years, and a test on 16 restrictions with so few clus"
+G_maize_checks.tex,,,,,C,12.0,32,"constante de conception, unité ou ordinal","First, one more degree-day above 32\,$^{ }$C is associated with a"
+G_maize_checks.tex,,,,,C,12.0,2010,année ou période,"be harvested as silage in dry summers. Over 2010--2025, the only years for whi"
+G_maize_checks.tex,,,,,C,12.0,2025,année ou période,"rvested as silage in dry summers. Over 2010--2025, the only years for which the"

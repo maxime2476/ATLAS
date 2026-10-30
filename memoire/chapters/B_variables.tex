@@ -1,0 +1,31 @@
+\section{Variable dictionary}
+\label[appendix]{app:variables}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Main variables}
+\label{tab:variables}
+\begin{tabular}{>{\raggedright}p{3.2cm}>{\raggedright}p{6.9cm}>{\raggedright}p{1.6cm}>{\raggedright\arraybackslash}p{2.1cm}}
+\toprule
+Variable & Definition & Unit & Source \\
+\midrule
+Yield $Y$ & Production over area (unharvested area counted with a zero yield), by department, crop and, for maize, irrigation mode & q/ha (1~q = 100~kg) & SAA; \textcite{schauberger2022} \\
+Gap & $\ln Y^{I} - \ln Y^{R}$, same department and year & log points & SAA \\
+$\mathrm{DD}_{>32}$ & Degree-days above 32\,$^{\circ}$C by double sine, summed over the window, crop-weighted mean of cells & $^{\circ}$C$\cdot$day & SIM2, RPG \\
+GDD & Degree-days between 0 and 32\,$^{\circ}$C ($\mathrm{DD}_{>0} - \mathrm{DD}_{>32}$) & $^{\circ}$C$\cdot$day & SIM2, RPG \\
+SWI & Soil wetness index, mean over the window (about 0 at wilting point, 1 at field capacity) & none & SIM2 \\
+$P$ & Precipitation (rain and snow), summed over the window & mm & SIM2 \\
+VPD & Vapour pressure deficit of the afternoon: saturation pressure at Tmax minus actual vapour pressure (daily relative humidity times saturation pressure at the daily mean temperature), mean over July--August & kPa & SIM2, RPG \\
+LST & Daytime land-surface temperature, mean of 8-day composites over July--August, crop-weighted (check only) & $^{\circ}$C & MODIS \\
+Irrigation volume & Withdrawals declared for irrigation, all crops, summed by department and year & m$^3$ & BNPE \\
+Dose & Irrigation volume times the share of grain maize in the irrigated area, over the irrigated maize area & m$^3$/ha & BNPE, RA2020, SAA \\
+Projected $\mathrm{DD}_{>32}$, VPD & As observed, from daily bias-corrected simulations (VPD from specific humidity, with pressure from cell altitude), 20-year window per warming level & $^{\circ}$C$\cdot$day; kPa & DRIAS, RPG \\
+Crisis days & Days of July--August with at least one zone of the department at crisis level & days & VigiEau \\
+Weights & Mean area 2010--2012 (wheat; or irrigated plus rainfed grain maize) & ha & SAA \\
+Windows (wheat) & Autumn: Sep--Nov of $t-1$; winter: Dec--Feb; spring: Mar--Apr; grain filling: May--Jun & --- & --- \\
+Window (maize) & July--August & --- & --- \\
+NDVI & Monthly means of 16-day composites, April--June, and maximum of all composites (from late March), only if ended before the forecast date & none & MODIS \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,39 @@
+[project]
+name = "atlas"
+version = "0.1.0"
+description = "ATLAS : chaleur estivale, irrigation et rendements du maïs et du blé en France (panels départementaux)"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "duckdb",    # lecture et agrégation des csv.gz SIM sans décompression préalable
+    "geopandas", # jointure spatiale grille SIM ↔ départements
+    "h5py",      # lecture des fichiers netCDF-4 E-OBS (vérification de la mesure de chaleur, v1.1)
+    "matplotlib", # figures descriptives statiques (rapport)
+    "numpy",     # importé directement dans les scripts
+    "openpyxl",  # lecture des fichiers xlsx de la SAA (Agreste)
+    "pandas",
+    "pyarrow",   # interface Parquet entre étapes (et avec R en phase 4)
+    "pyogrio",   # lecture des shapefiles RPG (src/atlas/rpg.py)
+    "pyproj",    # reprojections Lambert II étendu / Lambert 93 / WGS84
+    "scikit-learn",  # module prédictif (phase 5) : ridge, forêt aléatoire, gradient boosting
+    "scipy",     # intervalle de Student et test des signes sur les années test (déjà installé avec scikit-learn)
+    "rasterio",  # lecture des GeoTIFF NDVI (AppEEARS, phase 6)
+    "shapely",   # géométries des mailles (src/atlas/spatial.py)
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atlas"]
+
+[tool.uv]
+# Prudence : n'utiliser que des versions publiées depuis au moins deux semaines.
+exclude-newer = "2026-09-26T00:00:00Z"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

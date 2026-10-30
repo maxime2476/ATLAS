@@ -1,0 +1,28 @@
+\section{Reproduction}
+\label[appendix]{app:reproduction}
+
+Everything in this monograph can be rebuilt from public sources with the project's code. The code is available at \url{https://github.com/maxime2476/ATLAS}. This appendix says how, and what is needed.
+
+\paragraph{Environments.} Python~3.12 is managed with \texttt{uv}. Its lock file fixes every package, resolved with no release later than a fixed cut-off date (for instance pandas~\VerPandas, scikit-learn~\VerSklearn, DuckDB~\VerDuckdb, GeoPandas~\VerGeopandas). R~\VerR{} is managed with \texttt{renv}, from a dated snapshot of the Posit package repository, with \texttt{fixest}~\VerFixest. The two languages exchange data through Parquet files with documented schemas.
+
+\paragraph{Raw data.} About \RawSizeGb~GB of raw files, never modified, of which \DriasSizeGb~GB of climate projections (NDVI, E-OBS and DRIAS included). A manifest lists \ManifestFiles{} files with their URL and SHA-256 hash; an automated test checks every hash. The raw data are not redistributed with the code; the download script rebuilds them.
+
+\paragraph{Pipeline.} The repository's \texttt{data/README.md} gives the commands in order:
+\begin{enumerate}
+  \item downloads and checks;
+  \item weather, crop masks, exposure windows and panels;
+  \item econometrics in R;
+  \item forecasting and NDVI;
+  \item the main analyses of phase 4 bis;
+  \item the checks added later, including irrigation volumes and climate projections;
+  \item figures, then the tables and figures of this monograph.
+\end{enumerate}
+The longest steps are the NDVI processing (orders depend on the NASA queue, then about 15 minutes of aggregation and 30 minutes of forecasting) and the daily weather (about 20 minutes). Two sources require a free personal account: the NDVI (NASA Earthdata) and the climate projections (DRIAS and DRIAS-Eau, one account for both). DRIAS has no download interface: orders are placed through its web form, by a script that fills it in as a user would, and are delivered later as archives. Its terms forbid sharing the account, so a reproduction needs its own; the projections are therefore the one step that cannot be rebuilt without registration. All other sources are open without registration.
+
+\paragraph{A clean rebuild.} The whole chain was run again on a fresh copy of the repository, from the raw files and without downloading anything. It gave the same result tables byte for byte (except those of the random forests and double machine learning, run in parallel, which differ by at most $2\times 10^{-14}$, floating-point rounding), the same figures, and the same numbers as the text.
+
+\paragraph{The numbers in this text.} Every estimate, $p$-value, test size and table in this monograph is generated: a script reads the result tables of the project and writes them as \LaTeX{} macros and tables. Some numbers are written in the text by hand: counts that define the design (17 and 83 departments, the numbers of years and clusters, the 300 placebo repetitions), a few figures from earlier versions of the analysis, which are cited as such, and rounded comparisons derived from generated numbers (``about a third'', ``twice as high'', ``a factor of eight''). A second script recomputes part of the macros independently and checks each hand-written number against the code or the result tables. The script also checks that the valuation of 2003 is reproduced exactly; it stops otherwise.
+
+\paragraph{Tests.} The Python test suite has \TestCount{} tests: \TestIntegrity{} integrity checks of the raw files, one per file, and \TestLogic{} tests of logic and data. Together they check schemas, keys, the cardinality of joins, value ranges, the degree-day formula, the absence of forecasting leakage, the agreement of the maize mask with official statistics, and the integrity of the raw files. Tests that need data are skipped when the data are absent. A GitHub Actions workflow runs this suite on each push from a clean copy of the repository, where only the tests that need no data run. The R inference code has its own script, \texttt{tests/test\_r\_inference.R}, with \TestR{} checks: the observed and simulated bootstrap $t$-statistics equal those of a full weighted re-estimation by \texttt{fixest} to within $10^{-12}$; the cluster-jackknife standard error equals that of 26 explicit re-estimations; negative controls show that a missing re-projection or ignored weights would be detected; and the bootstrap functions leave the caller's random state unchanged. Sixteen of these checks need the maize panel. The workflow does not run them. The size simulations of \cref{sec:inference} complement them.
+
+\paragraph{Randomness.} All random draws use fixed seeds, recorded in the code. All seeds were set to 123 after the results (derived seeds keep their derivation, such as 123 + $r$ for the 50 splits of the double machine learning), so they differ from those written in the specifications (\cref{app:deviations}). The whole chain was then run again: regression estimates are unchanged; bootstrap $p$-values, placebo sizes, the double machine learning estimates and the forecast errors of the random models move, mostly within Monte Carlo error. Readings that change with the seed are reported as sensitive to it.

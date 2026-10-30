@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 704" width="960" height="704" role="img" aria-labelledby="regle-decision-title regle-decision-desc">
+<title id="regle-decision-title">Règle de décision des hypothèses principales</title>
+<desc id="regle-decision-desc">Une hypothèse principale n'est établie que si la taille de son test, mesurée par placebo, est d'au plus 10 % et si la p-valeur unilatérale du bootstrap par année est inférieure à 0,05 ; les vérifications ajoutées ensuite sont rapportées sans changer ce statut.</desc>
+<style>.n{fill:#2d3142;font:600 12px 'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;text-anchor:middle}.nb{fill:#2d3142;font:600 14px 'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;text-anchor:middle}.s{fill:#4f5d75;font:400 9px 'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;text-anchor:middle}.lab{font:400 8px 'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;letter-spacing:0.12em;text-anchor:middle}.d{font:400 8px 'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;letter-spacing:0.14em;text-anchor:middle}.lg{fill:#4f5d75;font:400 8.5px 'Geist',system-ui,-apple-system,'Segoe UI',sans-serif}.lgh{fill:#4f5d75;font:400 8px 'Geist Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;letter-spacing:0.18em}</style>
+<defs><marker id="regle-decision-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/></marker><marker id="regle-decision-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bf4520"/></marker></defs>
+<rect width="960" height="704" fill="#f5f5f5"/>
+<line x1="360" y1="88" x2="360" y2="120" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#regle-decision-arrow)"/>
+<line x1="360" y1="168" x2="360" y2="196" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#regle-decision-arrow)"/>
+<line x1="492" y1="248" x2="576" y2="248" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#regle-decision-arrow)"/>
+<line x1="360" y1="300" x2="360" y2="340" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#regle-decision-arrow)"/>
+<line x1="492" y1="392" x2="576" y2="392" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#regle-decision-arrow)"/>
+<line x1="360" y1="444" x2="360" y2="484" stroke="#bf4520" stroke-width="1.4" marker-end="url(#regle-decision-arrow-accent)"/>
+<line x1="360" y1="540" x2="360" y2="572" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#regle-decision-arrow)"/>
+<rect x="520.0" y="231" width="28" height="12" rx="2" fill="#f5f5f5"/>
+<text x="534.0" y="240" class="lab" fill="#4f5d75">NON</text>
+<rect x="368.0" y="315" width="28" height="12" rx="2" fill="#f5f5f5"/>
+<text x="382" y="324" class="lab" fill="#4f5d75">OUI</text>
+<rect x="520.0" y="375" width="28" height="12" rx="2" fill="#f5f5f5"/>
+<text x="534.0" y="384" class="lab" fill="#4f5d75">NON</text>
+<rect x="368.0" y="459" width="28" height="12" rx="2" fill="#f5f5f5"/>
+<text x="382" y="468" class="lab" fill="#bf4520">OUI</text>
+<rect x="228" y="40" width="264" height="48" rx="20" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)"/>
+<text x="360" y="60" class="n">Hypothèse principale</text>
+<text x="360" y="76" class="s">fixée dans le plan, sens du test inclus</text>
+<rect x="228" y="120" width="264" height="48" rx="6" fill="#ffffff" stroke="#2d3142"/>
+<text x="360" y="140" class="n">Estimer le modèle</text>
+<text x="360" y="156" class="s">effets fixes département et année</text>
+<polygon points="360,196 492,248 360,300 228,248" fill="#ffffff" stroke="#2d3142"/>
+<text x="360" y="244" class="n">Taille du test</text>
+<text x="360" y="260" class="n">≤ 10 % ?</text>
+<text x="210" y="252" class="s" text-anchor="end" style="text-anchor:end">placebo : années permutées</text>
+<rect x="576" y="224" width="248" height="48" rx="20" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)"/>
+<text x="700" y="244" class="n">Non établie</text>
+<text x="700" y="260" class="s">test non fiable sur ces données</text>
+<polygon points="360,340 492,392 360,444 228,392" fill="#ffffff" stroke="#2d3142"/>
+<text x="360" y="388" class="n">p bootstrap par</text>
+<text x="360" y="404" class="n">année &lt; 0,05 ?</text>
+<text x="210" y="396" class="s" text-anchor="end" style="text-anchor:end">unilatérale, 9 999 tirages</text>
+<rect x="576" y="368" width="248" height="48" rx="20" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)"/>
+<text x="700" y="388" class="n">Non établie, rapportée</text>
+<text x="700" y="404" class="s">ex. blé 1959-2025 : p = 0,125</text>
+<rect x="228" y="484" width="264" height="56" rx="20" fill="rgba(191,69,32,0.08)" stroke="#bf4520"/>
+<text x="360" y="508" class="n">Établie, au sens de la règle</text>
+<text x="360" y="524" class="s">ex. maïs : p = 0,007, taille 3,7 %</text>
+<rect x="228" y="572" width="264" height="48" rx="6" fill="rgba(45,49,66,0.02)" stroke="rgba(45,49,66,0.30)" stroke-dasharray="4,3"/>
+<text x="360" y="592" class="n">Vérifications ajoutées</text>
+<text x="360" y="608" class="s">rapportées, sans changer le statut</text>
+<line x1="40" y1="648" x2="920" y2="648" stroke="rgba(45,49,66,0.10)" stroke-width="0.8"/>
+<text x="40" y="664" class="lgh">LÉGENDE · LA FORME DONNE LE TYPE</text>
+<rect x="40" y="680" width="24" height="12" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)"/>
+<text x="72" y="690" class="lg">Départ / issue</text>
+<rect x="200" y="680" width="24" height="12" rx="2" fill="#ffffff" stroke="#2d3142"/>
+<text x="232" y="690" class="lg">Étape</text>
+<polygon points="324,686 336,680 348,686 336,692" fill="#ffffff" stroke="#2d3142"/>
+<text x="360" y="690" class="lg">Décision</text>
+<line x1="452" y1="688" x2="480" y2="688" stroke="#bf4520" stroke-width="1.4" marker-end="url(#regle-decision-arrow-accent)"/>
+<text x="488" y="690" class="lg">Chemin d'une hypothèse établie</text>
+<line x1="680" y1="688" x2="708" y2="688" stroke="#4f5d75" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#regle-decision-arrow)"/>
+<text x="716" y="690" class="lg">Ajouté après coup</text>
+</svg>

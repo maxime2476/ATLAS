@@ -1,0 +1,110 @@
+\section{Data}
+\label{sec:data}
+
+All data are public. \Cref{tab:sources} lists the sources; this section explains how each one is used, what was checked, and where the known weaknesses lie; \cref{app:variables} defines every variable. Every raw file is stored unmodified with its URL and SHA-256 hash, and an automated test verifies these hashes (\cref{app:reproduction}).
+
+\begin{table}[tp]
+\centering
+\scriptsize
+\caption{Data sources}
+\label{tab:sources}
+\begin{tabular}{>{\raggedright}p{4.4cm}>{\raggedright}p{4.3cm}>{\raggedright}p{2.6cm}>{\raggedright\arraybackslash}p{2.6cm}}
+\toprule
+Source & Variables used & Coverage & Licence \\
+\midrule
+Agreste, \emph{Statistique agricole annuelle} (SAA), long series & Area, yield, quality status; wheat, irrigated and rainfed grain maize & Departments, 2010--2025 & Free reuse with attribution; Licence Ouverte 2.0 \\
+Agreste, SAA ``older series'' (\texttt{SAANR\_DEVELOPPE\_2}) & Irrigated and rainfed grain maize & Departments, 2000--2020 & Free reuse with attribution \\
+\textcite{schauberger2021data}, version RAW; data paper \textcite{schauberger2022} & Soft wheat yields & Departments, 1959--2009 & CC BY 4.0 \\
+Météo-France, SIM2 (SAFRAN--ISBA) & Daily Tmin, Tmax, mean temperature, relative humidity, precipitation, evapotranspiration, soil wetness index & 8~km grid, Aug.~1958--2025 (2026: first look only) & Licence Ouverte 2.0 \\
+IGN / ASP, parcel register (RPG) v2.0 & Grain maize and soft wheat parcels & Parcels, 2015--2017 & Licence Ouverte 2.0 \\
+IGN / ASP, RPG v1.0 (anonymised blocks) & Blocks whose main crop is maize & 4 regions, 2008 & Licence Ouverte 2.0 \\
+IGN, ADMIN EXPRESS COG CARTO & Department boundaries & 2026 edition & Licence Ouverte 2.0 \\
+IGN, altimetry service (RGE ALTI) & Mean altitude of grid cells & 8~km cells & Licence Ouverte 2.0 \\
+Ministry of Ecological Transition, VigiEau & Water-restriction orders and severity levels & Departments, orders from 2010 (built 2012--2025, used 2016--2025) & Licence Ouverte 2.0 \\
+INSEE, producer price index (IPPAP); Eurostat \texttt{apri\_ap\_crpouta} & Maize and wheat prices & 2000--2025 & INSEE: Licence Ouverte 2.0; Eurostat: reuse with attribution \\
+NASA LP DAAC, MOD13Q1 v6.1 \parencite{didan2021} & NDVI, 250~m, 16-day composites & 2010--2025 & CC0 (NASA), citation requested \\
+NASA LP DAAC, MOD11A2 v6.1 \parencite{wan2021} & Daytime land-surface temperature, 1~km, 8-day composites (check only) & July--August 2000--2025 & CC0 (NASA), citation requested \\
+ECA\&D / Copernicus, E-OBS v33.0e \parencite{cornes2018} & Daily Tmin, Tmax (check of the heat measure only) & 0.1$^{\circ}$ grid, 2000--2025 & Non-commercial research and education; citation required \\
+OFB / water agencies, BNPE water withdrawals (Hub'Eau API) & Volumes declared for irrigation, all crops (check only) & Withdrawal points, 2012--2023 & Licence Ouverte 2.0 \\
+Agreste, 2020 agricultural census (table RA2020\_0052) & Share of grain maize in the irrigated area & Departments, 2010 and 2020 & Free reuse with attribution \\
+DRIAS, Explore2-Climat 2022, bias-corrected (ADAMONT) \parencite{drias2022} & Daily Tmin, Tmax, specific humidity (discussion only) & SAFRAN 8~km grid, 1976--2005 and RCP\,8.5 to 2100 & Licence Etalab (DRIAS terms); free account required \\
+Agreste, early crop estimates (\emph{Infos rapides} 2026-131) \parencite{agreste2026conjoncture} & Irrigated and rainfed grain maize, 2026 (first look only) & Departments, estimates at 1 Oct.~2026 & As the SAA \\
+DRIAS-Eau, Explore2 / SIM2 water indicators \parencite{driaseau2024} & Monthly soil wetness index, July--August (discussion only) & SAFRAN grid, warming levels & Licence Etalab; account required \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{\linewidth}\scriptsize
+Sources: Agreste, Statistique agricole annuelle; Météo-France, SIM2; IGN (ADMIN EXPRESS, RPG, RGE ALTI); Ministry of Ecological Transition, VigiEau; Insee; Eurostat; NASA LP DAAC; E-OBS; BNPE (OFB, water agencies), via Hub'Eau; Agreste, RA 2020; Drias, données Météo-France, CERFACS, IPSL. We acknowledge the E-OBS dataset and the data providers in the ECA\&D project (\url{https://www.ecad.eu}). The licence terms of every source were checked on the producers' websites; the attribution of each source and the files used are listed in the repository (\texttt{NOTICE.md}, \texttt{docs/manifest\_raw.csv}). The Schauberger et al.\ yields were converted from t/ha to q/ha and matched to INSEE department codes.
+\end{minipage}
+\end{table}
+
+
+\subsection{Crop yields}
+
+\paragraph{Maize: two releases of the same statistics.} The current long series of the SAA (2010--2025) report, for each department, the area and yield of grain maize on irrigated and on rainfed land. I found an older release on the Agreste website, a table of ``developed crops'' published as one file per year for 2000--2020, which contains the same split. The older release was not revised after the 2020 agricultural census, while the long series were. Before splicing them, I compared the two over 2010--2020, where they overlap. Over \SpliceN{} department-year-mode pairs, in all departments, \SpliceShare\,\% of yields agree to within 0.5 quintal per hectare, the median difference is \SpliceMedian{} quintal per hectare, and the correlation is \SpliceCorrIrr{} for irrigated and \SpliceCorrRain{} for rainfed maize. The panel uses the older release for 2000--2009 and the long series from 2010 onwards.
+
+\paragraph{Population and main sample.} The population is the set of departments where both irrigated and rainfed grain maize covered at least 1,000~ha on average over 2010--2012: \MaizeDeps{} departments. The threshold is fixed on 2010--2012, inside the estimation period; the areas of those years could themselves reflect their weather, but the rule does not change with the outcome of any later year. The SAA attaches a quality status to each series; the main sample keeps the \MaizeMainDeps{} departments whose irrigated maize series has status~1, the best. This status is only published for recent years, so the 2025 status is applied to the whole period. The other departments are used as a robustness check. \Cref{fig:map} shows where they lie: the main sample covers the Centre, Burgundy, Alsace and the Rhône--Alpes and Auvergne area, and leaves out the South-West and the Centre-West.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.62\textwidth]{figures/fig9_carte_echantillon.pdf}
+\caption{The maize population (38 departments where irrigated and rainfed grain maize each covered at least 1,000~ha on average over 2010--2012) and the main sample (17 departments whose irrigated series has quality status~1). Outlined: the six departments with uplands discussed in \cref{sec:exposure,subsec:maize-measure}. Boundaries: IGN, ADMIN EXPRESS COG CARTO 2026, simplified to 800~m; Lambert 93.}
+\label{fig:map}
+\end{figure}
+
+\paragraph{Exclusions.} \MaizeRemoved{} department-year-mode observations have a missing or zero yield and are dropped; they are listed in the project documentation. The maize models compare the two modes, so they use the \MaizePairs{} department-years where both are observed, of which \MaizeMainPairs{} are in the main sample.
+
+\paragraph{Wheat.} For soft wheat (soft winter wheat in the SAA; ``soft wheat'' below), the SAA long series cover 2010--2025. Over 1959--2009, I use the RAW version of the departmental yields compiled by \textcite{schauberger2022}. Their data come from hand-digitised statistics before 1989 and from the former Agreste database afterwards, and I checked their compatibility with the SAA on the 2010--2018 overlap. The population is the \WheatDeps{} departments with at least 1,000~ha of wheat on average over 2010--2012; the main sample keeps the \WheatMainDeps{} with quality status~1, which gives \WheatMainObs{} observations over 2010--2025. In the long panel, \WheatLongMissing{} yields of the main sample are missing, all in 1959--\WheatLongMissingLast; they are dropped, not imputed.
+
+\paragraph{What yields measure.} SAA yields are a synthesis of several sources, and many are rounded: \WheatIntegerShare\,\% of wheat yields over 2010--2025 are whole numbers of quintals per hectare. Rounding adds noise of at most 0.5 quintal, about 1\,\% of yield, to the outcome. Land is attributed to the department of the farm's headquarters, not to the department of the parcel, which creates small mismatches near borders. The 2025 values are provisional.
+
+\subsection{Weather}
+
+SIM2 is Météo-France's reanalysis combining the SAFRAN atmospheric analysis with the ISBA land-surface model. It provides daily minimum and maximum temperature, precipitation, reference evapotranspiration and a soil wetness index (SWI) on a grid of \SimCells{} cells of 8~km, of which \SimCellsFrance{} intersect a metropolitan department; the others lie at sea or abroad. The SWI is dimensionless. The product documentation labels it as a percentage, but its monthly cell means range from $\SwiMin$ to $\SwiMax$; I read it with the usual definition of Météo-France's index, about 0 at the wilting point and about 1 at field capacity, a reading that the documentation does not state explicitly. The series starts on 1~August~1958, which covers the sowing of the 1959 wheat harvest.
+
+Two features of SIM2 matter for the analysis. First, it is a reanalysis: it interpolates observations and may smooth local extremes; E-OBS, interpolated from stations, indeed counts more degree-days above 32\,$^{\circ}$C in the maize departments (\cref{sec:maize}). Second, the documentation does not state to which calendar day the minimum and maximum temperatures refer. I inferred the convention from the data: the minimum is that of the morning of day $J$ and the maximum that of the afternoon of day $J$ (\cref{sec:exposure}).
+
+\subsection{Where crops grow: the parcel register}
+
+The parcel register (\emph{Registre parcellaire graphique}, RPG) maps the fields declared for the Common Agricultural Policy. Version 2.0 (from 2015) gives each parcel its crop. I use the 2015--2017 vintages to build fixed masks: soft winter wheat (code \texttt{BTH}) and maize (code \texttt{MIS}); one later check uses silage maize (code \texttt{MIE}) in the same way.
+
+Does the code \texttt{MIS} cover grain maize, silage maize, or both? I checked against the SAA. Across departments with more than 2,000~ha, the area of \texttt{MIS} parcels has a correlation of \MaskCorrGrain{} with the SAA area of grain and seed maize (seed maize is about 4\,\% of it) and of \MaskCorrFodder{} with the area of silage maize, across department-vintages of 2015--2017. \texttt{MIS} therefore tracks grain maize. It does not, however, say whether a parcel is irrigated.
+
+Version 1.0 (2007--2014) only maps anonymised blocks of parcels, each labelled with its main crop group, where the maize group mixes grain and silage. I use the 2008 vintage, for the four regions that contain the main maize sample, to test whether a mask from 2015--2017 is too recent for the 2000s (\cref{sec:maize}).
+
+\subsection{Water restrictions}
+
+VigiEau publishes the orders by which prefectures restrict water use, with their start and end dates, the zones concerned and a severity level: vigilance, alert, reinforced alert, crisis. From these I count, for each department and summer, the days in July--August when at least one zone is at crisis level. The severity level is missing for almost all orders in 2010--2011, which are dropped, and for \VigiMissEarlyMin\,\% to \VigiMissEarlyMax\,\% of orders in 2012--2015, against \VigiMissMidMin\,\% to \VigiMissMidMax\,\% in 2016--2022. Analyses of restrictions therefore use 2016--2025. The indicator is coarse: it does not say what share of the maize area was restricted.
+
+\subsection{Prices, water and climate projections}
+
+Prices are only used for a descriptive valuation. The INSEE producer price index for maize gives the year-to-year variation. Eurostat gives absolute prices up to 2016. I convert the index into euros per quintal with its ratio to Eurostat over 2012--2016. A stability criterion is applied (largest deviation of the ratio below 0.002 euro per quintal per index point); it is met. Two sources, added later, serve checks on irrigation water in \cref{sec:maize}. Volumes withdrawn for irrigation come from the national database of water withdrawals (BNPE, via the Hub'Eau API), declared by each withdrawal point and year, for all crops; withdrawals below the fee threshold of the water agencies (10\,000~m$^3$ a year in most areas) need not be declared. The 2020 agricultural census gives the share of each crop in the irrigated area of each department. For the discussion of future summers, daily minimum and maximum temperatures and specific humidity come from the bias-corrected Explore2 regional climate simulations distributed by DRIAS, on the SAFRAN grid of SIM2 \parencite{drias2022}. The satellite data, MODIS NDVI at 250~m, are only used in the forecasting exercise and are described in \cref{sec:forecasting}.
+
+\subsection{From sources to panels}
+
+Each join was checked for its effect on the number of rows, the share of matched keys and the missing values. \Cref{tab:joins} summarises the construction of the two main panels; the full control tables are in the project documentation.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Construction of the main panels}
+\label{tab:joins}
+\begin{tabular}{>{\raggedright}p{8.2cm}>{\raggedright\arraybackslash}p{5.6cm}}
+\toprule
+Step & Result \\
+\midrule
+\multicolumn{2}{l}{\emph{Maize, 2000--2025}} \\
+Population (both modes $\geq$ 1,000~ha, 2010--2012) & \MaizeDeps{} departments $\times$ \MaizeYears{} years $\times$ 2 modes \\
+Missing or zero yields dropped & \MaizeRemoved{} observations \\
+Department-years with both modes & \MaizePairs{} (main sample: \MaizeMainPairs{}, \MaizeMainDeps{} departments) \\
+Join with weather, restrictions and centroids & No row lost or duplicated \\
+\midrule
+\multicolumn{2}{l}{\emph{Soft wheat}} \\
+Population ($\geq$ 1,000~ha, 2010--2012) & \WheatDeps{} departments \\
+Main sample, 2010--2025 & \WheatMainDeps{} departments, \WheatMainObs{} observations \\
+Long panel, 1959--2025 & \WheatLongMissing{} missing yields dropped (1959--\WheatLongMissingLast) \\
+Join with weather & No row lost or duplicated \\
+\bottomrule
+\end{tabular}
+\end{table}

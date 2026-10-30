@@ -1,0 +1,5 @@
+"test","stat","p"
+"H2 : swi = swi^2 = 0 (cluster dép.)",24.6552904206923,4.13122957093454e-09
+"H2 : swi = swi^2 = 0 (Conley 200 km)",10.1494008803383,4.24962880713279e-05
+"H2 : swi = swi^2 = 0 (cluster année, analytique)",1.90778812671171,0.182727122363349
+"H2 : swi = swi^2 = 0 (WCR joint par année, Webb, 9999 tirages)",4.36253715738748,0.318631863186319

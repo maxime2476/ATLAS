@@ -1,0 +1,107 @@
+\section{Empirical strategy}
+\label{sec:strategy}
+
+This section states what each model estimates, under which assumptions, and what it cannot tell us. It also records which rules were fixed before the results were known.
+
+\subsection{Estimands}
+
+All estimands are short-run associations between a weather shock and yields, within a department and relative to the national conditions of the same year.
+\begin{itemize}
+  \item \textbf{Maize (main question).} The change in the log yield gap between irrigated and rainfed maize associated with one more degree-day above 32\,$^{\circ}$C in July--August, holding the soil wetness index (SWI) fixed.
+  \item \textbf{Wheat.} The change in log yield associated with one more degree-day above 32\,$^{\circ}$C in May--June.
+\end{itemize}
+Neither is the effect of a warmer climate, which would include adaptation, nor, for maize, the causal effect of irrigation (\cref{subsec:not-identified}).
+
+\subsection{Maize: the irrigated--rainfed gap}
+
+For department $d$ and year $t$, let $Y^{I}_{dt}$ and $Y^{R}_{dt}$ be the irrigated and rainfed yields. The main model (A1) is
+\begin{equation}
+\label{eq:a1}
+\ln Y^{I}_{dt} - \ln Y^{R}_{dt} = \alpha_d + \gamma_t + \beta\, \mathrm{DD}_{>32,dt} + \delta\, \mathrm{SWI}_{dt} + \varepsilon_{dt},
+\end{equation}
+estimated by weighted least squares, with weights equal to each department's grain maize area in 2010--2012. Heat and the soil wetness index are measured over July--August with the maize mask.
+
+\paragraph{What the gap removes.} Any factor that shifts both yields by the same proportion in a given department and year drops out of the left-hand side, for instance a disease outbreak or a late frost that hits both modes alike. The department effects $\alpha_d$ absorb stable differences in the gap, such as soils that favour one mode or the typical intensity of irrigation. The year effects $\gamma_t$ absorb anything that moves the gap everywhere at once.
+
+\paragraph{What identifies $\beta$.} After these effects, $\beta$ is identified by how much hotter or cooler a department's July--August was than its own average, relative to other departments the same year. Equation~\eqref{eq:a1} is equivalent to estimating separate heat and moisture slopes for each mode in a stacked model with fully interacted fixed effects; $\beta$ is then the difference between the irrigated and the rainfed heat slopes, $\beta = \beta^{I} - \beta^{R}$. The two slopes are also estimated separately, with the same right-hand side, as secondary hypotheses.
+
+\paragraph{The identifying assumption.} Conditional on the fixed effects and on the soil wetness index, the year-to-year deviations of a department's summer heat must be unrelated to other determinants of the gap. This would fail if, for instance, the composition of irrigated and rainfed land changed in hot years, an issue discussed in \cref{sec:discussion}.
+
+\paragraph{The soil wetness index.} The SWI comes from a land-surface model driven by observed weather. I treat it as a weather variable. Part of it is a consequence of the heat itself (a hot summer dries the soil), so $\beta$ is a partial association, with heat at a given level of soil wetness, and the coefficient on the SWI is read as an association too. The SIM2 documentation does not mention irrigation: the SWI is best read as the moisture of rainfed soil in the grid cell, not of irrigated fields.
+
+\paragraph{Water restrictions (H3).} On 2016--2025, the years with usable severity levels, model~\eqref{eq:a1} is extended with $C_{dt}$, the number of July--August days with at least one zone of the department at crisis level, and its interaction with heat:
+\begin{equation}
+\label{eq:h3}
+\ln Y^{I}_{dt} - \ln Y^{R}_{dt} = \alpha_d + \gamma_t + \beta\, \mathrm{DD}_{>32,dt} + \kappa\, C_{dt} + \lambda\, \mathrm{DD}_{>32,dt} \times C_{dt} + \delta\, \mathrm{SWI}_{dt} + \varepsilon_{dt}.
+\end{equation}
+H3 is $\lambda < 0$: the slope of the gap on heat is smaller where crisis-level restrictions lasted longer. The plan reads this test descriptively, since restrictions are decided in response to drought.
+
+\subsection{Wheat}
+
+The wheat model of phase 4 (M1, 2010--2025) is
+\begin{equation}
+\label{eq:m1}
+\ln Y_{dt} = \alpha_d + \gamma_t + \beta_1 \mathrm{GDD}_{dt} + \beta_2\, \mathrm{DD}_{>32,dt} + \phi_1 P^{\mathrm{spring}}_{dt} + \phi_2 \mathrm{DD}^{\mathrm{autumn}}_{0,dt} + \phi_3 P^{\mathrm{autumn}}_{dt} + \varepsilon_{dt},
+\end{equation}
+where GDD are growing degree-days between 0 and 32\,$^{\circ}$C in May--June, $P$ is precipitation and $\mathrm{DD}^{\mathrm{autumn}}_{0}$ the warmth of the sowing period. Growing degree-days are measured over the same months as extreme heat; the rainfall and autumn controls precede May--June, so they are not consequences of the heat being studied. A variant (M2) adds the May--June SWI and its square.
+
+The long-series model (M3, 1959--2025) keeps the same variables but replaces $\alpha_d$ with department-by-period effects $\alpha_{d,p}$, where $p$ is the source period of the yield data: 1959--1988 (hand-digitised), 1989--2009 (former Agreste database) and 2010--2025 (current SAA). These effects absorb level breaks between sources. They do not absorb a change in how a source measures year-to-year variation.
+
+To ask whether wheat has become more or less sensitive to heat, the heat slope is allowed to differ across three sub-periods of 22 to 23 years (1959--1981, 1982--2003, 2004--2025). This question is descriptive: varieties, sowing dates and practices changed at the same time.
+
+\subsection{The plan of each phase}
+
+Each estimation phase began with a written plan (\cref{tab:specs}). It fixes the sample, the variables, the direction of each test, the family of secondary hypotheses and the list of robustness checks. No independent record dates these plans, so the order between plans and estimates rests on the author's account; the checks added later are listed in \cref{app:deviations}.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Plans of the estimation phases}
+\label{tab:specs}
+\begin{tabular}{>{\raggedright}p{2.4cm}>{\raggedright\arraybackslash}p{10.4cm}}
+\toprule
+Phase & Content \\
+\midrule
+4 & Wheat 2010--2025: M1, M2, three inferences, 10 robustness checks \\
+5 & Forecasting protocol and benchmarks \\
+6 & Exploratory maize analysis 2010--2025, valuation, NDVI \\
+4 bis & Maize 2000--2025 (A1) and wheat 1959--2025 (M3) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Phases and labels.} Phases are numbered in the order in which the project ran them, not in the order of this text: phase 4 (wheat 2010--2025), phase 5 (forecasting), phase 6 (exploratory maize analysis), then phase 4 bis (maize 2000--2025 and wheat 1959--2025). \Cref{tab:labels} lists the labels used in the text and in the project files.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Labels used in the text}
+\label{tab:labels}
+\begin{tabular}{>{\raggedright}p{2.4cm}>{\raggedright\arraybackslash}p{10.6cm}}
+\toprule
+Label & Meaning \\
+\midrule
+A1 & Maize model of \cref{eq:a1}: log yield gap irrigated minus rainfed, 2000--2025 \\
+M1, M2 & Wheat models of phase 4, 2010--2025; M2 adds the soil wetness index \\
+M3 & Long wheat model, 1959--2025, with department-by-period effects (called B1 in the phase 4 bis specification) \\
+B0, B1 & Forecasting benchmarks (\cref{sec:forecasting}): department mean (B0); department effect plus a common linear trend (B1) \\
+Q1, Q2 & Questions of phase 4 bis: maize (Q1) and long-series wheat (Q2); H1, H2\ldots{} are their hypotheses \\
+R1, R2\ldots & Robustness checks, numbered within each phase or question; Q1-R9 is the ninth check of Q1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The decision rules.} The first wheat phase (phase 4) used a strict rule: conclude only on what all three inferences (clustered by department, Conley, bootstrap by year) support. Once the size checks had shown that only the bootstrap by year was reliable on these data, phase 4 bis replaced it: a main hypothesis counts as established only if its one-sided wild cluster bootstrap $p$-value, with clusters by year, is below 0.05 \emph{and} the empirical size of that test, measured on the same data, is at most 10\,\%. For maize, the main hypothesis is $\beta > 0$; for wheat, $\beta_2 < 0$. The four secondary maize hypotheses form one family, corrected with the Holm method. In this text, a result of the project is called established only when it meets the decision rule of its phase.
+
+\paragraph{What I knew when writing the maize plan.} It was not written blind. The exploratory analysis of phase 6 had already estimated a version of model~\eqref{eq:a1} on 2010--2025, with department-wide weather. What had never been used were the years 2000--2009. The plan therefore designates them as a replication sample, and the maize mask as the main measure.
+
+\paragraph{Changes to the plan.} Some additions came after the first results of their phase: four extra wheat checks (R11--R14) and the robustness check with a 2008 mask of maize parcel blocks. Others were decided after seeing results: the size checks and the comparison of forecasts with the department mean. \Cref{app:deviations} lists them all.
+
+\subsection{What these models cannot identify}
+\label{subsec:not-identified}
+
+\begin{itemize}
+  \item \textbf{The causal effect of irrigation.} Irrigated and rainfed land differ in soils, farms and varieties. The fixed effects remove the stable part of these differences, not any part that varies with the heat of the year.
+  \item \textbf{The effect of a warmer climate.} Farmers respond to a lasting change in climate. \textcite{merel2021} identify conditions under which panel estimates of weather effects approximate long-run responses; I do not claim that they hold here.
+  \item \textbf{The value of irrigation water.} The data contain no water volumes per crop: the BNPE volumes cover all irrigated crops, and the value per cubic metre in \cref{sec:maize} splits them by area. The valuation is descriptive.
+\end{itemize}

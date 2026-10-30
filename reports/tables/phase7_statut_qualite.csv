@@ -1,0 +1,4 @@
+"terme","estimation","p_wcr","sens","n","effet_pct_par_unite","lecture"
+"pente statut 1 (dans le modèle joint)",0.0165151861149822,NA,NA,981,1.66523156677896,NA
+"écart de pente statut 2 - statut 1",0.00817836524295333,0.465546554655466,"bilatéral",981,0.821189942790945,"pas de différence détectable"
+"pente statut 2 seul (21 dép.)",0.0217906775362138,0.0172017201720172,"unilatéral à droite",546,2.20298282765827,NA

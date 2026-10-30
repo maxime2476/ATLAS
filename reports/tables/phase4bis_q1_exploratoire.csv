@@ -1,0 +1,12 @@
+"analyse","periode","mesure","estimation","n","p_cluster_annee"
+"beta A1 (dd_32_ja)","2000-2025","masque maïs",0.0157778591926995,435,NA
+"beta A1 (dd_32_ja)","2000-2025","pondération surfacique",0.0104176282253768,435,NA
+"beta A1 (dd_32_ja)","2000-2009","masque maïs",0.0108424922597141,165,NA
+"beta A1 (dd_32_ja)","2000-2009","pondération surfacique",-0.000908801478989311,165,NA
+"beta A1 (dd_32_ja)","2010-2025","masque maïs",0.0242299884453093,270,NA
+"beta A1 (dd_32_ja)","2010-2025","pondération surfacique",0.0380597071686339,270,NA
+"beta A1 (dd_32_ja)","sans 2003","masque maïs",0.0243267589164312,418,NA
+"beta A1 (dd_32_ja)","sans 2003","pondération surfacique",0.0365499670008524,418,NA
+"beta A1 (dd_32_ja)","2000-2009 sans 2003","masque maïs",0.0380019270073685,148,NA
+"beta A1 (dd_32_ja)","2000-2009 sans 2003","pondération surfacique",0.0091204716649316,148,NA
+"part irriguée ~ dd_32_ja (composition)","2000-2025","masque maïs",-0.00246255338592999,435,0.58049735393044
