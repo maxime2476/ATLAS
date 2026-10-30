@@ -6,7 +6,7 @@
 > - **Maïs grain, 17 départements, 2000-2025 (résultat principal).** Chaque degré-jour au-delà de 32 °C en juillet-août est associé à un écart de rendement plus large d'environ **1,6 %** en faveur du maïs irrigué (bootstrap par année, p = 0,007, taille mesurée 3,7 %). Le signe est robuste, la significativité fragile : elle disparaît sans les six départements de relief (p = 0,152) ou avec une météo moyennée sur tout le département, et 62 % de l'échantillon vient des années qui ont suggéré l'hypothèse. C'est une association, pas un effet causal de l'irrigation.
 > - **Blé tendre, 83 départements, 1959-2025.** La chaleur en fin de cycle est associée à −1,1 % de rendement par °C·jour, mais ce n'est **pas distinguable de zéro** (p = 0,125).
 > - **Prévision.** Ni la météo ni le NDVI satellitaire ne battent de façon démontrée la moyenne historique du département.
-> - **Test à venir.** Le test sur les récoltes 2026-2030 et la prévision du blé 2026 sont fixés dans [`specification_recoltes_futures.md`](specification_recoltes_futures.md).
+> - **Test à venir.** Le test sur les récoltes 2026-2030 et la prévision du blé 2026 sont fixés dans [`specification_recoltes_futures.md`](specification_recoltes_futures.md), enregistrée sur OSF ([doi:10.17605/OSF.IO/QKNAV](https://doi.org/10.17605/OSF.IO/QKNAV)).
 > - **Inférence.** Sur ces panels, le cluster par département et Conley concluent à tort dans 15 à 58 % des cas sans effet réel ; les inférences qui tiennent compte du choc commun à chaque année restent entre 3 et 12 %.
 
 ![Maïs : écart irrigué − non irrigué selon la spécification](docs/figures/fig4_mais_robustesse.png)
@@ -274,7 +274,7 @@ La chaîne complète, dans l'ordre, est détaillée dans **`data/README.md`**, y
 - mémoire : `memoire/` (méthodes, variables, écarts au plan et reproduction en annexes) ;
 - sources et licences : `docs/sources.md`, `NOTICE.md` ; manifeste des fichiers bruts : `docs/manifest_raw.csv` ;
 - résultats : `docs/resultats_phase4.md` à `docs/resultats_phase6.md`, **`docs/resultats_phase4bis.md`** et `docs/resultats_complements.md` ;
-- tests sur les récoltes futures : `specification_recoltes_futures.md`.
+- tests sur les récoltes futures : `specification_recoltes_futures.md`, enregistrée sur OSF (https://osf.io/qknav).
 
 ## 8. Licence et citation
 
